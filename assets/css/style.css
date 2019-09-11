@@ -1,0 +1,107 @@
+/*General*/
+
+@import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500&display=swap');
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+/*.bg-blue {*/
+
+/*    background-color: #01479e;*/
+
+/*}*/
+
+/*.callout {*/
+
+/*    background-color: #e9ecefb0;*/
+
+/*    height: 50vh;*/
+
+/*}*/
+
+.title-shadow {
+    text-shadow: -1px 3px 8px #ffffff9e;
+}
+
+.text-shadow {
+    text-shadow: -1px 1px 4px #ffffff;
+}
+
+.no-side-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.main-screen-container {
+    height: 90vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.social-row {
+    padding: 1rem;
+}
+
+.social-col {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.round-border {
+    border-radius: 50%;
+    height: 2rem;
+    border: 2px solid white;
+    width: 2rem;
+    justify-content: center;
+    display: flex;
+    line-height: 1.8rem;
+    color: white;
+    margin: 0 0.5rem;
+}
+
+.main-text-light {
+    color: white;
+    font-family: "Jura", "Revalia";
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.main-title {
+    font-family: "Revalia", "Jura";
+    font-size: 3rem;
+    color: white;
+    padding: 0 0 0.5rem;
+}
+
+.hr-divider {
+    border-top: 2px solid rgb(255, 255, 255);
+    width: 80vw;
+}
+
+.launch-button {
+    background-color: #c60000;
+    color: white;
+    border: 0px solid white;
+    font-family: "Revalia";
+    font-weight: 700;
+    padding: 0.5rem 1rem 1rem;
+    border-radius: 24px;
+}
+
+/*.main-subtitle {*/
+
+/*    color: white;*/
+
+/*    font-family: "Jura", "Revalia";*/
+
+/*    font-weight: 500;*/
+
+/*    font-size: 1.3rem;*/
+
+/*}*/
