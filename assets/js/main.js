@@ -8,7 +8,7 @@ var earthDate = "earth_date=2015-6-3"
 //WORKS xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
 //WORKS xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
 
-function getData(photos, cb) {
+function getData(key, cb) {
     var xhr = new XMLHttpRequest();
     
     xhr.open("GET", `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?${earthDate}${solNumber}${camName}${pageNumber}&api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b`);
@@ -23,9 +23,9 @@ function getData(photos, cb) {
     };
 }
 
-function writeToDocument (photos) {
-	getData(roverName, function(data){
+function writeToDocument (key) {
+	getData(key, function(data){
 		console.dir(data);
-		document.getElementById("data").innerHTML = data;
+		// document.getElementById("data").innerHTML = data;
 	});
 }

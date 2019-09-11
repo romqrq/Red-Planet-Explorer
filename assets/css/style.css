@@ -100,10 +100,10 @@ a {
 .launch-button-div {
     height: 9.5rem;
     width: 9.5rem;
-    background-color: #212529;
+    background-color: #e9ecef;
     padding: 0.75rem;
     border-radius: 50%;
-    box-shadow: inset 0px 0px 11px 6px #ced1d4;
+    box-shadow: inset 0px 0px 9px 5px #343a408a;
     margin: auto;
 }
 
