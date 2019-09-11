@@ -2,6 +2,14 @@
 
 @import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500&display=swap');
 
+.testbg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90vh;
+    z-index: -1;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -37,7 +45,12 @@ a {
 
 .main-screen-container {
     height: 90vh;
-    background-color: black;
+    padding: 1rem;
+    /*background-image: url("mars.png");*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-color: black;*/
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -84,14 +97,29 @@ a {
     width: 80vw;
 }
 
+.launch-button-div {
+    height: 9.5rem;
+    width: 9.5rem;
+    background-color: #212529;
+    padding: 0.75rem;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 11px 6px #ced1d4;
+    margin: auto;
+}
+
 .launch-button {
     background-color: #c60000;
     color: white;
     border: 0px solid white;
+    font-size: 1.2rem;
     font-family: "Revalia";
     font-weight: 700;
+    text-shadow: 0px 0px 5px #ffffffcf;
     padding: 0.5rem 1rem 1rem;
-    border-radius: 24px;
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%;
+    box-shadow: inset 3px -4px 20px 7px #842600;
 }
 
 /*.main-subtitle {*/

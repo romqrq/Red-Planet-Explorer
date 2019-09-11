@@ -1,17 +1,31 @@
-var data = null;
+var roverName = "curiosity";
+var solNumber = "" //"&sol=1000";
+var camName = "&camera=FHAZ";
+var pageNumber = "" //"&page=1"
+var earthDate = "earth_date=2015-6-3"
 
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
+//WORKS xhr.open("GET", "https://api.nasa.gov/insight_weather/?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
+//WORKS xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
+//WORKS xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/manifests/curiosity?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
 
-xhr.addEventListener("readystatechange", function () {
-	if (this.readyState === this.DONE) {
-		document.getElementById("data").innerHTML=this.responseText;
-	}
-});
+function getData(photos, cb) {
+    var xhr = new XMLHttpRequest();
+    
+    xhr.open("GET", `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverName}/photos?${earthDate}${solNumber}${camName}${pageNumber}&api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b`);
+    xhr.send();
 
-xhr.open("POST", "https://nasaapidimasv1.p.rapidapi.com/getClosestAsteroids");
-xhr.setRequestHeader("x-rapidapi-host", "NasaAPIdimasV1.p.rapidapi.com");
-xhr.setRequestHeader("x-rapidapi-key", "4b98a9a210msh591d6d1fd6f0ab6p14fa63jsnb3c557da6032");
-xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
 
-xhr.send(data);
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            cb(JSON.parse(this.responseText));
+            // console.log(typeof(this.responseText));
+        }
+    };
+}
+
+function writeToDocument (photos) {
+	getData(roverName, function(data){
+		console.dir(data);
+		document.getElementById("data").innerHTML = data;
+	});
+}
