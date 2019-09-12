@@ -98,19 +98,20 @@
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
                     ut aliquip ex ea commodo consequat.</pp>
             </div>
-            <button onclick="setName('curiosity')">Curiosity</button>
-            <button onclick="setName('spirit')">Spirit</button>
+            <button onclick="setName('curiosity'), writeToDocument()">Curiosity</button>
+            <button onclick="setName('spirit'), writeToDocument()">Spirit</button>
             <button onclick="setName('opportunity')">Opportunity</button>
-            <div id="data2"></div>
+            <hr>
+            <button onclick="writeRoverByName('spirit')">Spirit</button>
             <div class="row">
                 <div class="col-4">
                     <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Curiosity</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Spirit</button>
+                    <button class="btn btn-warning" onclick="writeToDocument('spirit')">Spirit</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Opportunity</button>
+                    <button class="btn btn-warning" onclick="writeToDocument('opportunity')">Opportunity</button>
                 </div>
             </div>
         </div>
@@ -118,28 +119,29 @@
 
     <div class="input-group mb-3">
         <select class="custom-select" id="input1">
-    <option selected>Choose...</option>
-    <option value="curiosity">Curiosity</option>
-    <option value="spirit">Spirit</option>
-    <option value="3">Three</option>
-  </select>
-        <select class="custom-select" id="input2">
-    <option selected>Choose...</option>
-    <option value="2015-6-3">2015-6-3</option>
-    <option value="2015-6-4">2015-6-4</option>
-    <option value="2015-6-5">2015-6-5</option>
-  </select>
-        <select class="custom-select" id="input3">
-    <option selected>Choose...</option>
-    <option value="fhaz">FHAZ</option>
-    <option value="rhaz">RHAZ</option>
-    <option value="mast">Mast</option>
-  </select>
-        <button onclick="nameThem()">Options</button>
+            <option selected>Choose...</option>
+            <option value="curiosity">Curiosity</option>
+            <option value="spirit">Spirit</option>
+            <option value="opportunity">Opportunity</option>
+        </select>
+        <!--      <select class="custom-select" id="input2">-->
+        <!--  <option selected>Choose...</option>-->
+        <!--  <option value="2015-6-3">2015-6-3</option>-->
+        <!--  <option value="2015-6-4">2015-6-4</option>-->
+        <!--  <option value="2015-6-5">2015-6-5</option>-->
+        <!--</select>-->
+        <!--      <select class="custom-select" id="input3">-->
+        <!--  <option selected>Choose...</option>-->
+        <!--  <option value="fhaz">FHAZ</option>-->
+        <!--  <option value="rhaz">RHAZ</option>-->
+        <!--  <option value="mast">Mast</option>-->
+        <!--</select>-->
+        <button onclick="writeToDocument()">Options</button>
     </div>
 
 
     <div id="data"></div>
+    <div id="data2"></div>
     <footer>
 
     </footer>

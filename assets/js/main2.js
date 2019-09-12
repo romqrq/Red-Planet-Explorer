@@ -22,6 +22,20 @@ function setName(namePicked, cb) {
     };
 }
 
+function writeToDocument() {
+	var el = document.getElementById("data2");
+	el.innerHTML = "";
+
+	setName(namePicked, function(data) {
+		data = data.latest_photos;
+
+		data.forEach(function(item) {
+			el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
+		});
+	});
+}
+
+
 // function nameThem() {
 //     var firstInput = document.getElementById("input1");
 //     var roverName = firstInput.options[firstInput.selectedIndex].value;
