@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
     <!--<script type="text/javascript" src="assets/js/main2.js"></script>-->
     <!--<script type="text/javascript" src="assets/js/main3.js"></script>-->
@@ -102,52 +105,54 @@
             <button onclick="setName('spirit'), writeToDocument()">Spirit</button>
             <button onclick="setName('opportunity')">Opportunity</button>
             <hr>
-            <button onclick="writeRoverByName('spirit')">Spirit</button>
+            <div>latest</div>
             <div class="row">
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Curiosity</button>
+                    <button class="btn btn-warning latest-button" id="buttonCuriosity" onclick="writeLatestToDocument()" value="curiosity">Curiosity</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="writeToDocument('spirit')">Spirit</button>
+                    <button class="btn btn-warning latest-button" id="buttonSpirit" onclick="writeLatestToDocument()" value="spirit">Spirit</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="writeToDocument('opportunity')">Opportunity</button>
+                    <button class="btn btn-warning latest-button" id="buttonOpportunity" onclick="writeLatestToDocument()" value="opportunity">Opportunity</button>
                 </div>
             </div>
         </div>
     </section>
-
+    <hr>
+    <div class=text-center>different parameters</div>
     <div class="input-group mb-3">
-        <select class="custom-select" id="input1">
+        <div class="input-group mb-3">
+            <select class="custom-select" id="inputRoverName">
             <option selected>Choose...</option>
             <option value="curiosity">Curiosity</option>
             <option value="spirit">Spirit</option>
             <option value="opportunity">Opportunity</option>
         </select>
-        <!--      <select class="custom-select" id="input2">-->
-        <!--  <option selected>Choose...</option>-->
-        <!--  <option value="2015-6-3">2015-6-3</option>-->
-        <!--  <option value="2015-6-4">2015-6-4</option>-->
-        <!--  <option value="2015-6-5">2015-6-5</option>-->
-        <!--</select>-->
-        <!--      <select class="custom-select" id="input3">-->
-        <!--  <option selected>Choose...</option>-->
-        <!--  <option value="fhaz">FHAZ</option>-->
-        <!--  <option value="rhaz">RHAZ</option>-->
-        <!--  <option value="mast">Mast</option>-->
-        <!--</select>-->
-        <button onclick="writeToDocument()">Options</button>
-    </div>
+            <select class="custom-select" id="inputSolNumber">
+          <option selected>Choose...</option>
+          <option value="500">500</option>
+          <option value="1000">1000</option>
+          <option value="1500">1500</option>
+        </select>
+            <select class="custom-select" id="inputCamName">
+          <option selected>Choose...</option>
+          <option value="fhaz">FHAZ</option>
+          <option value="rhaz">RHAZ</option>
+          <option value="mast">Mast</option>
+        </select>
+            <button onclick="writeParamsToDocument()">Options</button>
+        </div>
 
 
-    <div id="data"></div>
-    <div id="data2"></div>
-    <footer>
+        <div id="data"></div>
+        <div id="data2"></div>
+        <footer>
 
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 </body>
 
