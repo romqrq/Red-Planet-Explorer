@@ -12,6 +12,7 @@
 
     <!--<script type="text/javascript" src="assets/js/main.js"></script>-->
     <script type="text/javascript" src="assets/js/main2.js"></script>
+    <!--<script type="text/javascript" src="assets/js/main3.js"></script>-->
 
 </head>
 
@@ -97,20 +98,23 @@
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
                     ut aliquip ex ea commodo consequat.</pp>
             </div>
+            <button onclick="setName('curiosity')">Curiosity</button>
+            <button onclick="setName('spirit')">Spirit</button>
+            <button onclick="setName('opportunity')">Opportunity</button>
             <div class="row">
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="setRover(" curiosity ")">button 1</button>
+                    <button class="btn btn-warning" onclick="getLatest(roverName=" curiosity ")">Curiosity</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="setDate(" 2015-6-3 ")">button 2</button>
+                    <button class="btn btn-warning" onclick="roverName(" spirit ")">Spirit</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="setCam(" FHAZ ")">button 3</button>
+                    <button class="btn btn-warning" onclick="roverName(" opportunity ")">Opportunity</button>
                 </div>
             </div>
         </div>
-
     </section>
+
     <div class="input-group mb-3">
         <select class="custom-select" id="input1">
     <option selected>Choose...</option>
@@ -130,7 +134,7 @@
     <option value="rhaz">RHAZ</option>
     <option value="mast">Mast</option>
   </select>
-            <button onclick="nameThem()">Options</button>
+        <button onclick="nameThem()">Options</button>
     </div>
 
 
