@@ -21,21 +21,16 @@
             .then((res) => res.json())
             .then((data) => {
                 let output = '<h2>Photos</>';
-                // data.forEach(function(photo){
-                    var photos = "";
-                    var pic;
-                    for (pic in data) {
-                        photos += data[pic] + " ";
-                    }
-                    // `
-                    // <ul>
-                    //     <li>Name: ${photo_manifest.name}</li>
-                    //     <li>Landing Date: ${key.landing_date}</li>
-                    //     <li>Launch Date: ${key.launch_date}</li>
-                    //     <li>Status: ${key.status}</li>
-                    //     <li>Max Sol: ${key.max_sol}</li>
-                    // </ul>`;
-                // });
+                data.forEach(function(photo){
+                    output += `
+                    <ul>
+                        <li>Name: ${photo_manifest.name}</li>
+                        <li>Landing Date: ${key.landing_date}</li>
+                        <li>Launch Date: ${key.launch_date}</li>
+                        <li>Status: ${key.status}</li>
+                        <li>Max Sol: ${key.max_sol}</li>
+                    </ul>`;
+                });
                 document.getElementById('output3').innerHTML = output;
                 
             });

@@ -22,18 +22,6 @@ function setName(namePicked, cb) {
     };
 }
 
-// function setRover(namePicked) {
-//     var roverName = namePicked;
-// }
-
-// function setDate(datePicked) {
-//     var earthDate = `earth_date=${datePicked}`;
-// }
-
-// function setCam(camPicked) {
-//     var camName = `&camera=${camPicked}`;
-// }
-
 // function nameThem() {
 //     var firstInput = document.getElementById("input1");
 //     var roverName = firstInput.options[firstInput.selectedIndex].value;

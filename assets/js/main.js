@@ -30,7 +30,7 @@ function setName(namePicked, cb) {
 }
 
 function writeToData2() {
-	var el = document.getElementById("data");
+	var el = document.getElementById("data2");
 	el.innerHTML = "";
 
 	getLatest(function(data) {
@@ -41,10 +41,6 @@ function writeToData2() {
 		});
 	});
 }
-
-
-
-
 
 
 

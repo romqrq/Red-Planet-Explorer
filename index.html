@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-    <!--<script type="text/javascript" src="assets/js/main.js"></script>-->
-    <script type="text/javascript" src="assets/js/main2.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!--<script type="text/javascript" src="assets/js/main2.js"></script>-->
     <!--<script type="text/javascript" src="assets/js/main3.js"></script>-->
 
 </head>
@@ -101,15 +101,16 @@
             <button onclick="setName('curiosity')">Curiosity</button>
             <button onclick="setName('spirit')">Spirit</button>
             <button onclick="setName('opportunity')">Opportunity</button>
+            <div id="data2"></div>
             <div class="row">
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="getLatest(roverName=" curiosity ")">Curiosity</button>
+                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Curiosity</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="roverName(" spirit ")">Spirit</button>
+                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Spirit</button>
                 </div>
                 <div class="col-4">
-                    <button class="btn btn-warning" onclick="roverName(" opportunity ")">Opportunity</button>
+                    <button class="btn btn-warning" onclick="writeToDocument('curiosity')">Opportunity</button>
                 </div>
             </div>
         </div>
