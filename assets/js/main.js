@@ -12,46 +12,46 @@
 
 
 
-//Pick latest photo by rover name
-function getLatest(cb) {
-	// roverName = function() {
-	// 	if (document.getElementById("buttonCuriosity") == true) {
-	// 		var e = document.getElementById("buttonCuriosity");
-	// 		return e.options[e.selectedIndex].value;
-	// 	}
-	// }
-	$('.latest-button').on('click', function() {
-		var e = document.getElementById(this.id);
-		roverName = e.options[e.selectedIndex].value;
-	});
-	console.log(roverName);
-	// var e = document.getElementById("buttonCuriosity");
-	// var roverName = e.options[e.selectedIndex].value;
-	var xhr = new XMLHttpRequest();
-	xhr.onreadystatechange = function() {
-		if (this.readyState == 4 && this.status == 200) {
-			// document.getElementById("data").innerHTML = JSON.parse(this.responseText);
-			console.log(JSON.parse(this.responseText));
-			cb(JSON.parse(this.responseText));
-		}
-	};
-	xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/" + roverName + "/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
-	xhr.send();
+// //Pick latest photo by rover name
+// function getLatest(cb) {
+// 	// roverName = function() {
+// 	// 	if (document.getElementById("buttonCuriosity") == true) {
+// 	// 		var e = document.getElementById("buttonCuriosity");
+// 	// 		return e.options[e.selectedIndex].value;
+// 	// 	}
+// 	// }
+// 	$('.latest-button').on('click', function() {
+// 		var e = document.getElementById(this.id);
+// 		roverName = e.options[e.selectedIndex].value;
+// 	});
+// 	console.log(roverName);
+// 	// var e = document.getElementById("buttonCuriosity");
+// 	// var roverName = e.options[e.selectedIndex].value;
+// 	var xhr = new XMLHttpRequest();
+// 	xhr.onreadystatechange = function() {
+// 		if (this.readyState == 4 && this.status == 200) {
+// 			// document.getElementById("data").innerHTML = JSON.parse(this.responseText);
+// 			console.log(JSON.parse(this.responseText));
+// 			cb(JSON.parse(this.responseText));
+// 		}
+// 	};
+// 	xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/" + roverName + "/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
+// 	xhr.send();
 
-}
+// }
 
-function writeLatestToDocument() {
-	var el = document.getElementById("data");
-	el.innerHTML = "";
+// function writeLatestToDocument() {
+// 	var el = document.getElementById("data");
+// 	el.innerHTML = "";
 
-	getLatest(function(data) {
-		data = data.latest_photos;
+// 	getLatest(function(data) {
+// 		data = data.latest_photos;
 
-		data.forEach(function(item) {
-			el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
-		});
-	});
-}
+// 		data.forEach(function(item) {
+// 			el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
+// 		});
+// 	});
+// }
 
 
 
@@ -95,8 +95,10 @@ function getParamsData(cb) {
 	var rvn = document.getElementById("inputRoverName");
 	var roverName = rvn.options[rvn.selectedIndex].value;
 
-	var snb = document.getElementById("inputSolNumber");
-	var solNumber = `&sol=${snb.options[snb.selectedIndex].value}`;
+	var snb = document.getElementById("solTextInput");
+    var solNumber = `&sol=${snb.value}`;
+	// var snb = document.getElementById("inputSolNumber");
+	// var solNumber = `&sol=${snb.options[snb.selectedIndex].value}`;
 
 	var cmn = document.getElementById("inputCamName");
 	var camName = `&camera=${cmn.options[cmn.selectedIndex].value}`;
