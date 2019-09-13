@@ -2,16 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
 
+
 body {
     background-color: #ffd86845;
-}
-
-.header-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 90vh;
-    z-index: -1;
 }
 
 a {
@@ -20,19 +13,7 @@ a {
 
 }
 
-/*.bg-blue {*/
-
-/*    background-color: #01479e;*/
-
-/*}*/
-
-/*.callout {*/
-
-/*    background-color: #e9ecefb0;*/
-
-/*    height: 50vh;*/
-
-/*}*/
+/* Header */
 
 .title-shadow {
     text-shadow: -1px 3px 8px #000000;
@@ -48,16 +29,18 @@ a {
 }
 
 .main-screen-container {
-    height: 90vh;
+    height: 100vh;
+    max-width: 100vw;
     padding: 1rem;
-    /*background-image: url("mars.png");*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*background-color: black;*/
+    background-image: url("../images/mars-athmosphere.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    box-shadow: 1px 4px 9px 0px black;
 }
 
 .social-row {
@@ -104,6 +87,10 @@ a {
 }
 
 .launch-button-div {
+    margin-bottom: 1rem;
+}
+
+.launch-button-border {
     height: 9.5rem;
     width: 9.5rem;
     background-color: #eaeaea;
@@ -126,16 +113,37 @@ a {
     width: 8rem;
     border-radius: 50%;
     box-shadow: inset 3px -4px 20px 7px #842600;
+    animation-name: launchButtonAnimation;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
-/*.main-subtitle {*/
+.btn.launch-button:hover {
+    color: white;
+}
 
-/*    color: white;*/
+.btn.launch-button:focus {
+    background-color: #ff0018;
+    box-shadow: inset 0px 0px 1px 4px #ce3c00;
+}
 
-/*    font-family: "Jura", "Revalia";*/
+.btn.launch-button:active {
+    background-color: #d40101!important;
+    box-shadow: inset 3px -4px 20px 7px #842600!important;
+}
 
-/*    font-weight: 500;*/
 
-/*    font-size: 1.3rem;*/
 
-/*}*/
+/* Launch button bg change */
+
+@keyframes launchButtonAnimation {
+    from {
+        background-color: #d40101;
+    }
+    to {
+        background-color: #ff0018;
+    }
+}
