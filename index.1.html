@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>-->
     <!--<script type="text/javascript" src="assets/js/jquery.js"></script>-->
     <script type="text/javascript" src="assets/js/main4.js"></script>
     <!--<script type="text/javascript" src="assets/js/main2.js"></script>-->
@@ -19,51 +19,12 @@
 </head>
 
 <body>
-
-
-
-
-    <!--<button id="roverNameButton" value="curiosity"></button>-->
-    <!--<button id="roverNameButton" value="spirit"></button>-->
-    <!--<button id="roverNameButton" value="opportunity"></button>-->
-    <div class="input-group mb-3">
-        <select class="custom-select" id="inputRoverName">
-                <option selected>Choose...</option>
-                <option value="curiosity">Curiosity</option>
-                <option value="spirit">Spirit</option>
-                <option value="opportunity">Opportunity</option>
-            </select>
-
-        <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
-
-        <!--<select class="custom-select" id="inputSolNumber">-->
-        <!--  <option selected>Choose...</option>-->
-        <!--  <option value="500">500</option>-->
-        <!--  <option value="1000">1000</option>-->
-        <!--  <option value="1500">1500</option>-->
-        <!--</select>-->
-        <select class="custom-select" id="inputCamName">
-              <option selected>Choose...</option>
-              <option value="fhaz">FHAZ</option>
-              <option value="rhaz">RHAZ</option>
-              <option value="mast">Mast</option>
-            </select>
-        <!--<select class="custom-select" id="inputEarthDate">-->
-        <!--  <option selected>Choose...</option>-->
-        <!--  <option value="fhaz">FHAZ</option>-->
-        <!--  <option value="rhaz">RHAZ</option>-->
-        <!--  <option value="mast">Mast</option>-->
-        <!--</select>-->
-        <button onclick="writeGeneralToDocument()">Options</button>
-    </div>
-
-    <hr>
-    <button name="testButton" onclick="writeLatestToDocument()" value="curiosity" id="curiosityButton">Curiosity</button>
-    <button name="testButton" onclick="writeLatestToDocument()" value="spirit" id="spiritButton">Spirit</button>
-    <button name="testButton" onclick="writeLatestToDocument()" value="opportunity" id="opportunityButton">Opportunity</button>
-    <button onclick="writeToDocument('starships')">Starship</button>
+    <button class="nameRoverButton" onclick="writeLatestToDocument('curiosity'); getLatest('curiosity')" value="curiosity" id="curiosityButton">Curiosity</button>
+    <button class="nameRoverButton" onclick="writeLatestToDocument(); getLatest('spirit')" value="spirit" id="spiritButton">Spirit</button>
+    <button class="nameRoverButton" onclick="writeLatestToDocument(); getLatest('opportunity')" value="opportunity" id="opportunityButton">Opportunity</button>
+    <button onclick="writeLatestToDocument('curiosity')">Starship</button>
     <button onclick="writeToDocument('vehicles')">Vehicles</button>
-    <button onclick="writeToDocument('films')">Films</button>
+    <button onclick="writeManifestToDocument('films')">Films</button>
     <div id="data"></div>
 </body>
 <footer>
