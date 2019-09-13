@@ -1,8 +1,12 @@
 /*General*/
 
-@import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
 
-.testbg {
+body {
+    background-color: #ffd86845;
+}
+
+.header-bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,11 +35,11 @@ a {
 /*}*/
 
 .title-shadow {
-    text-shadow: -1px 3px 8px #ffffff9e;
+    text-shadow: -1px 3px 8px #000000;
 }
 
 .text-shadow {
-    text-shadow: -1px 1px 4px #ffffff;
+    text-shadow: -1px 1px 3px #000000;
 }
 
 .no-side-padding {
@@ -76,12 +80,13 @@ a {
     line-height: 1.8rem;
     color: white;
     margin: 0 0.5rem;
+    font-weight: 900;
 }
 
 .main-text-light {
     color: white;
     font-family: "Jura", "Revalia";
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.3rem;
 }
 
@@ -93,28 +98,29 @@ a {
 }
 
 .hr-divider {
-    border-top: 2px solid rgb(255, 255, 255);
+    border-top: 3px solid rgb(255, 255, 255);
     width: 80vw;
+    box-shadow: -2px 2px 6px 0px black;
 }
 
 .launch-button-div {
     height: 9.5rem;
     width: 9.5rem;
-    background-color: #e9ecef;
+    background-color: #eaeaea;
     padding: 0.75rem;
     border-radius: 50%;
-    box-shadow: inset 0px 0px 9px 5px #343a408a;
+    box-shadow: inset 0px 0px 6px 6px #676767;
     margin: auto;
 }
 
 .launch-button {
-    background-color: #c60000;
+    background-color: #d40101;
     color: white;
     border: 0px solid white;
-    font-size: 1.2rem;
-    font-family: "Revalia";
+    font-size: 1.5rem;
+    font-family: "Jura", "Revalia";
     font-weight: 700;
-    text-shadow: 0px 0px 5px #ffffffcf;
+    /*text-shadow: 0px 0px 5px #ffffffcf;*/
     padding: 0.5rem 1rem 1rem;
     height: 8rem;
     width: 8rem;
