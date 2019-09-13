@@ -100,25 +100,31 @@
                 <h3>some text text text text</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
                     ut aliquip ex ea commodo consequat.</pp>
-            </div>
-            <button onclick="setName('curiosity'), writeToDocument()">Curiosity</button>
-            <button onclick="setName('spirit'), writeToDocument()">Spirit</button>
-            <button onclick="setName('opportunity')">Opportunity</button>
-            <hr>
             <div>latest</div>
-            <div class="row">
-                <div class="col-4">
-                    <button class="btn btn-warning latest-button" id="buttonCuriosity" onclick="writeLatestToDocument()" value="curiosity">Curiosity</button>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-warning latest-button" id="buttonSpirit" onclick="writeLatestToDocument()" value="spirit">Spirit</button>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-warning latest-button" id="buttonOpportunity" onclick="writeLatestToDocument()" value="opportunity">Opportunity</button>
-                </div>
-            </div>
+            <!--<div class="row">-->
+            <!--    <div class="col-4">-->
+            <!--        <button class="btn btn-warning latest-button" id="buttonCuriosity" onclick="writeLatestToDocument('curiosity')" value="curiosity">Curiosity</button>-->
+            <!--    </div>-->
+            <!--    <div class="col-4">-->
+            <!--        <button class="btn btn-warning latest-button" id="buttonSpirit" onclick="writeLatestToDocument()" value="spirit">Spirit</button>-->
+            <!--    </div>-->
+            <!--    <div class="col-4">-->
+            <!--        <button class="btn btn-warning latest-button" id="buttonOpportunity" onclick="writeLatestToDocument()" value="opportunity">Opportunity</button>-->
+            <!--    </div>-->
+            <!--</div>-->
         </div>
     </section>
+    <hr>
+    <p>Rover Latest Pictures</p>
+    <div class="input-group mb-3">
+        <select class="custom-select" id="inputLatestRoverPhoto">
+            <option selected>Choose...</option>
+            <option value="curiosity">Curiosity</option>
+            <option value="spirit">Spirit</option>
+            <option value="opportunity">Opportunity</option>
+        </select>
+        <button onclick="writeLatestToDocument()">Options</button>
+    </div>
     <hr>
     <div class=text-center>different parameters</div>
     <div class="input-group mb-3">
@@ -129,12 +135,13 @@
             <option value="spirit">Spirit</option>
             <option value="opportunity">Opportunity</option>
         </select>
-            <select class="custom-select" id="inputSolNumber">
-          <option selected>Choose...</option>
-          <option value="500">500</option>
-          <option value="1000">1000</option>
-          <option value="1500">1500</option>
-        </select>
+        <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
+<!--    <select class="custom-select" id="inputSolNumber">-->
+      <!--  <option selected>Choose...</option>-->
+      <!--  <option value="500">500</option>-->
+      <!--  <option value="1000">1000</option>-->
+      <!--  <option value="1500">1500</option>-->
+      <!--</select>-->
             <select class="custom-select" id="inputCamName">
           <option selected>Choose...</option>
           <option value="fhaz">FHAZ</option>
