@@ -91,6 +91,41 @@ var camName = ""; //"&camera=FHAZ";
 var pageNumber = ""; //"&page=1"
 var earthDate = ""; //"earth_date=2015-6-3"
 
+function getManifest(roverNameManifest, cbManifest) {
+    console.log(roverNameManifest);
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // document.getElementById("data").innerHTML = JSON.parse(this.responseText);
+            console.log(JSON.parse(this.responseText));
+            cbManifest(JSON.parse(this.responseText));
+        }
+    };
+    xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/manifests/" + roverNameManifest + "?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
+    xhr.send();
+}
+
+function writeManifestToDocument(roverNameManifest) {
+    var el = document.getElementById("dataManifest");
+    el.innerHTML = "";
+
+    getManifest(roverNameManifest, function(data) {
+        data = data.photo_manifest;
+        
+        let item;
+        for (item in data) {
+            if (item != "photos") {
+                let itemString = item.replace(/_/g, " ");
+                let itemStringCapitalized = itemString.charAt(0).toUpperCase() + itemString.slice(1);
+                console.log(itemStringCapitalized);
+                    el.innerHTML += `<p>${itemStringCapitalized}: ${data[item]}</p>`;
+            }
+        }
+    });
+}
+
 function getParamsData(cb) {
 	var rvn = document.getElementById("inputRoverName");
 	var roverName = rvn.options[rvn.selectedIndex].value;
