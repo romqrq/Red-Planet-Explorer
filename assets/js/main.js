@@ -133,3 +133,36 @@ function writeParamsToDocument() {
 		});
 	});
 }
+
+
+function getLatest(cbLatest) {
+    var roverLatest = document.getElementById("inputLatestRoverPhoto");
+    var roverNameLatest = `${roverLatest.options[roverLatest.selectedIndex].value}`;
+    // var rvrnm = document.getElementsByclass("nameRoverButton").id;
+    // console.log(rvrnm);
+    // var roverNameLatest = rvrnm.value;
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            // document.getElementById("data").innerHTML = JSON.parse(this.responseText);
+            console.log(JSON.parse(this.responseText));
+            cbLatest(JSON.parse(this.responseText));
+        }
+    };
+    xhr.open("GET", `https://api.nasa.gov/mars-photos/api/v1/rovers/${roverNameLatest}/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0`);
+    xhr.send();
+}
+
+function writeLatestToDocument() {
+    var el = document.getElementById("data");
+    el.innerHTML = "";
+
+    getLatest(function(data) {
+        data = data.latest_photos;
+
+        data.forEach(function(item) {
+            el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
+        });
+    });
+}
