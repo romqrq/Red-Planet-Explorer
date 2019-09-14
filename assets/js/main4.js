@@ -1,3 +1,6 @@
+// var datenow = new Date;
+// console.log(datenow);
+
 function getWeatherData(cbweather) {
     // console.log(roverNameManifest);
 
@@ -14,50 +17,48 @@ function getWeatherData(cbweather) {
     xhr.send();
 }
 
-function writeManifestToDocument() {
-    var el = document.getElementById("data");
+function writeWeatherToDocument() {
+    var el = document.getElementById("dataWeather");
     el.innerHTML = "";
 
     getWeatherData(function(data) {
-        // var JSO = data;
-        // console.log(JSO[269].AT.av);
-        console.log(data);
-        // console.log(data.sol_keys);
-        // console.log(data.sol_keys.AT);
-        // console.log(data.sol_keys.Season);
-        // // console.log(data.sol_keys.WD.most_common);
-        // console.log(data.validity_checks..AT.valid);
-        // var solKeys = data.sol_keys;
-        // console.log(solKeys.AT);
-        // console.log(data.validity_checks[0]);
-        
-        console.log(featuredSol);
-        var dataCheck = data.validity_checks;
-        console.log(dataCheck.sol_keys);
-        let latestSunData;
-        for (latestSunData in dataCheck) {
-            // el.innerHTML += `<p>${data[item]}</p>`;
-            let paramsData = data[latestSunData];
-            // console.log(data[latestSunData]);
-            let param;
-            for (param in paramsData) {
-                let validCheck = paramsData[param];
-                if (validCheck.valid !== false) {
-                    var featuredSol = data.sol_keys[data.sol_keys.length - 1];
-                    document.getElementById("lastSunNumber").innerHTML = `<p>${featuredSol}</p>`;
+        var JSO = data;
+        //data/validity_checks/
+        var vc = data.validity_checks;
+        //setting last sol number
+        var sol = JSON.parse(vc.sols_checked)
+        //data/validity_checks/"last sun number"/AT/valid:"true or false"
+        var vcsATvalid = vc[sol].AT.valid;
 
-                }
-                console.log(validCheck);
-
-            }
-            //     if (item != "photos") {
-            //         let itemString = item.replace(/_/g, " ");
-            //         let itemStringCapitalized = itemString.charAt(0).toUpperCase() + itemString.slice(1);
-            //         // console.log(itemStringCapitalized);
-            //             el.innerHTML += `<p>${itemStringCapitalized}: ${data[item]}</p>`;
+        if ( vcsATvalid !== false) {
+            el.innerHTML += `
+            <p>Temperature (ºC): ${JSO[sol].AT.av}</p>
+            <p>ATM Pressure (Pa): ${JSO[sol].PRE.av}</p>
+            <p>Wind Speed (m/s): ${JSO[sol].HWS.av}</p>
+            <p>Wind Direction: ${JSO[sol].WD.most_common.compass_point}</p>
+            `;
+        } else {
+            el.innerHTML += `
+            <p>Temperature (ºC): </p>
+            <p>ATM Pressure (Pa): </p>
+            <p>Wind Speed (m/s): </p>
+            <p>Wind Direction: </p>
+            <p>NASA: Data not yet validated.</p>
+            `;
         }
     });
 }
+
+//         if (validCheck.valid === false) {
+//             //setting sol number to element
+
+//             document.getElementById("lastSunNumber").innerHTML = `
+//                     <p>Data for <strong>${featuredSol}</strong> awaiting NASA's validation</p>
+//                     <p>While we wait, scroll down and go deeper into the Red Planet!</p>
+//                     `;
+//         }
+//     });
+// }
 
 
 

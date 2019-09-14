@@ -24,8 +24,11 @@
     <button class="nameRoverButton" onclick="writeLatestToDocument(); getLatest('opportunity')" value="opportunity" id="opportunityButton">Opportunity</button>
     <button onclick="writeLatestToDocument('curiosity')">Starship</button>
     <button onclick="writeToDocument('vehicles')">Vehicles</button>
-    <button onclick="writeManifestToDocument('films')">Films</button>
-    <div id="data"></div>
+    <button onclick="writeManifestToDocument()">Films</button>
+    <div>
+        <p onload=writeWeatherToDocument()>testing</p>
+        <div id="dataWeather"></div>
+    </div>
 </body>
 <footer>
 
