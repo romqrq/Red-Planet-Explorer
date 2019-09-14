@@ -1,3 +1,7 @@
-$(document).ready(function(value) {
-    var roverName = this.value;
+$(document).ready(function() {
+
+    $("#launch-button").on("click", function() {
+        $("button").toggleClass("pressed-button");
+    });
+    
 });
