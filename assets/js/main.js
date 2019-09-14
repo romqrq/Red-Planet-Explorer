@@ -11,85 +11,57 @@
 
 
 
-
-// //Pick latest photo by rover name
-// function getLatest(cb) {
-// 	// roverName = function() {
-// 	// 	if (document.getElementById("buttonCuriosity") == true) {
-// 	// 		var e = document.getElementById("buttonCuriosity");
-// 	// 		return e.options[e.selectedIndex].value;
-// 	// 	}
-// 	// }
-// 	$('.latest-button').on('click', function() {
-// 		var e = document.getElementById(this.id);
-// 		roverName = e.options[e.selectedIndex].value;
-// 	});
-// 	console.log(roverName);
-// 	// var e = document.getElementById("buttonCuriosity");
-// 	// var roverName = e.options[e.selectedIndex].value;
-// 	var xhr = new XMLHttpRequest();
-// 	xhr.onreadystatechange = function() {
-// 		if (this.readyState == 4 && this.status == 200) {
-// 			// document.getElementById("data").innerHTML = JSON.parse(this.responseText);
-// 			console.log(JSON.parse(this.responseText));
-// 			cb(JSON.parse(this.responseText));
-// 		}
-// 	};
-// 	xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/" + roverName + "/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
-// 	xhr.send();
-
-// }
-
-// function writeLatestToDocument() {
-// 	var el = document.getElementById("data");
-// 	el.innerHTML = "";
-
-// 	getLatest(function(data) {
-// 		data = data.latest_photos;
-
-// 		data.forEach(function(item) {
-// 			el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
-// 		});
-// 	});
-// }
-
-
-
-
-
-// function getLatest(cb) {
-// 	var xhr = new XMLHttpRequest();
-
-// 	xhr.onreadystatechange = function() {
-// 		if (this.readyState == 4 && this.status == 200) {
-// 			// document.getElementById("data").innerHTML = JSON.parse(this.responseText);
-// 			console.log(JSON.parse(this.responseText));
-// 			cb(JSON.parse(this.responseText));
-// 		}
-// 	};
-
-// 	xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
-// 	xhr.send();
-// }
-
-// function writeToDocument() {
-// 	var el = document.getElementById("data");
-// 	el.innerHTML = "";
-
-// 	getLatest(function(data) {
-// 		data = data.latest_photos;
-
-// 		data.forEach(function(item) {
-// 			el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
-// 		});
-// 	});
-// }
-var xhr = new XMLHttpRequest();
 var roverName = ""; //"curiosity";
 var solNumber = ""; //"&sol=1000";
 var camName = ""; //"&camera=FHAZ";
 var pageNumber = ""; //"&page=1"
 var earthDate = ""; //"earth_date=2015-6-3"
+
+function getWeatherData(cbweather) {
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            cbweather(JSON.parse(this.responseText));
+        }
+    };
+    xhr.open("GET", "https://mars.nasa.gov/rss/api/?feed=weather&category=insight&feedtype=json&ver=1.0");
+    xhr.send();
+}
+
+function writeWeatherToDocument() {
+    var el = document.getElementById("dataWeather");
+    el.innerHTML = "";
+
+    getWeatherData(function(data) {
+        var JSO = data;
+        //data/validity_checks/
+        var vc = data.validity_checks;
+        //setting last sol number
+        var sol = JSON.parse(vc.sols_checked)
+        //data/validity_checks/"last sun number"/AT/valid:"true or false"
+        var vcsATvalid = vc[sol].AT.valid;
+
+        if ( vcsATvalid !== false) {
+            el.innerHTML += `
+            <p>Temperature (ºC): ${JSO[sol].AT.av}</p>
+            <p>ATM Pressure (Pa): ${JSO[sol].PRE.av}</p>
+            <p>Wind Speed (m/s): ${JSO[sol].HWS.av}</p>
+            <p>Wind Direction: ${JSO[sol].WD.most_common.compass_point}</p>
+            `;
+        } else {
+            el.innerHTML += `
+            <p>Temperature (ºC): </p>
+            <p>ATM Pressure (Pa): </p>
+            <p>Wind Speed (m/s): </p>
+            <p>Wind Direction: </p>
+            <p>NASA: Data not yet validated.</p>
+            `;
+        }
+    });
+}
+
 
 function getManifest(roverNameManifest, cbManifest) {
     console.log(roverNameManifest);
