@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body onload=writeWeatherToDocument()>
     <header>
         <div class="container-fluid main-screen-container">
             <!--<img class="header-bg" src="assets/images/mars-athmosphere.jpg"></img>-->
@@ -95,25 +95,11 @@
         <!--    </div>-->
         <!--</nav>-->
     </header>
-    <section class="callout">
-        <div class="container-fluid text-center align-middle">
-            <div>
-                <h3>some text text text text</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
-                    ut aliquip ex ea commodo consequat.</pp>
-                    <div>latest</div>
-                    <!--<div class="row">-->
-                    <!--    <div class="col-4">-->
-                    <!--        <button class="btn btn-warning latest-button" id="buttonCuriosity" onclick="writeLatestToDocument('curiosity')" value="curiosity">Curiosity</button>-->
-                    <!--    </div>-->
-                    <!--    <div class="col-4">-->
-                    <!--        <button class="btn btn-warning latest-button" id="buttonSpirit" onclick="writeLatestToDocument()" value="spirit">Spirit</button>-->
-                    <!--    </div>-->
-                    <!--    <div class="col-4">-->
-                    <!--        <button class="btn btn-warning latest-button" id="buttonOpportunity" onclick="writeLatestToDocument()" value="opportunity">Opportunity</button>-->
-                    <!--    </div>-->
-                    <!--</div>-->
-            </div>
+    <section>
+        <div class="container-fluid">
+            <div id="dataWeather"></div>
+        </div>
+        
     </section>
     <p>Rovers Manifest</p>
     <button onclick="writeManifestToDocument('curiosity')">Curiosity</button>
