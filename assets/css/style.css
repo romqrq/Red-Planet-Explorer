@@ -2,6 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #ffd86845;
@@ -113,6 +116,9 @@ a {
     width: 8rem;
     border-radius: 50%;
     box-shadow: inset 3px -4px 20px 7px #842600;
+}
+
+.launch-button-animation {
     animation-name: launchButtonAnimation;
     animation-duration: 2s;
     animation-delay: .3s;
@@ -121,30 +127,154 @@ a {
     animation-direction: alternate;
 }
 
+.shake-animation {
+    animation-name: shake;
+    animation-duration: 2s;
+    animation-delay: .3s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
 .btn.launch-button:hover {
     color: white;
 }
 
-/*.btn.launch-button:focus {
-    */
-    /*    background-color: #ff0018;*/
-    /*    box-shadow: inset 0px 0px 1px 4px #ce3c00;*/
-    /*}*/
-    /*.btn.launch-button:active {*/
-    /*}*/
+.btn.launch-button:focus {
+    box-shadow: inset 0 0 3px 1px black;
+}
 
-.pressed-button {
-    background-color: #d40101!important;
-    box-shadow: inset 3px -4px 20px 7px #842600!important;
+
+
+/* Weather */
+
+.weather-container {
+    padding: 2rem 0;
+    height: 45vh;
+    max-width: 100vw;
+}
+
+
+.carousel-img {
+    height: 45vh;
+}
+
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}
+
+.carousel-weather-text {
+    color: white;
+    font-family: "Jura"
+}
+
+.weather-label{
+    padding: 0;
+    text-align: right;
+}
+
+.weather-main-number {
+    padding: 0;
+}
+
+.weather-secondary-numbers {
+    padding: 0;
 }
 
 /* Launch button bg change */
 
 @keyframes launchButtonAnimation {
     from {
-        background-color: #d40101;
+        background-color: #bf0000;
     }
     to {
-        background-color: #ff0018;
+        background-color: #fa1800;
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    5% {
+        transform: translate(-1px, -2px) rotate(-0.1deg);
+    }
+
+    10% {
+        transform: translate(-3px, 0px) rotate(0.1deg);
+    }
+
+    15% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    20% {
+        transform: translate(1px, -1px) rotate(0.1deg);
+    }
+
+    25% {
+        transform: translate(-1px, 2px) rotate(-0.1deg);
+    }
+
+    30% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    35% {
+        transform: translate(3px, 1px) rotate(-0.1deg);
+    }
+
+    40% {
+        transform: translate(-1px, -1px) rotate(0.1deg);
+    }
+
+    45% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(1px, -2px) rotate(-0.1deg);
+    }
+
+    55% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-1px, -2px) rotate(-0.1deg);
+    }
+
+    65% {
+        transform: translate(-3px, 0px) rotate(0.1deg);
+    }
+
+    70% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    75% {
+        transform: translate(1px, -1px) rotate(0.1deg);
+    }
+
+    80% {
+        transform: translate(-1px, 2px) rotate(-0.1deg);
+    }
+
+    85% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    90% {
+        transform: translate(3px, 1px) rotate(-0.1deg);
+    }
+
+    95% {
+        transform: translate(-1px, -1px) rotate(0.1deg);
+    }
+
+    100% {
+        transform: translate(1px, 2px) rotate(0deg);
     }
 }
