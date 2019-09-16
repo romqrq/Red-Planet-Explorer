@@ -64,56 +64,44 @@ function writeWeatherToDocument() {
         }
 
         el.innerHTML += `
-        <div class="weather-data-display">
-            <div class="row AT-data">
-                <div class="col-3 weather-label">
-                    <p>T (ºC):</p>
-                </div>
-                <div class="col-2 weather-main-number">
-                    <p>Avg: ${Math.round(AT.av)}</p>
-                </div>
-                <div class="col-7 weather-secondary-numbers">
-                    <div class ="weather-sn-1">
-                        <p>Max: ${Math.round(AT.mx)}</p>
+        <div class="row weather-data-display">
+            <div class="col-4 AT-data">
+                <p class="weather-label">Temperature (ºC):</p>
+                <p class="weather-main-number weather-number">${Math.round(AT.av)}</p>
+                <div class ="weather-max-min">
+                    <div>
+                        <h6>High</h6><p class="weather-number-small">${Math.round(AT.mx)}</p>
                     </div>
-                    <div class ="weather-sn-2">
-                        <p>Min: ${Math.round(AT.mn)}</p>
+                    <div>
+                        <h6>Low</h6><p class="weather-number-small">${Math.round(AT.mn)}</p>
                     </div>
                 </div>
             </div>
-            <div class="row PRE-data">
-                <div class="col-3 weather-label ">
-                    <p>P (Pa):</p>
-                </div>
-                <div class="col-2 weather-main-number>
-                    <p>Avg:${Math.round(PRE.av)}</p>
-                </div>
-                <div class="col-7 weather-secondary-numbers>
-                    <div class ="weather-sn-1">
-                        <p>Max: ${Math.round(PRE.mx)}</p>
+            <div class="col-4 AT-data">
+                <p class="weather-label">Pressure (Pa):</p>
+                <p class="weather-main-number weather-number">${(PRE.av/1000).toPrecision(1)}</p>
+                <div class ="weather-max-min">
+                    <div>
+                        <h6>High</h6><p class="weather-number-small">${(PRE.mx/1000).toPrecision(1)}</p>
                     </div>
-                    <div class ="weather-sn-2">
-                        <p>Min: ${Math.round(PRE.mn)}</p>
+                    <div>
+                        <h6>Low</h6><p class="weather-number-small">${(PRE.mn/1000).toPrecision(1)}</p>
                     </div>
                 </div>
             </div>
-            <div class="row HWS-data">
-                <div class="col-3 weather-label">
-                    <p>Wind (ºm/s):</p>
+            <div class="col-4 AT-data">
+                <p class="weather-label">Wind<br>(m/s):</p>
+                <div class="wind-direction">
+                <p class="weather-main-number weather-number">${Math.round(HWS.av)}</p>
+                <h5>${WD}</h5>
                 </div>
-                <div class="col-2 weather-main-number>
-                    <p>Avg: ${Math.round(HWS.av)}</p>
-                </div>
-                <div class="col-2 weather-secondary-numbers>
-                    <div class ="weather-sn-1">
-                        <p>Max: ${Math.round(HWS.mx)}</p>
+                <div class ="weather-max-min">
+                    <div>
+                        <h6>High</h6><p class="weather-number-small">${Math.round(HWS.mx)}</p>
                     </div>
-                    <div class ="weather-sn-2">
-                        <p>Min: ${Math.round(HWS.mn)}</p>
-                    </div>
-                </div>
-                <div class="col-5 weather-main-number>
-                    <p>${WD}</p>
+                    <div>
+                        <h6>Low</h6><p class="weather-number-small">${Math.round(HWS.mn)}</p>
+                    </div>    
                 </div>
             </div>
         </div>`;
