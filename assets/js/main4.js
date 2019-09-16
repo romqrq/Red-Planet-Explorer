@@ -1,3 +1,43 @@
+$(document).ready(function() {
+    $("#launch-button").click(function() {
+        $("#test").addClass("shake-animation");
+        setTimeout(scrolldown, 3000);
+    });
+
+    function scrolldown() {
+        var images = document.getElementById("image");
+        images.scrollIntoView();
+    }
+});
+
+
+// $("#button").click(function() {
+//     $([document.documentElement, document.body]).animate({
+//         scrollTop: $("#elementtoScrollToID").offset().top
+//     }, 2000);
+// });
+// // $("#launch-button").click(function() {
+// //     this.addClass("shake-animation");
+// //     setTimeout(window.scrollBy(0, 100));
+// });
+
+// $("button").click(function(){
+//   $("p:first").addClass("intro");
+// });
+
+// function launch(){
+//     document.getElementById("test").addClass("shake-animation");
+// }
+
+// function scroll() {
+
+//     window.scrollBy(0, 900)
+// }
+
+// setTimeout(scroll, 3000);
+
+
+
 // var datenow = new Date;
 // console.log(datenow);
 
@@ -30,14 +70,15 @@ function writeWeatherToDocument() {
         //data/validity_checks/"last sun number"/AT/valid:"true or false"
         var vcsATvalid = vc[sol].AT.valid;
 
-        if ( vcsATvalid !== false) {
+        if (vcsATvalid !== false) {
             el.innerHTML += `
             <p>Temperature (ºC): ${JSO[sol].AT.av}</p>
             <p>ATM Pressure (Pa): ${JSO[sol].PRE.av}</p>
             <p>Wind Speed (m/s): ${JSO[sol].HWS.av}</p>
             <p>Wind Direction: ${JSO[sol].WD.most_common.compass_point}</p>
             `;
-        } else {
+        }
+        else {
             el.innerHTML += `
             <p>Temperature (ºC): </p>
             <p>ATM Pressure (Pa): </p>
