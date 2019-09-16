@@ -64,9 +64,8 @@ function writeWeatherToDocument() {
         }
 
         el.innerHTML += `
-        <div class="row weather-data-display">
             <div class="col-4 AT-data">
-                <p class="weather-label">Temperature (ºC):</p>
+                <p class="weather-label">Temperature<br>(ºC):</p>
                 <p class="weather-main-number weather-number">${Math.round(AT.av)}</p>
                 <div class ="weather-max-min">
                     <div>
@@ -78,7 +77,7 @@ function writeWeatherToDocument() {
                 </div>
             </div>
             <div class="col-4 AT-data">
-                <p class="weather-label">Pressure (Pa):</p>
+                <p class="weather-label">Pressure<br>(Pa):</p>
                 <p class="weather-main-number weather-number">${(PRE.av/1000).toPrecision(1)}</p>
                 <div class ="weather-max-min">
                     <div>
@@ -103,8 +102,7 @@ function writeWeatherToDocument() {
                         <h6>Low</h6><p class="weather-number-small">${Math.round(HWS.mn)}</p>
                     </div>    
                 </div>
-            </div>
-        </div>`;
+            </div>`;
     });
 }
 
