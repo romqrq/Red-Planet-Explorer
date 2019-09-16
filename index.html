@@ -23,7 +23,6 @@
 <body onload=writeWeatherToDocument()>
     <header>
         <div class="container-fluid main-screen-container">
-            <!--<img class="header-bg" src="assets/images/mars-athmosphere.jpg"></img>-->
             <div class="row social-row">
                 <div class="col-12 social-col">
                     <i class="fab fa-facebook-f round-border text-shadow"></i>
@@ -51,55 +50,35 @@
             </div>
             <div class="launch-button-div">
                 <div class="launch-button-border">
-                    <button class="btn launch-button text-shadow" data-toggle="button">Launch!</button>
+                    <button class="btn launch-button text-shadow" id="launch-button">Launch!</button>
                 </div>
             </div>
-            <!--<div class="row">-->
-            <!--    <div class=navbar>-->
-            <!--        <ul class="navbar-nav">-->
-            <!--            <li class="nav-item">-->
-            <!--                <a href="#" class="nav-link">menu button 1</a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a href="#" class="nav-link">menu button 2</a>-->
-            <!--            </li>-->
-            <!--            <li class="nav-item">-->
-            <!--                <a href="#" class="nav-link">menu button 3</a>-->
-            <!--            </li>-->
-            <!--        </ul>-->
-            <!--    </div>-->
-            <!--</div>-->
         </div>
-        <!--<nav class="navbar navbar-expand-md navbar-dark bg-blue">-->
-        <!-- Brand -->
-        <!--    <a class="brand-text" href="#"><span class="NE-text">RW</span> | Red Weather</a>-->
-
-        <!-- Toggler/collapsibe Button -->
-        <!--    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">-->
-        <!--        <span class="navbar-toggler-icon"></span>-->
-        <!--    </button>-->
-
-        <!-- Navbar links -->
-        <!--    <div class="collapse navbar-collapse" id="collapsibleNavbar">-->
-        <!--        <ul class="navbar-nav">-->
-        <!--            <li class="nav-item">-->
-        <!--                <a class="nav-link" href="#">Link</a>-->
-        <!--            </li>-->
-        <!--            <li class="nav-item">-->
-        <!--                <a class="nav-link" href="#">Link</a>-->
-        <!--            </li>-->
-        <!--            <li class="nav-item">-->
-        <!--                <a class="nav-link" href="#">Link</a>-->
-        <!--            </li>-->
-        <!--        </ul>-->
-        <!--    </div>-->
-        <!--</nav>-->
     </header>
-    <section>
-        <div class="container-fluid">
-            <div id="dataWeather"></div>
+    <section id="weather-section">
+        <div class="container-fluid weather-container">
+            <div class="carousel slide carousel-fade" data-ride="carousel" id="weather-carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/carousel/curiosity_sunset.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/sand_storm.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-caption d-md-block">
+                    <div class="carousel-weather-text" id="dataWeather"></div>
+                </div>
+            </div>
+
         </div>
-        
+
     </section>
     <p>Rovers Manifest</p>
     <button onclick="writeManifestToDocument('curiosity')">Curiosity</button>

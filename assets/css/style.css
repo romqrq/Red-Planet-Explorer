@@ -125,17 +125,18 @@ a {
     color: white;
 }
 
-.btn.launch-button:focus {
-    background-color: #ff0018;
-    box-shadow: inset 0px 0px 1px 4px #ce3c00;
-}
+/*.btn.launch-button:focus {
+    */
+    /*    background-color: #ff0018;*/
+    /*    box-shadow: inset 0px 0px 1px 4px #ce3c00;*/
+    /*}*/
+    /*.btn.launch-button:active {*/
+    /*}*/
 
-.btn.launch-button:active {
+.pressed-button {
     background-color: #d40101!important;
     box-shadow: inset 3px -4px 20px 7px #842600!important;
 }
-
-
 
 /* Launch button bg change */
 
