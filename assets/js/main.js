@@ -36,6 +36,7 @@ function writeWeatherToDocument() {
 
     getWeatherData(function(data) {
         var JSO = data;
+        console.log(JSO);
         //data/validity_checks/
         var vc = data.validity_checks;
         //setting last sol number
@@ -49,21 +50,27 @@ function writeWeatherToDocument() {
 
         //stting up data for display
         if (vcsATvalid) {
-            var DLVS = JSO[sol];
-            var AT = JSO[sol].AT;
-            var PRE = JSO[sol].PRE;
-            var HWS = JSO[sol].HWS;
-            var WD = JSO[sol].WD.most_common.compass_point
+            var SOLnum = sol;
         }
         else if (vcSLsATvalid) {
-            var DLVS = JSO[SLsol];
-            var AT = JSO[SLsol].AT;
-            var PRE = JSO[SLsol].PRE;
-            var HWS = JSO[SLsol].HWS;
-            var WD = JSO[SLsol].WD.most_common.compass_point;
+            var SOLnum = SLsol;
         }
-
+        var DLVS = JSO[SOLnum];
+        var AT = JSO[SOLnum].AT;
+        var PRE = JSO[SOLnum].PRE;
+        var HWS = JSO[SOLnum].HWS;
+        var WD = JSO[SOLnum].WD.most_common.compass_point;
+        var LUTC = JSO[SOLnum].Last_UTC;
+        var LUTCyear = LUTC.substr(0, 4);
+        var LUTCmonth = LUTC.substr(5, 2);
+        var LUTCday = LUTC.substr(8, 2);
         el.innerHTML += `
+        <div class="weather-sun-date">
+            <p class="weather-number">Sol ${SOLnum}</p>
+            <p class="weather-label">Last valid data: ${LUTCday}/${LUTCmonth}/${LUTCyear}</p>
+        </div>
+        <hr class="hr-divider">
+        <div class="row">    
             <div class="col-4 AT-data">
                 <p class="weather-label">Temperature<br>(ºC):</p>
                 <p class="weather-main-number weather-number">${Math.round(AT.av)}</p>
@@ -77,14 +84,14 @@ function writeWeatherToDocument() {
                 </div>
             </div>
             <div class="col-4 AT-data">
-                <p class="weather-label">Pressure<br>(Pa):</p>
-                <p class="weather-main-number weather-number">${(PRE.av/1000).toPrecision(1)}</p>
+                <p class="weather-label">Pressure<br>(atm ÷ 100):</p>
+                <p class="weather-main-number weather-number">${((PRE.av/101325)*100).toPrecision(1)}</p>
                 <div class ="weather-max-min">
                     <div>
-                        <h6>High</h6><p class="weather-number-small">${(PRE.mx/1000).toPrecision(1)}</p>
+                        <h6>High</h6><p class="weather-number-small">${((PRE.mx/101325)*100).toPrecision(1)}</p>
                     </div>
                     <div>
-                        <h6>Low</h6><p class="weather-number-small">${(PRE.mn/1000).toPrecision(1)}</p>
+                        <h6>Low</h6><p class="weather-number-small">${((PRE.mn/101325)*100).toPrecision(1)}</p>
                     </div>
                 </div>
             </div>
@@ -102,7 +109,8 @@ function writeWeatherToDocument() {
                         <h6>Low</h6><p class="weather-number-small">${Math.round(HWS.mn)}</p>
                     </div>    
                 </div>
-            </div>`;
+            </div>
+        </div>`;
     });
 }
 
