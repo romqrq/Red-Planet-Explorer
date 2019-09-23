@@ -17,6 +17,9 @@ var camName = ""; //"&camera=FHAZ";
 var pageNumber = ""; //"&page=1"
 var earthDate = ""; //"earth_date=2015-6-3"
 
+
+//Information for the weather section
+
 function getWeatherData(cbweather) {
 
     var xhr = new XMLHttpRequest();
@@ -36,7 +39,6 @@ function writeWeatherToDocument() {
 
     getWeatherData(function(data) {
         var JSO = data;
-        console.log(JSO);
         //data/validity_checks/
         var vc = data.validity_checks;
         //setting last sol number
@@ -48,7 +50,7 @@ function writeWeatherToDocument() {
         //data/validity_checks/"SECOND LAST sun number"/AT/valid:"true or false"
         var vcSLsATvalid = vc[SLsol].AT.valid;
 
-        //stting up data for display
+        //Setting sol number to use as reference to drill down to the other variables
         if (vcsATvalid) {
             var SOLnum = sol;
         }
@@ -115,15 +117,14 @@ function writeWeatherToDocument() {
 }
 
 
+//Information about Rovers
+
 function getManifest(roverNameManifest, cbManifest) {
-    console.log(roverNameManifest);
 
     var xhr = new XMLHttpRequest();
 
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // document.getElementById("data").innerHTML = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
             cbManifest(JSON.parse(this.responseText));
         }
     };
@@ -137,16 +138,29 @@ function writeManifestToDocument(roverNameManifest) {
 
     getManifest(roverNameManifest, function(data) {
         data = data.photo_manifest;
+        console.log(data);
+        var RovNameManifest = data.name;
+        var RovLandingManifest = data.landing_date;
+        var RovLaunchManifest = data.launch_date;
+        var RovStatusManifest = data.status;
+        var RovMaxSolManifest = data.max_sol;
+        var RovTotalPhotosManifest = data.total_photos;
+        //Breaking down dates
+        var RLchYear = data.launch_date.substr(0, 4);
+        var RLchMonth = data.launch_date.substr(5, 2);
+        var RLchDay = data.launch_date.substr(8, 2);
+        
+        var RLndYear = data.landing_date.substr(0, 4);
+        var RLndMonth = data.landing_date.substr(5, 2);
+        var RLndDay = data.landing_date.substr(8, 2);
 
-        let item;
-        for (item in data) {
-            if (item != "photos") {
-                let itemString = item.replace(/_/g, " ");
-                let itemStringCapitalized = itemString.charAt(0).toUpperCase() + itemString.slice(1);
-                console.log(itemStringCapitalized);
-                el.innerHTML += `<p>${itemStringCapitalized}: ${data[item]}</p>`;
-            }
-        }
+        el.innerHTML = ` 
+        <p>Name: ${data.name}</p>
+        <p>Status: ${data.status}</p>
+        <p>Launch Date: ${RLchDay}/${RLchMonth}/${RLchYear}</p>
+        <p>Landing Date: ${RLndDay}/${RLndMonth}/${RLndYear}</p>
+        <p>Max Sol: ${data.max_sol}</p>
+        `
     });
 }
 
