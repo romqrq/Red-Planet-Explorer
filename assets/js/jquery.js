@@ -6,7 +6,7 @@ $(document).ready(function() {
     });
 
     function scrolldown() {
-        var elTarget = document.getElementById("weather-carousel");
+        var elTarget = document.getElementById("weather-section");
         elTarget.scrollIntoView();
     }
 });

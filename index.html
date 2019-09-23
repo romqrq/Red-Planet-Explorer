@@ -49,95 +49,154 @@
             </div>
         </div>
     </header>
-    <section id="weather-section">
-        <div class="weather-header">
-            <div class="header-console">
-                <div class="flash-light-border">
-                    <div class="flash-light-red"></div>
+    <section class="content-section" id="weather-section">
+        <div class="container-fluid dark-mask">
+            <div class="section-heading container-fluid">
+                <!--<div class="row ">-->
+                <!--<div class="col-3 heading-console">-->
+                <!--    <div class="bars-meter-heading">-->
+                <!--        <div class="meter-text">charging...</div>-->
+                <!--        <div class="meter-bar">-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--            <div class="meter-cell"></div>-->
+                <!--        </div>-->
+                <!--    </div>-->
+                <!--</div>-->
+                <div class="heading-text">
+                    <h2 class="text-shadow">Mars Weather</h2>
                 </div>
-                <h2>Mars Weather</h2>
+                <hr class="hr-divider">
+                <!--<div class="col-2 flash-lights-heading">-->
+                <!--    <div class="flash-light-border">-->
+                <!--        <div class="flash-light-green"></div>-->
+                <!--    </div>-->
+                <!--    <div class="flash-light-border">-->
+                <!--        <div class="flash-light-red"></div>-->
+                <!--    </div>-->
+                <!--</div>-->
+                <!--</div>-->
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
-                aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et</p>
-        </div>
-        <div class="container-fluid weather-container">
-            <div class="carousel slide carousel-fade h-100" data-ride="carousel" id="weather-carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="assets/images/carousel/curiosity_sunset.jpg" class="d-block carousel-img" alt="...">
+            <div class="container-fluid general-text">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et</p>
+            </div>
+            <div class="container-fluid weather-container">
+                <div class="carousel slide carousel-fade h-100" data-ride="carousel" id="weather-carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/carousel/curiosity_sunset.jpg" class="d-block carousel-img" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/carousel/sand_storm.jpg" class="d-block carousel-img" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/carousel/sand_storm.jpg" class="d-block carousel-img" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
-                    </div>
+                    <div class="carousel-caption d-md-block" id="dataWeather"></div>
                 </div>
-                <div class="carousel-caption d-md-block" id="dataWeather"></div>
             </div>
-
         </div>
-
     </section>
-    <p>Rovers Manifest</p>
-    <button onclick="writeManifestToDocument('curiosity')">Curiosity</button>
-    <button onclick="writeManifestToDocument('opportunity')">Opportunity</button>
-    <button onclick="writeManifestToDocument('spirit')">Spirit</button>
-    <div id="dataManifest"></div>
-    <hr>
-    <p>Rover Latest Pictures</p>
-    <div class="input-group mb-3">
-        <select class="custom-select" id="inputLatestRoverPhoto">
-            <option selected>Choose...</option>
-            <option value="curiosity">Curiosity</option>
-            <option value="spirit">Spirit</option>
-            <option value="opportunity">Opportunity</option>
-        </select>
-        <button onclick="writeLatestToDocument()">Options</button>
-    </div>
-    <hr>
-    <div class=text-center>different parameters</div>
-    <div class="input-group mb-3">
-        <div class="input-group mb-3">
-            <select class="custom-select" id="inputRoverName">
-            <option selected>Choose...</option>
-            <option value="curiosity">Curiosity</option>
-            <option value="spirit">Spirit</option>
-            <option value="opportunity">Opportunity</option>
-        </select>
-            <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
-            <!--    <select class="custom-select" id="inputSolNumber">-->
-            <!--  <option selected>Choose...</option>-->
-            <!--  <option value="500">500</option>-->
-            <!--  <option value="1000">1000</option>-->
-            <!--  <option value="1500">1500</option>-->
-            <!--</select>-->
-            <select class="custom-select" id="inputCamName">
-          <option selected>Choose...</option>
-          <option value="fhaz">FHAZ</option>
-          <option value="rhaz">RHAZ</option>
-          <option value="mast">Mast</option>
-        </select>
-            <button onclick="writeParamsToDocument()">Options</button>
+    <section class="content-section dark-bg">
+        <div class="container-fluid dark-mask">
+            <div class="section-heading container-fluid">
+                <div class="heading-text">
+                    <h2>Rovers Manifest</h2>
+                </div>
+            </div>
+            <hr class="hr-divider">
+            <div class="container-fluid general-text">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et</p>
+            </div>
+            <div class="container-fluid manifest-data">
+                <button class="btn general-button" onclick="writeManifestToDocument('curiosity')">Curiosity</button>
+                <button class="btn general-button" onclick="writeManifestToDocument('opportunity')">Opportunity</button>
+                <button class="btn general-button" onclick="writeManifestToDocument('spirit')">Spirit</button>
+                <div class="rovers-manifest-data" id="dataManifest"></div>
+            </div>
         </div>
+    </section>
+    <section class="content-section">
+        <div class="container-fluid dark-mask">
+            <div class="section-heading container-fluid">
+                <div class="heading-text">
+                    <h2>Latest Pictures</h2>
+                </div>
+            </div>
+            <hr class="hr-divider">
+            <div class="container-fluid general-text">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et</p>
+            </div>
+            <div class="container-fluid">
+                <div class="input-group mb-3">
+                    <select class="custom-select" id="inputLatestRoverPhoto">
+                    <option selected>Choose...</option>
+                    <option value="curiosity">Curiosity</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="opportunity">Opportunity</option>
+                </select>
+                    <button class="btn general-button" onclick="writeLatestToDocument()">Options</button>
+                </div>
+                <div id="data"></div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section dark-bg">
+        <div class="container-fluid dark-mask">
+            <div class="section-heading container-fluid">
+                <div class="heading-text">
+                    <h2>Gallery Explorer</h2>
+                </div>
+            </div>
+            <hr class="hr-divider">
+            <div class="container-fluid">
+                <div class="input-group mb-3">
+                    <div class="input-group mb-3">
+                        <select class="custom-select" id="inputRoverName">
+                    <option selected>Choose...</option>
+                    <option value="curiosity">Curiosity</option>
+                    <option value="spirit">Spirit</option>
+                    <option value="opportunity">Opportunity</option>
+                </select>
+                        <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
+                        <select class="custom-select" id="inputCamName">
+                    <option selected>Choose...</option>
+                    <option value="fhaz">FHAZ</option>
+                    <option value="rhaz">RHAZ</option>
+                    <option value="mast">Mast</option>
+                </select>
+                        <button class="btn general-button" onclick="writeParamsToDocument()">Options</button>
+                    </div>
+                </div>
+                <div id="data2"></div>
+            </div>
+        </div>
+    </section>
 
 
-        <div id="data"></div>
-        <div id="data2"></div>
-        <footer>
 
-        </footer>
-        <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery.min.js"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.js" crossorigin="anonymous"></script>
-        <script type="text/javascript" src="assets/js/jquery.js"></script>
-        <script type="text/javascript" src="assets/js/main.js"></script>
+    <footer>
+
+    </footer>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 
 
