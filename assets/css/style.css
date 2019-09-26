@@ -345,6 +345,10 @@ a {
     overflow: hidden;
     border-radius: 0.5rem;
     box-shadow: 0 0 8px 2px black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
 }
 
 
@@ -370,6 +374,7 @@ a {
 }
 
 .weather-label {
+    font-family: "Jura", sans-serif;
     font-size: 1rem;
     font-weight: 700;
     padding: 0;
@@ -427,31 +432,100 @@ a {
 
 /* Rovers Manifest */
 
-.manifest-data {
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
+.card {
+    border: none;
+    background-color: transparent;
 }
 
-.manifest-data button {
-    margin-bottom: 0.25rem;
-}
-
-.rovers-manifest-data {
-    text-align: left;
-    margin-top: 1rem;
+.btn {
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
 }
 
 
+/*.manifest-data {*/
+
+/*    padding: 0;*/
+
+/*    display: flex;*/
+
+/*    flex-direction: column;*/
+
+/*}*/
+
+/*.manifest-data button {*/
+
+/*    margin: 0 1rem 0.25rem;*/
+
+/*}*/
+
+/*.rovers-manifest-data {*/
+
+/*    text-align: left;*/
+
+/*    margin-top: 1rem;*/
+
+/*    min-height: 20rem;*/
+
+/*    background-position: center;*/
+
+/*    background-repeat: no-repeat;*/
+
+/*    background-size: cover;*/
+
+/*    background-color: black;*/
+
+/*}*/
+
+/*.manifest-text {*/
+
+/*    padding: 9rem 1rem 0;*/
+
+/*    height: 100%;*/
+
+/*    background-color: #00000066;*/
+
+/*}*/
+
+/*.manifest-rover-facts {*/
+
+/*}*/
+
+/* Gallery */
+
+.table-box {
+    overflow: scroll;
+    border-radius: 0.5rem;
+}
+
+.tr-sol {
+    background-color: #e5530069;
+}
+
+.table {
+    background-color: #ffffff63;
+    margin: 0;
+}
 
 
+/* Modal */
 
+button.close {
+    padding: 0 1rem;
+    text-align: right;
+}
 
+.modal-content {
+    background-color: transparent;
+    border: none;
+}
 
-
-
-
-
+.img-thumbnail {
+    background-color: transparent;
+    border: 1px solid #e55300;
+    max-width: 25%;
+}
 
 
 
