@@ -119,52 +119,72 @@ function writeWeatherToDocument() {
 
 //Information about Rovers
 
-function getManifest(roverNameManifest, cbManifest) {
+// function getManifest(roverNameManifest, cbManifest) {
 
-    var xhr = new XMLHttpRequest();
+//     var xhr = new XMLHttpRequest();
 
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            cbManifest(JSON.parse(this.responseText));
-        }
-    };
-    xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/manifests/" + roverNameManifest + "?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
-    xhr.send();
-}
+//     xhr.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//             cbManifest(JSON.parse(this.responseText));
+//             console.log(cbManifest);
+//         }
+//     };
+//     xhr.open("GET", "https://api.nasa.gov/mars-photos/api/v1/manifests/" + roverNameManifest + "?api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b&feedtype=json&ver=1.0");
+//     xhr.send();
+// }
 
-function writeManifestToDocument(roverNameManifest) {
-    var el = document.getElementById("dataManifest");
-    el.innerHTML = "";
+// function writeManifestToDocument(roverNameManifest) {
+//     var el = document.getElementById("dataManifest");
+//     el.innerHTML = "";
 
-    getManifest(roverNameManifest, function(data) {
-        data = data.photo_manifest;
-        console.log(data);
-        var RovNameManifest = data.name;
-        var RovLandingManifest = data.landing_date;
-        var RovLaunchManifest = data.launch_date;
-        var RovStatusManifest = data.status;
-        var RovMaxSolManifest = data.max_sol;
-        var RovTotalPhotosManifest = data.total_photos;
-        //Breaking down dates
-        var RLchYear = data.launch_date.substr(0, 4);
-        var RLchMonth = data.launch_date.substr(5, 2);
-        var RLchDay = data.launch_date.substr(8, 2);
-        
-        var RLndYear = data.landing_date.substr(0, 4);
-        var RLndMonth = data.landing_date.substr(5, 2);
-        var RLndDay = data.landing_date.substr(8, 2);
+//     var el2 = document.getElementById("curiosityLastSun");
+//     el2.innerHTML = "";
 
-        el.innerHTML = ` 
-        <p>Name: ${data.name}</p>
-        <p>Status: ${data.status}</p>
-        <p>Launch Date: ${RLchDay}/${RLchMonth}/${RLchYear}</p>
-        <p>Landing Date: ${RLndDay}/${RLndMonth}/${RLndYear}</p>
-        <p>Max Sol: ${data.max_sol}</p>
-        `
-    });
-}
+//     getManifest(roverNameManifest, function(data) {
+//         data = data.photo_manifest;
+//         // console.log(data);
+//         // var RovNameManifest = data.name;
+//         // var RovLandingManifest = data.landing_date;
+//         // var RovLaunchManifest = data.launch_date;
+//         // var RovStatusManifest = data.status;
+//         // var RovMaxSolManifest = data.max_sol;
+//         // var RovTotalPhotosManifest = data.total_photos;
+//         //Breaking down dates
+//         var RLchYear = data.launch_date.substr(0, 4);
+//         var RLchMonth = data.launch_date.substr(5, 2);
+//         var RLchDay = data.launch_date.substr(8, 2);
+
+//         var RLndYear = data.landing_date.substr(0, 4);
+//         var RLndMonth = data.landing_date.substr(5, 2);
+//         var RLndDay = data.landing_date.substr(8, 2);
+
+//         //Setting up the background image link
+//         var imgbox = document.getElementById("dataManifest");
+//         imgbox.style.backgroundImage = `URL('assets/images/${data.name}.jpg')`;
+//         imgbox.style.height = "45vh";
+
+
+
+
+//         el.innerHTML = ` 
+//         <div class="manifest-text">
+//             <p class="weather-label">Name: ${data.name}</p>
+//             <p class="weather-label">Status: ${data.status}</p>
+//             <p class="weather-label">Launch Date: ${RLchDay}/${RLchMonth}/${RLchYear}</p>
+//             <p class="weather-label">Landing Date: ${RLndDay}/${RLndMonth}/${RLndYear}</p>
+//             <p class="weather-label">Max Sol: ${data.max_sol}</p>
+//             <p class="weather-label">Total Photos: ${data.total_photos}</p>
+//         </div>    
+//         `;
+
+//         // el2.innerHTML = `document.${data.name}.html.innerHTML`;
+
+
+//     });
+// }
 
 function getParamsData(cb) {
+
     var rvn = document.getElementById("inputRoverName");
     var roverName = rvn.options[rvn.selectedIndex].value;
 
@@ -203,11 +223,40 @@ function writeParamsToDocument() {
         data = data.photos;
 
         data.forEach(function(item) {
-            // for (item in data) {
-            el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
+            // el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal()">`;
+            el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
         });
     });
 }
+
+function openModal(imageID, imageSRC) {
+    var modalContent = document.getElementById("modalBody");
+    modalContent.innerHTML = "";
+
+    modalContent.innerHTML = `
+        <img class="modal-content" src="${imageSRC}" id="${imageID}">`;
+}
+
+// function modalOpener(id) {
+//     var GalModal = document.getElementById("galleryModal")
+//     GalModal.innerHTML = "";
+
+
+
+
+//     `<div id="myModal" class="modal">
+//   <span class="close">&times;</span>
+//   <img class="modal-content" id="${item.id}">
+
+//   <!-- Modal Caption (Image Text) -->
+//   <div id="${item.earth_date}"></div>
+// </div>`;
+
+// };
+
+
+
+
 
 
 function getLatest(cbLatest) {
@@ -237,7 +286,24 @@ function writeLatestToDocument() {
         data = data.latest_photos;
 
         data.forEach(function(item) {
-            el.innerHTML += `<img src=${item.img_src} height=150 width=150>`;
+            el.innerHTML += `<img src=${item.img_src} class="img-thumbnail">`;
         });
     });
 }
+
+
+//DESKTOP
+
+// // Scroll top button
+// function topFunction() {
+//   document.body.scrollTop = 0; // For Safari
+//   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+// }
+
+// // Intechanging pages
+// function openAbout() {
+//   document.getElementById("sidenav-about").style.width = "47vw";
+//   document.getElementById("sidenav-resume").style.width = "0";
+//   document.getElementById("sidenav-portfolio").style.width = "0";
+//   document.getElementById("sidenav-contact").style.width = "0";
+// }
