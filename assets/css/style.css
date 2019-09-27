@@ -508,6 +508,29 @@ a {
     margin: 0;
 }
 
+/*VIDEO Gallery*/
+.gallery-video{
+    height: 40vw;
+    width: 100%;
+}
+
+
+/*EXPLORE*/
+
+.rover-explorer {
+    height: 65vh;
+    width: 100%;
+}
+
+.rover-desktop {
+    height: 78vh;
+    width: 45vw;
+}
+
+
+
+
+
 
 /* Modal */
 
