@@ -223,7 +223,6 @@ function writeParamsToDocument() {
         data = data.photos;
 
         data.forEach(function(item) {
-            // el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal()">`;
             el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
         });
     });
