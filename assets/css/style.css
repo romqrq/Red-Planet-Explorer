@@ -227,7 +227,7 @@ a {
     height: 100vh;
     max-width: 100vw;
     padding: 1rem;
-    background-image: url("../images/mars-athmosphere.jpg");
+    background-image: url("../images/mars-atmosphere.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -509,9 +509,104 @@ a {
 }
 
 /*VIDEO Gallery*/
-.gallery-video{
+
+.gallery-video {
     height: 40vw;
     width: 100%;
+}
+
+/*.vg-earth-stage {*/
+/*    background-image: url(../images/earth.jpg);*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
+.vg-earth-button {
+    background-image: url(../images/earth.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*.vg-travel-stage {*/
+/*     background-image: url(../images/land-site.jpg);*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: cover;*/
+/*}*/
+
+.vg-travel-button {
+    background-image: url(../images/spaceship.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-general-button {
+    border: none;
+    height: 30vw;
+    border-radius: 0.5rem;
+    width: 100%;
+    border: 5px solid #e55300;
+    background-color: transparent;
+
+}
+
+.vg-mars-stage {
+    padding: 0 1rem;
+    background-image: url(../images/mars_atmosphere.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button1 {
+    background-image: url(../images/capsule-approach.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button2 {
+    background-image: url(../images/landing.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button3 {
+    background-image: url(../images/communication.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button4 {
+    background-image: url(../images/spirit.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button5 {
+    background-image: url(../images/molecule.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vg-button6 {
+    background-image: url(../images/mars-atmosphere.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.vg-mars-stage img {
+    overflow: hidden;
+    max-width: 100%
 }
 
 
