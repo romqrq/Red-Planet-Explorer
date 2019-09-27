@@ -415,35 +415,38 @@
                 </div>
             </div>
             <hr class="hr-divider">
+            <div>
+                <p>Getting to Mars was an enormous challenge that required much planning.</p>
+                <p>Here are some nicely short videos from NASA explaining many of the different steps on our Mars Exploration.</p>
+            </div>
             <div class="container-fluid general-text vg-container">
-                <div class="vg-earth-stage">
-                    <button class="vg-general-button vg-earth-button">
-                    <!--<img src="assets/images/earth.jpg">-->
-                    </button>
-                </div>
-                <div class="vg-travel-stage">
-                    <button class="vg-general-button vg-travel-button">
-                    <!--<img src="assets/images/spaceship.jpg">-->
-                    </button>
-                </div>
                 <div class="row vg-mars-stage">
+
+                    <button class="col-12 col-md-6 vg-general-button vg-earth-button">
+                    Coosing the landing site
+                    </button>
+
+                    <button class="col-12 col-md-6 vg-general-button vg-travel-button">
+                    Getting to Mars
+                    </button>
+
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button1">
-                        <!--<img src="assets/images/capsule-approach.jpeg">-->
+                        How to land
                     </button>
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button2">
-                        <!--<img src="assets/images/landing.jpg">-->
+                        Landing Curiosity
                     </button>
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button3">
-                    <!--<img class="col-sm-6" src="assets/images/communication.jpg">-->
+                    Calling home
                     </button>
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button4">
-                    <!--<img class="col-sm-6 col-md-4 col-lg-2" src="assets/images/curiosity.jpg">-->
+                    Hover Drive
                     </button>
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button5">
-                    <!--<img class="col-6 col-md-4 col-lg-2" src="assets/images/molecule.png">-->
+                    Looking for Organics
                     </button>
                     <button class="col-6 col-md-4 col-lg-2 vg-general-button vg-button6">
-                    <!--<img class="col-6 col-md-4 col-lg-2" src="assets/images/mars-atmosphere">-->
+                    Is Mars Red?
                     </button>
                 </div>
                 <!--<div>-->
@@ -493,7 +496,8 @@
             </div>
         </div>
     </section>
-    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- modal image Gallery -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="GalleryImage" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -503,9 +507,121 @@
             <div class="modal-body" id=modalBody></div>
         </div>
     </div>
+
+    <!-- Video Gallery Modals -->
+
+    <!-- Landing site-->
+    <div class="modal fade" id="VGM-landing-site" tabindex="-1" role="dialog" aria-labelledby="ChoosingLandingSite" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/BsB1Ecczghc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </div>
 
+    <!-- Getting to Mars-->
+    <div class="modal fade" id="VGM-getting-to-mars" tabindex="-1" role="dialog" aria-labelledby="GettingToMars" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/gYJsMBabjVY?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
 
+ <!-- How to land-->
+    <div class="modal fade" id="VGM-how-to-land" tabindex="-1" role="dialog" aria-labelledby="HowToLand" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/cA8ar8vwpTs?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+ <!-- Landing curiosity-->
+    <div class="modal fade" id="VGM-landing-curiosity" tabindex="-1" role="dialog" aria-labelledby="LandingCuriosity" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/hVTqEvPdNmc?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+<!-- Communicating from Mars-->
+    <div class="modal fade" id="VGM-com-from-mars" tabindex="-1" role="dialog" aria-labelledby="CommunicatingFromMars" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/2t7p08hcQzs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+<!-- Rover Drive-->
+    <div class="modal fade" id="VGM-rover-drive" tabindex="-1" role="dialog" aria-labelledby="RoverDriveMars" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/e6vzjNkDB5k?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Looking for organics-->
+    <div class="modal fade" id="VGM-looking-for-organics" tabindex="-1" role="dialog" aria-labelledby="LookinForOrganics" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/-5XMH3KmUCg?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Mars really red-->
+    <div class="modal fade" id="VGM-mars-red" tabindex="-1" role="dialog" aria-labelledby="IsMarsRed?" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <iframe class="gallery-video" src="https://www.youtube.com/embed/aXhqNUx2EsE?list=PL9TFrgFq7557nWqmfuVngU22OhTpUE9gg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
     <footer>
 
     </footer>
