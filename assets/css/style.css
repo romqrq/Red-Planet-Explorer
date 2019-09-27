@@ -527,19 +527,11 @@ a {
     width: 100%;
     border: 2px solid #E55300;
     background-color: transparent;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 0 4px black;
 }
 
-/*.vg-earth-stage {*/
-
-/*    background-image: url(../images/earth.jpg);*/
-
-/*    background-position: center;*/
-
-/*    background-repeat: no-repeat;*/
-
-/*    background-size: cover;*/
-
-/*}*/
 
 .vg-earth-button {
     background-image: url(../images/earth.jpg);
@@ -548,17 +540,6 @@ a {
     background-size: cover;
 }
 
-/*.vg-travel-stage {*/
-
-/*    background-image: url(../images/land-site.jpg);*/
-
-/*    background-position: center;*/
-
-/*    background-repeat: no-repeat;*/
-
-/*    background-size: cover;*/
-
-/*}*/
 
 .vg-travel-button {
     background-image: url(../images/spaceship.jpg);
