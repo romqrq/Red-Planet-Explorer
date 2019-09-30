@@ -530,68 +530,47 @@ a {
     font-weight: 700;
     color: white;
     text-shadow: 0 0 4px black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
 .vg-earth-button {
     background-image: url(../images/earth.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 
 .vg-travel-button {
     background-image: url(../images/spaceship.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.vg-mars-stage {
+.vg-mars-stages {
     padding: 0 1rem;
 }
 
 .vg-button1 {
     background-image: url(../images/capsule-approach.jpeg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .vg-button2 {
     background-image: url(../images/land-site.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .vg-button3 {
     background-image: url(../images/communication.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .vg-button4 {
-    background-image: url(../images/curiosity.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../images/spirit1.jpg);
 }
 
 .vg-button5 {
     background-image: url(../images/molecule.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .vg-button6 {
-    background-image: url(../images/mars-atmosphere.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(../images/mars-surface.jpg);
 }
 
 
