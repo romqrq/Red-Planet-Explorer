@@ -17,13 +17,14 @@ a {
 
 /* Header */
 
-.btn.launch-button:hover {
+
+/* .btn.launch-button:hover {
     color: white;
 }
 
 .btn.launch-button:focus {
     box-shadow: inset 0 0 3px 1px black;
-}
+} */
 
 
 /* Weather */
