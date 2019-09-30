@@ -276,4 +276,328 @@
 .wind-direction h5 {
   margin: 0;
 }
+
+/* Rovers Manifest */
+.card {
+  border: none;
+  background-color: transparent;
+}
+
+/* Gallery */
+.table-box {
+  overflow: auto;
+  border-radius: 0.5rem;
+  margin: 1rem -0.9rem;
+}
+
+.tr-sol {
+  background-color: #e5530069;
+}
+
+.table {
+  background-color: #ffffff63;
+  margin: 0;
+}
+
+/* VIDEO Gallery */
+.vg-container {
+  background-color: #ffffff63;
+  padding: 2rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.gallery-video {
+  height: 40vw;
+  width: 100%;
+}
+
+.vg-general-button {
+  height: 30vw;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 2px solid #E55300;
+  background-color: transparent;
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0px 1px 1px black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.vg-earth-button {
+  background-image: url(../images/earth.jpg);
+}
+
+.vg-travel-button {
+  background-image: url(../images/spaceship.jpg);
+}
+
+.vg-mars-stages {
+  padding: 0 1rem;
+}
+
+.vg-button1 {
+  background-image: url(../images/capsule-approach.jpeg);
+}
+
+.vg-button2 {
+  background-image: url(../images/land-site.jpg);
+}
+
+.vg-button3 {
+  background-image: url(../images/communication.jpg);
+}
+
+.vg-button4 {
+  background-image: url(../images/spirit1.jpg);
+}
+
+.vg-button5 {
+  background-image: url(../images/molecule.png);
+}
+
+.vg-button6 {
+  background-image: url(../images/mars-surface.jpg);
+}
+
+.vg-mars-stage img {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Explore */
+.rover-explorer {
+  height: 65vh;
+  width: 100%;
+  margin: 1rem 0 3rem;
+}
+
+.rover-desktop {
+  height: 78vh;
+  width: 100%;
+  margin: auto;
+}
+
+.mars-rover-2d {
+  width: 10rem;
+  height: 10rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+}
+
+.fa-android,
+.fa-apple {
+  display: inline-block;
+}
+
+/* Modal */
+button.close {
+  padding: 0 1rem;
+  text-align: right;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.img-thumbnail {
+  background-color: transparent;
+  border: 1px solid #e55300;
+  max-width: 25%;
+}
+
+/* Launch button bg change */
+@-webkit-keyframes launchButtonAnimation {
+  from {
+    background-color: #bf0000;
+  }
+  to {
+    background-color: #fa1800;
+  }
+}
+@keyframes launchButtonAnimation {
+  from {
+    background-color: #bf0000;
+  }
+  to {
+    background-color: #fa1800;
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  5% {
+    -webkit-transform: translate(-1px, -2px) rotate(-0.1deg);
+            transform: translate(-1px, -2px) rotate(-0.1deg);
+  }
+  10% {
+    -webkit-transform: translate(-3px, 0px) rotate(0.1deg);
+            transform: translate(-3px, 0px) rotate(0.1deg);
+  }
+  15% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(1px, -1px) rotate(0.1deg);
+            transform: translate(1px, -1px) rotate(0.1deg);
+  }
+  25% {
+    -webkit-transform: translate(-1px, 2px) rotate(-0.1deg);
+            transform: translate(-1px, 2px) rotate(-0.1deg);
+  }
+  30% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  35% {
+    -webkit-transform: translate(3px, 1px) rotate(-0.1deg);
+            transform: translate(3px, 1px) rotate(-0.1deg);
+  }
+  40% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.1deg);
+            transform: translate(-1px, -1px) rotate(0.1deg);
+  }
+  45% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translate(1px, -2px) rotate(-0.1deg);
+            transform: translate(1px, -2px) rotate(-0.1deg);
+  }
+  55% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translate(-1px, -2px) rotate(-0.1deg);
+            transform: translate(-1px, -2px) rotate(-0.1deg);
+  }
+  65% {
+    -webkit-transform: translate(-3px, 0px) rotate(0.1deg);
+            transform: translate(-3px, 0px) rotate(0.1deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  75% {
+    -webkit-transform: translate(1px, -1px) rotate(0.1deg);
+            transform: translate(1px, -1px) rotate(0.1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, 2px) rotate(-0.1deg);
+            transform: translate(-1px, 2px) rotate(-0.1deg);
+  }
+  85% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  90% {
+    -webkit-transform: translate(3px, 1px) rotate(-0.1deg);
+            transform: translate(3px, 1px) rotate(-0.1deg);
+  }
+  95% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.1deg);
+            transform: translate(-1px, -1px) rotate(0.1deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  5% {
+    -webkit-transform: translate(-1px, -2px) rotate(-0.1deg);
+            transform: translate(-1px, -2px) rotate(-0.1deg);
+  }
+  10% {
+    -webkit-transform: translate(-3px, 0px) rotate(0.1deg);
+            transform: translate(-3px, 0px) rotate(0.1deg);
+  }
+  15% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  20% {
+    -webkit-transform: translate(1px, -1px) rotate(0.1deg);
+            transform: translate(1px, -1px) rotate(0.1deg);
+  }
+  25% {
+    -webkit-transform: translate(-1px, 2px) rotate(-0.1deg);
+            transform: translate(-1px, 2px) rotate(-0.1deg);
+  }
+  30% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  35% {
+    -webkit-transform: translate(3px, 1px) rotate(-0.1deg);
+            transform: translate(3px, 1px) rotate(-0.1deg);
+  }
+  40% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.1deg);
+            transform: translate(-1px, -1px) rotate(0.1deg);
+  }
+  45% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translate(1px, -2px) rotate(-0.1deg);
+            transform: translate(1px, -2px) rotate(-0.1deg);
+  }
+  55% {
+    -webkit-transform: translate(1px, 1px) rotate(0deg);
+            transform: translate(1px, 1px) rotate(0deg);
+  }
+  60% {
+    -webkit-transform: translate(-1px, -2px) rotate(-0.1deg);
+            transform: translate(-1px, -2px) rotate(-0.1deg);
+  }
+  65% {
+    -webkit-transform: translate(-3px, 0px) rotate(0.1deg);
+            transform: translate(-3px, 0px) rotate(0.1deg);
+  }
+  70% {
+    -webkit-transform: translate(3px, 2px) rotate(0deg);
+            transform: translate(3px, 2px) rotate(0deg);
+  }
+  75% {
+    -webkit-transform: translate(1px, -1px) rotate(0.1deg);
+            transform: translate(1px, -1px) rotate(0.1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, 2px) rotate(-0.1deg);
+            transform: translate(-1px, 2px) rotate(-0.1deg);
+  }
+  85% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  90% {
+    -webkit-transform: translate(3px, 1px) rotate(-0.1deg);
+            transform: translate(3px, 1px) rotate(-0.1deg);
+  }
+  95% {
+    -webkit-transform: translate(-1px, -1px) rotate(0.1deg);
+            transform: translate(-1px, -1px) rotate(0.1deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, 2px) rotate(0deg);
+            transform: translate(1px, 2px) rotate(0deg);
+  }
+}
 /*# sourceMappingURL=testing.css.map */
