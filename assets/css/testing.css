@@ -21,6 +21,13 @@
   font-size: 1.5rem;
 }
 
+.heading-text {
+  text-align: center;
+  font-family: "Revalia", "Jura", sans-serif;
+  margin-bottom: 2rem;
+  text-shadow: -1px 3px 8px #000000;
+}
+
 .orange-button {
   border-radius: 0.5rem;
   font-family: "Jura", sans-serif;
@@ -43,13 +50,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.heading-text {
-  text-align: center;
-  font-family: "Revalia", "Jura", sans-serif;
-  margin-bottom: 2rem;
-  text-shadow: -1px 3px 8px #000000;
 }
 
 .round-border {
@@ -108,6 +108,11 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.main-title {
+  font-family: "Revalia", "Jura", sans-serif;
+  text-shadow: -1px 3px 8px #000000;
 }
 
 .launch-button-div {

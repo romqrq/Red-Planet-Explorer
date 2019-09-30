@@ -15,6 +15,11 @@ $lighter-bg: #ffffff63;
     font-weight: 700;
 }
 
+@mixin title-font {
+    font-family: "Revalia", "Jura", sans-serif;
+    text-shadow: -1px 3px 8px #000000;
+}
+
 @mixin bg-fitting {
     background-position: center;
     background-repeat: no-repeat;
@@ -41,6 +46,13 @@ $lighter-bg: #ffffff63;
     font-size: 1.5rem
 }
 
+.heading-text {
+    text-align: center;
+    font-family: "Revalia", "Jura", sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: -1px 3px 8px #000000;
+}
+
 .orange-button {
     @include border-radius;
     @include font-style;
@@ -58,13 +70,6 @@ $lighter-bg: #ffffff63;
     box-shadow: inset 0 0 10px 5px black;
     background-image: url(../images/bg-content-section-2.jpeg);
     @include bg-fitting;
-}
-
-.heading-text {
-    text-align: center;
-    font-family: "Revalia", "Jura", sans-serif;
-    margin-bottom: 2rem;
-    text-shadow: -1px 3px 8px #000000;
 }
 
 .round-border {
@@ -104,6 +109,10 @@ $lighter-bg: #ffffff63;
     flex-direction: row;
     display: flex;
     justify-content: center;
+}
+
+.main-title {
+    @include title-font;
 }
 
 .launch-button-div {
