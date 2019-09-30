@@ -1,3 +1,18 @@
+/*General*/
+@import url("https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ded9cc;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .hr-divider {
   border-top: 3px solid white;
   width: 80vw;
