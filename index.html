@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" type="text/css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
-    <link rel="stylesheet" href="testing.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="assets/css/style.css" type="text/css" /> -->
+    <link rel="stylesheet" href="assets/css/testing.css" type="text/css" />
 
 </head>
 
@@ -20,32 +20,32 @@
         <div class="container-fluid main-screen-container">
             <div class="row social-row">
                 <div class="col-12 social-col">
-                    <i class="fab fa-facebook-f round-border text-shadow"></i>
+                    <i class="fab fa-facebook-f round-border"></i>
                     <i class="fab fa-instagram round-border"></i>
                     <i class="fab fa-twitter round-border"></i>
                     <i class="fab fa-pinterest-p round-border"></i>
                 </div>
             </div>
             <div class="row" role="navigation">
-                <a class="col-4 text-right main-text-light text-shadow" href="#">Weather</a>
-                <a class="col-4 text-center main-text-light text-shadow" href="#">Rovers</a>
-                <a class="col-4 text-left main-text-light text-shadow" href="#">Gallery</a>
+                <a class="col-4 text-right medium-text" href="#">Weather</a>
+                <a class="col-4 text-center medium-text" href="#">Rovers</a>
+                <a class="col-4 text-left medium-text" href="#">Gallery</a>
             </div>
             <hr class="hr-divider">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="main-title title-shadow">Red Planet Explorer</p>
+                    <p class="main-title">Red Planet Explorer</p>
                 </div>
             </div>
             <hr class="hr-divider">
             <div class="row">
                 <div class="col-12">
-                    <p class="main-text-light text-center text-shadow">Suit up and get ready for launch!</p>
+                    <p class="medium-text text-center">Suit up and get ready for launch!</p>
                 </div>
             </div>
             <div class="launch-button-div">
                 <div class="launch-button-border">
-                    <button class="btn launch-button text-shadow" id="launch-button">Launch!</button>
+                    <button class="btn launch-button " id="launch-button">Launch!</button>
                 </div>
             </div>
         </div>
@@ -53,33 +53,10 @@
     <section class="content-section" id="weather-section">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
-                <!--<div class="row ">-->
-                <!--<div class="col-3 heading-console">-->
-                <!--    <div class="bars-meter-heading">-->
-                <!--        <div class="meter-text">charging...</div>-->
-                <!--        <div class="meter-bar">-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--            <div class="meter-cell"></div>-->
-                <!--        </div>-->
-                <!--    </div>-->
-                <!--</div>-->
                 <div class="heading-text">
-                    <h2 class="text-shadow">Mars Weather</h2>
+                    <h2>Mars Weather</h2>
                 </div>
                 <hr class="hr-divider">
-                <!--<div class="col-2 flash-lights-heading">-->
-                <!--    <div class="flash-light-border">-->
-                <!--        <div class="flash-light-green"></div>-->
-                <!--    </div>-->
-                <!--    <div class="flash-light-border">-->
-                <!--        <div class="flash-light-red"></div>-->
-                <!--    </div>-->
-                <!--</div>-->
-                <!--</div>-->
             </div>
             <div class="container-fluid general-text">
                 <p>Mars is considered a planet with a great potential for human colonization. Understanding the weather is critical to determine what to expect and how can we make it more liveable for humans.</p>
@@ -117,16 +94,16 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div class="container-fluid general-text text-left">
+            <div class="container-fluid general-text">
                 <p>Rovers are an important tool on the exploration of Mars as their mobility allows us to have a closer look at different geological features, different materials, substracts and rocks that hardly would be concentrated on a single spot.</p>
                 <p>A total of 6 rovers were sent to Mars and while some met catastrofic circumstances, some of them exceeded the expectations.</p>
 
                 <div id="accordion">
                     <div class="card">
-                        <div class="card-header general-button" id="headingOne">
-                            <!--<h5 class="mb-0">-->
-                            <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Mars 2</button>
-                            <!--</h5>-->
+                        <div class="card-header orange-button" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Mars 2</button>
+                            </h5>
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body">
@@ -141,7 +118,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingTwo">
+                        <div class="card-header orange-button" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Mars 3</button>
                             </h5>
@@ -156,7 +133,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingThree">
+                        <div class="card-header orange-button" id="headingThree">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Sojourner Rover</button>
                             </h5>
@@ -174,7 +151,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingFour">
+                        <div class="card-header orange-button" id="headingFour">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">Spirit</button>
                             </h5>
@@ -189,7 +166,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingFive">
+                        <div class="card-header orange-button" id="headingFive">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">Opportunity</button>
                             </h5>
@@ -211,7 +188,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingSix">
+                        <div class="card-header orange-button" id="headingSix">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">Curiosity</button>
                             </h5>
@@ -276,13 +253,13 @@
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
-                    <select class="custom-select" id="inputLatestRoverPhoto">
+                    <select class="custom-select orange-button" id="inputLatestRoverPhoto">
                     <option selected>Choose...</option>
                     <option value="curiosity">Curiosity</option>
                     <option value="spirit">Spirit</option>
                     <option value="opportunity">Opportunity</option>
                 </select>
-                    <button class="btn general-button" onclick="writeLatestToDocument()">Options</button>
+                    <button class="btn orange-button" onclick="writeLatestToDocument()">Show me</button>
                 </div>
                 <div id="data"></div>
             </div>
@@ -382,14 +359,14 @@
                 <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                 <div class="input-group mb-3">
                     <div class="input-group mb-3">
-                        <select class="custom-select" id="inputRoverName">
+                        <select class="custom-select orange-button" id="inputRoverName">
                     <option selected>Choose...</option>
                     <option value="curiosity">Curiosity</option>
                     <option value="spirit">Spirit</option>
                     <option value="opportunity">Opportunity</option>
                 </select>
-                        <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
-                        <select class="custom-select" id="inputCamName">
+                        <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
+                        <select class="custom-select orange-button" id="inputCamName">
                     <option selected>Choose...</option>
                     <option value="fhaz">FHAZ</option>
                     <option value="rhaz">RHAZ</option>
@@ -401,7 +378,7 @@
                     <option value="pancam">PANCAM</option>
                     <option value="minites">MINITES</option>
                 </select>
-                        <button class="btn general-button" onclick="writeParamsToDocument()">Options</button>
+                        <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
                     </div>
                 </div>
                 <div id="data2"></div>
@@ -416,7 +393,7 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div>
+            <div class="general-text">
                 <p>Getting to Mars was an enormous challenge that required much planning.</p>
                 <p>Here are some nicely short videos from NASA explaining many of the different steps on our Mars Exploration.</p>
             </div>
@@ -464,12 +441,13 @@
             <div class="container-fluid general-text">
                 <div>
                     <p>Drive Curiosity and explore the red planet!</p>
-                    <embed class="rover-explorer" src="https://eyes.nasa.gov/curiosity/">
+
                 </div>
+                <embed class="rover-explorer" src="https://eyes.nasa.gov/curiosity/">
                 <div>
                     <p>How far can you go on this fun and quite addictive rover exploration?</p>
                     <embed class="rover-desktop d-none d-md-block" src="https://www.gamee.com/game/0Moq0ctcY">
-                    <img class="mars-rover-2d"src="assets/images/gamee-mars-rover.jpg">
+                    <img class="mars-rover-2d" src="assets/images/gamee-mars-rover.jpg">
                     <p>download for <i class="fab fa-apple round-border" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"></i> or <i class="fab fa-android round-border" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"></i></p>
                 </div>
             </div>

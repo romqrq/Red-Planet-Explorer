@@ -1,51 +1,45 @@
+/*General*/
+
+@import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
 html {
     scroll-behavior: smooth;
 }
 
-.test {
-    height: 100vh;
+body {
+    background-color: #ded9cc;
 }
 
-.top{
-    height: 90vh;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/*img:hover {*/
-  /* Start the shake animation and make the animation last for 0.5 seconds */
-/*  animation: shake 0.5s; */
 
-  /* When the animation is finished, start again */
-/*  animation-iteration-count: infinite; */
-/*}*/
-.shake-animation {
-    animation-name: shake;
-    animation-duration: 2s;
-    animation-delay: .3s;
-    animation-timing-function: linear;
-    animation-direction: alternate;
+/* Header */
+
+
+/* Weather */
+
+
+/* Rovers Manifest */
+
+.card {
+    border: none;
+    background-color: transparent;
 }
 
-@keyframes shake {
-  0% { transform: translate(1px, 1px) rotate(0deg); }
-  5% { transform: translate(-1px, -2px) rotate(-0.1deg); }
-  10% { transform: translate(-3px, 0px) rotate(0.1deg); }
-  15% { transform: translate(3px, 2px) rotate(0deg); }
-  20% { transform: translate(1px, -1px) rotate(0.1deg); }
-  25% { transform: translate(-1px, 2px) rotate(-0.1deg); }
-  30% { transform: translate(-3px, 1px) rotate(0deg); }
-  35% { transform: translate(3px, 1px) rotate(-0.1deg); }
-  40% { transform: translate(-1px, -1px) rotate(0.1deg); }
-  45% { transform: translate(1px, 2px) rotate(0deg); }
-  50% { transform: translate(1px, -2px) rotate(-0.1deg); }
-  55% { transform: translate(1px, 1px) rotate(0deg); }
-  60% { transform: translate(-1px, -2px) rotate(-0.1deg); }
-  65% { transform: translate(-3px, 0px) rotate(0.1deg); }
-  70% { transform: translate(3px, 2px) rotate(0deg); }
-  75% { transform: translate(1px, -1px) rotate(0.1deg); }
-  80% { transform: translate(-1px, 2px) rotate(-0.1deg); }
-  85% { transform: translate(-3px, 1px) rotate(0deg); }
-  90% { transform: translate(3px, 1px) rotate(-0.1deg); }
-  95% { transform: translate(-1px, -1px) rotate(0.1deg); }
-  100% { transform: translate(1px, 2px) rotate(0deg); }
-  
-}
+
+/* .btn {
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+} */
+
+
+/* Gallery */
+
+
+/*VIDEO Gallery*/
+
+
+/*EXPLORE*/
