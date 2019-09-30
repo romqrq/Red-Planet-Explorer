@@ -1,0 +1,107 @@
+$orange-color: #e55300;
+$orange-hover: #ff701f;
+$text-shadow: 0px 1px 1px black;
+@mixin border-radius {
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+@mixin font-style {
+    font-family: "Jura", sans-serif;
+    font-weight: 700;
+}
+
+@mixin bg-fitting {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hr-divider {
+    border-top: 3px solid rgb(255, 255, 255);
+    width: 80vw;
+    box-shadow: -2px 2px 6px 0px black;
+}
+
+.general-text {
+    @include font-style;
+    text-shadow: $text-shadow;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.medium-text {
+    @include general-text;
+    font-size: 1.5rem
+}
+
+.orange-button {
+    @include border-radius;
+    @include font-style;
+    background-color: $orange-color;
+    color: black;
+    text-shadow: $text-shadow;
+    border: none;
+    box-shadow: inset 0px -5px 17px 1px #000000a3;
+}
+
+.content-section {
+    @include border-radius;
+    background-color: #29292859;
+    padding: 2rem 0 3rem;
+    box-shadow: inset 0 0 10px 5px black;
+    background-image: url(../images/bg-content-section-2.jpeg);
+    @include bg-fitting;
+}
+
+.heading-text {
+    text-align: center;
+    font-family: "Revalia", "Jura", sans-serif;
+    margin-bottom: 2rem;
+    text-shadow: -1px 3px 8px #000000;
+}
+
+.round-border {
+    border-radius: 50%;
+    height: 2rem;
+    border: 2px solid white;
+    width: 2rem;
+    justify-content: center;
+    display: flex;
+    line-height: 1.8rem;
+    color: white;
+    margin: 0 0.5rem;
+    font-weight: 900;
+}
+
+
+/* Main Screen */
+
+.main-screen-container {
+    height: 100vh;
+    max-width: 100vw;
+    padding: 1rem;
+    background-image: url("../images/mars-atmosphere.jpg");
+    @include bg-fitting;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 1px 4px 9px 0px black;
+}
+
+.social-row {
+    padding: 1rem;
+}
+
+.social-col {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.launch-button-div {
+    margin-bottom: 1rem;
+}
