@@ -53,8 +53,7 @@ function writeWeatherToDocument() {
         //Setting sol number to use as reference to drill down to the other variables
         if (vcsATvalid) {
             var SOLnum = sol;
-        }
-        else if (vcSLsATvalid) {
+        } else if (vcSLsATvalid) {
             var SOLnum = SLsol;
         }
         var DLVS = JSO[SOLnum];
@@ -86,7 +85,7 @@ function writeWeatherToDocument() {
                 </div>
             </div>
             <div class="col-4 AT-data">
-                <p class="weather-label">Pressure<br>(atm ÷ 100):</p>
+                <p class="weather-label">Pressure<br>(atm÷100):</p>
                 <p class="weather-main-number weather-number">${((PRE.av/101325)*100).toPrecision(1)}</p>
                 <div class ="weather-max-min">
                     <div>
