@@ -94,16 +94,16 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div class="container-fluid general-text text-left">
+            <div class="container-fluid general-text">
                 <p>Rovers are an important tool on the exploration of Mars as their mobility allows us to have a closer look at different geological features, different materials, substracts and rocks that hardly would be concentrated on a single spot.</p>
                 <p>A total of 6 rovers were sent to Mars and while some met catastrofic circumstances, some of them exceeded the expectations.</p>
 
                 <div id="accordion">
                     <div class="card">
-                        <div class="card-header general-button" id="headingOne">
-                            <!--<h5 class="mb-0">-->
-                            <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Mars 2</button>
-                            <!--</h5>-->
+                        <div class="card-header orange-button" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Mars 2</button>
+                            </h5>
                         </div>
                         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
                             <div class="card-body">
@@ -118,7 +118,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingTwo">
+                        <div class="card-header orange-button" id="headingTwo">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Mars 3</button>
                             </h5>
@@ -133,7 +133,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingThree">
+                        <div class="card-header orange-button" id="headingThree">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Sojourner Rover</button>
                             </h5>
@@ -151,7 +151,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingFour">
+                        <div class="card-header orange-button" id="headingFour">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">Spirit</button>
                             </h5>
@@ -166,7 +166,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingFive">
+                        <div class="card-header orange-button" id="headingFive">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree">Opportunity</button>
                             </h5>
@@ -188,7 +188,7 @@
                         </div>
                     </div>
                     <div class="card">
-                        <div class="card-header general-button" id="headingSix">
+                        <div class="card-header orange-button" id="headingSix">
                             <h5 class="mb-0">
                                 <button class="btn collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">Curiosity</button>
                             </h5>
@@ -253,13 +253,13 @@
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
-                    <select class="custom-select" id="inputLatestRoverPhoto">
+                    <select class="custom-select orange-button" id="inputLatestRoverPhoto">
                     <option selected>Choose...</option>
                     <option value="curiosity">Curiosity</option>
                     <option value="spirit">Spirit</option>
                     <option value="opportunity">Opportunity</option>
                 </select>
-                    <button class="btn general-button" onclick="writeLatestToDocument()">Options</button>
+                    <button class="btn orange-button" onclick="writeLatestToDocument()">Show me</button>
                 </div>
                 <div id="data"></div>
             </div>
@@ -359,14 +359,14 @@
                 <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                 <div class="input-group mb-3">
                     <div class="input-group mb-3">
-                        <select class="custom-select" id="inputRoverName">
+                        <select class="custom-select orange-button" id="inputRoverName">
                     <option selected>Choose...</option>
                     <option value="curiosity">Curiosity</option>
                     <option value="spirit">Spirit</option>
                     <option value="opportunity">Opportunity</option>
                 </select>
-                        <input type="text" class="form-control" id="solTextInput" placeholder="Type a sol number(1 sol = 1 Martian day)">
-                        <select class="custom-select" id="inputCamName">
+                        <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
+                        <select class="custom-select orange-button" id="inputCamName">
                     <option selected>Choose...</option>
                     <option value="fhaz">FHAZ</option>
                     <option value="rhaz">RHAZ</option>
@@ -378,7 +378,7 @@
                     <option value="pancam">PANCAM</option>
                     <option value="minites">MINITES</option>
                 </select>
-                        <button class="btn general-button" onclick="writeParamsToDocument()">Options</button>
+                        <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
                     </div>
                 </div>
                 <div id="data2"></div>
@@ -393,7 +393,7 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div>
+            <div class="general-text">
                 <p>Getting to Mars was an enormous challenge that required much planning.</p>
                 <p>Here are some nicely short videos from NASA explaining many of the different steps on our Mars Exploration.</p>
             </div>

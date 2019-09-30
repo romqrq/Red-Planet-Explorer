@@ -278,9 +278,17 @@ $lighter-bg: #ffffff63;
 
 /* Rovers Manifest */
 
-.card {
-    border: none;
-    background-color: transparent;
+.btn {
+    @include font-style;
+    text-shadow: $text-shadow;
+    width: 100%;
+}
+
+#accordion {
+    .card {
+        border: none;
+        background-color: #00000059;
+    }
 }
 
 
@@ -374,7 +382,7 @@ $lighter-bg: #ffffff63;
 .rover-explorer {
     height: 65vh;
     width: 100%;
-    margin: 1rem 0 3rem;
+    margin: 1rem -1rem 3rem;
 }
 
 .rover-desktop {
