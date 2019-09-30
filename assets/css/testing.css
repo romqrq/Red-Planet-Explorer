@@ -406,9 +406,9 @@ a {
 
 /* Explore */
 .rover-explorer {
-  height: 65vh;
+  height: 70vh;
   width: 100%;
-  margin: 1rem -1rem 3rem;
+  margin: 1rem 0 3rem;
 }
 
 .rover-desktop {
