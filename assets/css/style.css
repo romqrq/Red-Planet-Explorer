@@ -1,7 +1,6 @@
 /*General*/
 
 @import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
-
 html {
     scroll-behavior: smooth;
 }
@@ -13,20 +12,10 @@ body {
 a {
     text-decoration: none;
     color: inherit;
-
 }
 
-/*.custom-select, .form-control {*/
 
-/*    background-color: #e8a76f;*/
-
-/*    border: 3px solid #e55300;*/
-
-/*    font-family: "Jura";*/
-
-/*}*/
-
-.general-button,
+/* .general-button,
 .custom-select,
 .form-control {
     background-color: #e55300;
@@ -34,20 +23,36 @@ a {
     border: none;
     border-radius: 0.25rem;
     /*border-top-right-radius: 0.25rem;*/
-    /*border-bottom-right-radius: 0.25rem;*/
-    font-family: "Jura";
+
+
+/*border-bottom-right-radius: 0.25rem;*/
+
+
+/* font-family: "Jura";
     font-weight: 700;
     text-shadow: 0px 1px 1px black;
     box-shadow: inset 0px -5px 17px 1px #000000a3;
-}
+} */
 
-
+*/
 /*.general-text {*/
+
+
 /*    font-size: 1.2rem;*/
+
+
 /*    margin: 1.5rem 0;*/
+
+
 /*    font-family: "Jura", "Roboto", sans-serif;*/
+
+
 /*    font-weight: 700;*/
+
+
 /*    text-align: center;*/
+
+
 /*}*/
 
 .dark-bg {
@@ -61,6 +66,7 @@ a {
     padding: 2rem 0 3rem;
     color: white;
 }
+
 
 /* Header */
 
@@ -87,81 +93,120 @@ a {
     background-color: black;
 }
 
+
 /*.section-heading {*/
+
 
 /*    padding: 1rem;*/
 
+
 /*    margin-bottom: 2rem;*/
 
+
 /*}*/
+
 
 /*.heading-console {*/
 
+
 /*    display: flex;*/
 
+
 /*    align-items: center;*/
+
 
 /*    padding: 0;*/
 
+
 /*}*/
+
 
 /*.bars-meter-heading {*/
 
+
 /*    height: 2.5rem;*/
+
 
 /*    width: 5rem;*/
 
+
 /*    text-align: center;*/
+
 
 /*    font-family: Jura;*/
 
+
 /*    font-weight: 700;*/
+
 
 /*    background-color: #00000094;*/
 
+
 /*    text-shadow: 0 0 6px black;*/
 
+
 /*}*/
+
 
 /*.meter-text {*/
 
+
 /*    color: white;*/
+
 
 /*    font-size: 0.7rem;*/
 
+
 /*}*/
+
 
 /*.meter-bar {*/
 
+
 /*    width: 4.7rem;*/
+
 
 /*    height: 1.4rem;*/
 
+
 /*    padding: 0 0.25rem;*/
+
 
 /*    margin: 0 auto;*/
 
+
 /*    background-color: #404040;*/
+
 
 /*    display: flex;*/
 
+
 /*    align-items: center;*/
+
 
 /*    border-radius: 2px;*/
 
+
 /*    box-shadow: inset 0 0 5px 1px black;*/
+
 
 /*}*/
 
+
 /*.meter-cell {*/
+
 
 /*    height: 1rem;*/
 
+
 /*    width: 0.7rem;*/
+
 
 /*    background-color: white;*/
 
+
 /*    box-shadow: inset 0 0 3px 1px #000000;*/
+
 
 /*}*/
 
@@ -171,55 +216,81 @@ a {
     margin-bottom: 2rem;
 }
 
+
 /*.flash-lights-heading {*/
+
 
 /*    margin: auto;*/
 
+
 /*}*/
+
 
 /*.flash-light-border {*/
 
+
 /*    height: 1.5rem;*/
+
 
 /*    width: 1.5rem;*/
 
+
 /*    border-radius: 50%;*/
+
 
 /*    margin: auto;*/
 
+
 /*    padding: 0.25rem;*/
+
 
 /*    background-color: #fbf5f5;*/
 
+
 /*    box-shadow: inset 0 0 5px 0px #000000;*/
 
+
 /*}*/
+
 
 /*.flash-light-red {*/
 
+
 /*    height: 1rem;*/
+
 
 /*    width: 1rem;*/
 
+
 /*    border-radius: 50%;*/
+
 
 /*    background-color: #d53f00;*/
 
+
 /*    box-shadow: inset 0 0 4px black;*/
+
 
 /*}*/
 
+
 /*.flash-light-green {*/
+
 
 /*    height: 1rem;*/
 
+
 /*    width: 1rem;*/
+
 
 /*    border-radius: 50%;*/
 
+
 /*    background-color: green;*/
 
+
 /*    box-shadow: inset 0 0 4px black;*/
+
 
 /*}*/
 
@@ -268,11 +339,22 @@ a {
     font-size: 1.3rem;
 }
 
+
 /*.main-title {*/
+
+
 /*    font-family: "Revalia", "Jura";*/
+
+
 /*    font-size: 3rem;*/
+
+
 /*    color: white;*/
+
+
 /*    padding: 0 0 0.5rem;*/
+
+
 /*}*/
 
 .hr-divider {
@@ -336,7 +418,6 @@ a {
 }
 
 
-
 /* Weather */
 
 .weather-container {
@@ -350,7 +431,6 @@ a {
     background-size: cover;
     background-color: black;
 }
-
 
 .carousel-img {
     height: 45vh;
@@ -430,6 +510,7 @@ a {
     margin: 0;
 }
 
+
 /* Rovers Manifest */
 
 .card {
@@ -446,51 +527,75 @@ a {
 
 /*.manifest-data {*/
 
+
 /*    padding: 0;*/
+
 
 /*    display: flex;*/
 
+
 /*    flex-direction: column;*/
 
+
 /*}*/
+
 
 /*.manifest-data button {*/
 
+
 /*    margin: 0 1rem 0.25rem;*/
 
+
 /*}*/
+
 
 /*.rovers-manifest-data {*/
 
+
 /*    text-align: left;*/
+
 
 /*    margin-top: 1rem;*/
 
+
 /*    min-height: 20rem;*/
+
 
 /*    background-position: center;*/
 
+
 /*    background-repeat: no-repeat;*/
+
 
 /*    background-size: cover;*/
 
+
 /*    background-color: black;*/
 
+
 /*}*/
+
 
 /*.manifest-text {*/
 
+
 /*    padding: 9rem 1rem 0;*/
+
 
 /*    height: 100%;*/
 
+
 /*    background-color: #00000066;*/
 
+
 /*}*/
+
 
 /*.manifest-rover-facts {*/
 
+
 /*}*/
+
 
 /* Gallery */
 
@@ -508,6 +613,7 @@ a {
     background-color: #ffffff63;
     margin: 0;
 }
+
 
 /*VIDEO Gallery*/
 
@@ -536,11 +642,9 @@ a {
     background-size: cover;
 }
 
-
 .vg-earth-button {
     background-image: url(../images/earth.jpg);
 }
-
 
 .vg-travel-button {
     background-image: url(../images/spaceship.jpg);
@@ -573,7 +677,6 @@ a {
 .vg-button6 {
     background-image: url(../images/mars-surface.jpg);
 }
-
 
 .vg-mars-stage img {
     overflow: hidden;
@@ -608,10 +711,6 @@ a {
 }
 
 
-
-
-
-
 /* Modal */
 
 button.close {
@@ -631,8 +730,6 @@ button.close {
 }
 
 
-
-
 /* Launch button bg change */
 
 @keyframes launchButtonAnimation {
@@ -648,83 +745,63 @@ button.close {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
     }
-
     5% {
         transform: translate(-1px, -2px) rotate(-0.1deg);
     }
-
     10% {
         transform: translate(-3px, 0px) rotate(0.1deg);
     }
-
     15% {
         transform: translate(3px, 2px) rotate(0deg);
     }
-
     20% {
         transform: translate(1px, -1px) rotate(0.1deg);
     }
-
     25% {
         transform: translate(-1px, 2px) rotate(-0.1deg);
     }
-
     30% {
         transform: translate(-3px, 1px) rotate(0deg);
     }
-
     35% {
         transform: translate(3px, 1px) rotate(-0.1deg);
     }
-
     40% {
         transform: translate(-1px, -1px) rotate(0.1deg);
     }
-
     45% {
         transform: translate(1px, 2px) rotate(0deg);
     }
-
     50% {
         transform: translate(1px, -2px) rotate(-0.1deg);
     }
-
     55% {
         transform: translate(1px, 1px) rotate(0deg);
     }
-
     60% {
         transform: translate(-1px, -2px) rotate(-0.1deg);
     }
-
     65% {
         transform: translate(-3px, 0px) rotate(0.1deg);
     }
-
     70% {
         transform: translate(3px, 2px) rotate(0deg);
     }
-
     75% {
         transform: translate(1px, -1px) rotate(0.1deg);
     }
-
     80% {
         transform: translate(-1px, 2px) rotate(-0.1deg);
     }
-
     85% {
         transform: translate(-3px, 1px) rotate(0deg);
     }
-
     90% {
         transform: translate(3px, 1px) rotate(-0.1deg);
     }
-
     95% {
         transform: translate(-1px, -1px) rotate(0.1deg);
     }
-
     100% {
         transform: translate(1px, 2px) rotate(0deg);
     }
