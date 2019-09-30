@@ -1,6 +1,7 @@
 $orange-color: #e55300;
 $orange-hover: #ff701f;
 $text-shadow: 0px 1px 1px black;
+$box-shadow: 0 0 8px 2px black;
 @mixin border-radius {
     -webkit-border-radius: 0.5rem;
     -moz-border-radius: 0.5rem;
@@ -33,7 +34,9 @@ $text-shadow: 0px 1px 1px black;
 }
 
 .medium-text {
-    @include general-text;
+    @include font-style;
+    text-shadow: $text-shadow;
+    color: white;
     font-size: 1.5rem
 }
 
@@ -144,4 +147,45 @@ $text-shadow: 0px 1px 1px black;
     animation-delay: .3s;
     animation-timing-function: linear;
     animation-direction: alternate;
+}
+
+
+/* WEATHER */
+
+.weather-container {
+    padding: 0;
+    height: 45vh;
+    overflow: hidden;
+    @include border-radius;
+    @include box-shadow;
+    @include bg-fitting;
+    background-color: black;
+}
+
+.carousel-img {
+    height: 45vh;
+}
+
+.carousel-caption {
+    color: white;
+    font-family: "Jura";
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0000003d;
+}
+
+.weather-sun-date {
+    margin-bottom: 1rem;
+}
+
+.weather-label {
+    @include font-style;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }

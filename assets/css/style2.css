@@ -18,57 +18,7 @@ a {
 /* Header */
 
 
-/* .btn.launch-button:hover {
-    color: white;
-}
-
-.btn.launch-button:focus {
-    box-shadow: inset 0 0 3px 1px black;
-} */
-
-
 /* Weather */
-
-.weather-container {
-    padding: 0;
-    height: 45vh;
-    overflow: hidden;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 8px 2px black;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
-}
-
-.carousel-img {
-    height: 45vh;
-}
-
-.carousel-caption {
-    color: white;
-    font-family: "Jura";
-    font-weight: 700;
-    text-align: center;
-    padding: 1rem;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #0000003d;
-}
-
-.weather-sun-date {
-    margin-bottom: 1rem;
-}
-
-.weather-label {
-    font-family: "Jura", sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
-    padding: 0;
-    margin: 0;
-}
 
 .weather-label p {
     margin: 0;
