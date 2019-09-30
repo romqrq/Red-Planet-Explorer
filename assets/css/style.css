@@ -42,13 +42,13 @@ a {
 }
 
 
-.general-text {
-    font-size: 1.2rem;
-    margin: 1.5rem 0;
-    font-family: "Jura", "Roboto", sans-serif;
-    font-weight: 700;
-    text-align: center;
-}
+/*.general-text {*/
+/*    font-size: 1.2rem;*/
+/*    margin: 1.5rem 0;*/
+/*    font-family: "Jura", "Roboto", sans-serif;*/
+/*    font-weight: 700;*/
+/*    text-align: center;*/
+/*}*/
 
 .dark-bg {
     background-color: #292928;
@@ -268,12 +268,12 @@ a {
     font-size: 1.3rem;
 }
 
-.main-title {
-    font-family: "Revalia", "Jura";
-    font-size: 3rem;
-    color: white;
-    padding: 0 0 0.5rem;
-}
+/*.main-title {*/
+/*    font-family: "Revalia", "Jura";*/
+/*    font-size: 3rem;*/
+/*    color: white;*/
+/*    padding: 0 0 0.5rem;*/
+/*}*/
 
 .hr-divider {
     border-top: 3px solid rgb(255, 255, 255);
@@ -495,8 +495,9 @@ a {
 /* Gallery */
 
 .table-box {
-    overflow: scroll;
+    overflow: auto;
     border-radius: 0.5rem;
+    margin: 1rem -0.9rem;
 }
 
 .tr-sol {
@@ -585,11 +586,25 @@ a {
 .rover-explorer {
     height: 65vh;
     width: 100%;
+    margin: 1rem 0 3rem;
 }
 
 .rover-desktop {
     height: 78vh;
-    width: 45vw;
+    width: 100%;
+    margin: auto;
+}
+
+.mars-rover-2d {
+    width: 10rem;
+    height: 10rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+}
+
+.fa-android,
+.fa-apple {
+    display: inline-block;
 }
 
 

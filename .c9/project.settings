@@ -1,4 +1,7 @@
 {
+    "build": {
+        "@saveall": true
+    },
     "language": {
         "tern_defs": {
             "json()": {
@@ -15,6 +18,7 @@
         }
     },
     "run": {
+        "@runner": "Ruby",
         "configs": {
             "@inited": "true",
             "json()": {}
