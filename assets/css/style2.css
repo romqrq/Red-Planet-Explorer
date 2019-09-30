@@ -20,55 +20,6 @@ a {
 
 /* Weather */
 
-.weather-label p {
-    margin: 0;
-}
-
-.weather-main-number {
-    padding: 0;
-    font-size: 0.8rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.weather-main-number h5 {
-    line-height: 1rem;
-    display: flex;
-    margin: 0 auto;
-}
-
-.weather-number {
-    font-size: 3rem;
-    line-height: 3rem;
-    font-weight: 700;
-    margin: 0;
-}
-
-.weather-max-min {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.weather-max-min h6 {
-    margin: 0;
-}
-
-.weather-number-small {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 0;
-}
-
-.wind-direction {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.wind-direction h5 {
-    margin: 0;
-}
-
 
 /* Rovers Manifest */
 
