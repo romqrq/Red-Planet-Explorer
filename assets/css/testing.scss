@@ -7,6 +7,7 @@ html {
 
 body {
     background-color: #ded9cc;
+    text-align: center;
 }
 
 a {
@@ -99,6 +100,7 @@ $lighter-bg: #ffffff63;
     color: white;
     margin: 0 0.5rem;
     font-weight: 900;
+    text-shadow: $text-shadow;
 }
 
 
@@ -129,6 +131,8 @@ $lighter-bg: #ffffff63;
 
 .main-title {
     @include title-font;
+    font-size: 3rem;
+    color: white;
 }
 
 .launch-button-div {
