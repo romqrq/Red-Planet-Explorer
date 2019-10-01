@@ -715,5 +715,24 @@ button.close {
     display: -ms-flexbox;
     line-height: 2.7rem;
   }
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel-caption {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
+  .carousel-caption .hr-divider {
+    width: 19rem;
+    margin-left: 0;
+  }
+  .carousel-caption .weather-sun-date {
+    padding: 0 2.5rem;
+  }
 }
 /*# sourceMappingURL=testing.css.map */
