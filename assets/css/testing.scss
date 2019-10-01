@@ -212,7 +212,7 @@ $lighter-bg: #ffffff63;
     bottom: 0;
     left: 0;
     background-color: #0000003d;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     justify-content: flex-end;
 }
@@ -499,5 +499,26 @@ button.close {
     }
     100% {
         transform: translate(1px, 2px) rotate(0deg);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main-title {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+    }
+    .round-border {
+        height: 3rem;
+        border: 3px solid white;
+        width: 3rem;
+    }
+    .round-border {
+        height: 3rem;
+        border: 3px solid white;
+        font-size: 1.4rem;
+        width: 3rem;
+        -ms-flex-pack: center;
+        display: -ms-flexbox;
+        line-height: 2.7rem;
     }
 }
