@@ -12,7 +12,6 @@ body {
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
 $orange-color: #e55300;
@@ -190,7 +189,7 @@ $lighter-bg: #ffffff63;
 
 .weather-container {
     padding: 0;
-    height: 45vh;
+    height: 70vh;
     overflow: hidden;
     @include border-radius;
     box-shadow: $box-shadow;
@@ -199,7 +198,7 @@ $lighter-bg: #ffffff63;
 }
 
 .carousel-img {
-    height: 45vh;
+    height: 70vh;
 }
 
 .carousel-caption {
@@ -213,6 +212,9 @@ $lighter-bg: #ffffff63;
     bottom: 0;
     left: 0;
     background-color: #0000003d;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .weather-sun-date {
