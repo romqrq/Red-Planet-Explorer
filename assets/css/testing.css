@@ -431,9 +431,7 @@ a {
 }
 
 .mars-rover-2d {
-  width: 10rem;
-  height: 10rem;
-  margin: 1rem;
+  width: 100%;
   border-radius: 0.5rem;
 }
 
@@ -454,14 +452,18 @@ a {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .R2D-buttons a {
   color: inherit;
   margin: 0.3rem;
+}
+
+.R2D-buttons i {
+  margin: 0;
 }
 
 /* Modal */
