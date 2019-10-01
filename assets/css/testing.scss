@@ -56,6 +56,7 @@ $lighter-bg: #ffffff63;
     border-top: 3px solid rgb(255, 255, 255);
     width: 80vw;
     box-shadow: -2px 2px 6px 0px black;
+    margin-bottom: 3rem;
 }
 
 .general-text {
@@ -300,10 +301,16 @@ $lighter-bg: #ffffff63;
 
 /* Gallery */
 
+.photo-gallery-text {
+    padding-right: 2rem;
+}
+
 .table-box {
     overflow: auto;
     border-radius: 0.5rem;
     margin: 1rem -0.9rem;
+    box-shadow: $box-shadow;
+    padding: 0;
 }
 
 .tr-sol {

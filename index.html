@@ -275,111 +275,115 @@
             </div>
             <hr class="hr-divider">
             <div class="container-fluid general-text">
-                <p>Our gallery consists of pictures you won't find on most websites. They are raw images, the way they are received by NASA straight from the rovers.</p>
-                <p>You can experience the sensation of having on your screen images taken on another planet, sent through millions of kilometers and shown to you the same way they were seen by scientist at NASA.</p>
-                <p>How to search for images:</p>
-                <ol>
-                    <li class="text-left">Select a Rover.</li>
-                    <li class="text-left">Type the sol number - Check the red row on the table below.</li>
-                    <li class="text-left">Choose one of the cameras carried by your chosen rover.</li>
-                </ol>
-                <div class="table-box">
-                    <table class="table">
-                        <thead>
-                            <tr class="tr-sol">
-                                <th scope="col">Sols</th>
-                                <th scope="col">2537</th>
-                                <th scope="col">5111</th>
-                                <th scope="col">2208</th>
-                            </tr>
-                            <tr>
-                                <th scope="col">Camera</th>
-                                <th scope="col">Cur</th>
-                                <th scope="col">Opp</th>
-                                <th scope="col">Spi</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">FHAZ - Front Hazard Avoidance Camera</th>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">RHAZ - Rear Hazard Avoidance Camera</th>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">MAST - Mast Camera</th>
-                                <td>Yes</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">CHEMCAM - Chemistry and Camera Complex</th>
-                                <td>Yes</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">MAHLI - Mars Hand Lens Imager</th>
-                                <td>Yes</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">MARDI - Mars Descent Imager</th>
-                                <td>Yes</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">NAVCAM - Navigation Camera</th>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">PANCAM - Panoramic Camera</th>
-                                <td></td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">MINITES - Miniature Thermal Emission Spectrometer</th>
-                                <td></td>
-                                <td>Yes</td>
-                                <td>Yes</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
-                <div class="input-group mb-5">
-                    <div class="input-group mb-3">
-                        <select class="custom-select orange-button" id="inputRoverName">
-                    <option selected>Choose...</option>
-                    <option value="curiosity">Curiosity</option>
-                    <option value="spirit">Spirit</option>
-                    <option value="opportunity">Opportunity</option>
-                </select>
-                        <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
-                        <select class="custom-select orange-button" id="inputCamName">
-                    <option selected>Choose...</option>
-                    <option value="fhaz">FHAZ</option>
-                    <option value="rhaz">RHAZ</option>
-                    <option value="mast">Mast</option>
-                    <option value="chemcam">CHEMCAM</option>
-                    <option value="mahli">MAHLI</option>
-                    <option value="mardi">MARDI</option>
-                    <option value="navcam">NAVCAM</option>
-                    <option value="pancam">PANCAM</option>
-                    <option value="minites">MINITES</option>
-                </select>
-                        <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
+                <div class="row explore-gallery-row">
+                    <div class="col-12 col-lg-6 photo-gallery-text">
+                        <p>Our gallery consists of pictures you won't find on most websites. They are raw images, the way they are received by NASA straight from the rovers.</p>
+                        <p>You can experience the sensation of having on your screen images taken on another planet, sent through millions of kilometers and shown to you the same way they were seen by scientist at NASA.</p>
+                        <p>How to search for images:</p>
+                        <ol>
+                            <li class="text-left">Select a Rover.</li>
+                            <li class="text-left">Type the sol number - Check the red row on the table below.</li>
+                            <li class="text-left">Choose one of the cameras carried by your chosen rover.</li>
+                        </ol>
+                        <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
+                        <div class="input-group mb-5">
+                            <div class="input-group mb-3">
+                                <select class="custom-select orange-button" id="inputRoverName">
+                                    <option selected>Choose...</option>
+                                    <option value="curiosity">Curiosity</option>
+                                    <option value="spirit">Spirit</option>
+                                    <option value="opportunity">Opportunity</option>
+                                </select>
+                                <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
+                                <select class="custom-select orange-button" id="inputCamName">
+                                    <option selected>Choose...</option>
+                                    <option value="fhaz">FHAZ</option>
+                                    <option value="rhaz">RHAZ</option>
+                                    <option value="mast">Mast</option>
+                                    <option value="chemcam">CHEMCAM</option>
+                                    <option value="mahli">MAHLI</option>
+                                    <option value="mardi">MARDI</option>
+                                    <option value="navcam">NAVCAM</option>
+                                    <option value="pancam">PANCAM</option>
+                                    <option value="minites">MINITES</option>
+                                </select>
+                                <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-box col-12 col-lg-6">
+                        <table class="table">
+                            <thead>
+                                <tr class="tr-sol">
+                                    <th scope="col">Sols</th>
+                                    <th scope="col">2537</th>
+                                    <th scope="col">5111</th>
+                                    <th scope="col">2208</th>
+                                </tr>
+                                <tr>
+                                    <th scope="col">Camera</th>
+                                    <th scope="col">Cur</th>
+                                    <th scope="col">Opp</th>
+                                    <th scope="col">Spi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">FHAZ - Front Hazard Avoidance Camera</th>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">RHAZ - Rear Hazard Avoidance Camera</th>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">MAST - Mast Camera</th>
+                                    <td>Yes</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">CHEMCAM - Chemistry and Camera Complex</th>
+                                    <td>Yes</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">MAHLI - Mars Hand Lens Imager</th>
+                                    <td>Yes</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">MARDI - Mars Descent Imager</th>
+                                    <td>Yes</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">NAVCAM - Navigation Camera</th>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">PANCAM - Panoramic Camera</th>
+                                    <td></td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">MINITES - Miniature Thermal Emission Spectrometer</th>
+                                    <td></td>
+                                    <td>Yes</td>
+                                    <td>Yes</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div id="data2"></div>
