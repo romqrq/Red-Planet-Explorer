@@ -280,7 +280,7 @@
                 <p>How to search for images:</p>
                 <ol>
                     <li class="text-left">Select a Rover.</li>
-                    <li class="text-left">Type the sol number - Check the red row on the table.</li>
+                    <li class="text-left">Type the sol number - Check the red row on the table below.</li>
                     <li class="text-left">Choose one of the cameras carried by your chosen rover.</li>
                 </ol>
                 <div class="table-box">
@@ -358,7 +358,7 @@
                     </table>
                 </div>
                 <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
-                <div class="input-group mb-3">
+                <div class="input-group mb-5">
                     <div class="input-group mb-3">
                         <select class="custom-select orange-button" id="inputRoverName">
                     <option selected>Choose...</option>
@@ -447,13 +447,31 @@
                 <embed class="rover-explorer" src="https://eyes.nasa.gov/curiosity/">
                 <div>
                     <p>How far can you go on this fun and quite addictive rover exploration?</p>
-                    <embed class="rover-desktop d-none d-md-block" src="https://www.gamee.com/game/0Moq0ctcY">
                     <img class="mars-rover-2d" src="assets/images/gamee-mars-rover.jpg">
-                    <p>download for <i class="fab fa-apple round-border" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"></i> or <i class="fab fa-android round-border" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"></i></p>
+                    <p>Play on <i class="fas fa-desktop" data-toggle="modal" data-target="#R@DModal"></i> or download for <i class="fab fa-apple round-border" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"></i> or <i class="fab fa-android round-border"
+                            href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"></i></p>
                 </div>
             </div>
         </div>
     </section>
+    <!-- modal Rover 2D Gallery -->
+    <div class="modal fade" id="R2DModal" tabindex="-1" role="dialog" aria-labelledby="R2DGame" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <embed class="rover-desktop" src="https://www.gamee.com/game/0Moq0ctcY">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
     <!-- modal image Gallery -->
     <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="GalleryImage" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -462,7 +480,7 @@
                   <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" id=modalBody></div>
+            <div class="modal-body" id="modalBody"></div>
         </div>
     </div>
 
