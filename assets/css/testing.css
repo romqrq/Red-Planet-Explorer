@@ -226,9 +226,9 @@ a {
   bottom: 0;
   left: 0;
   background-color: #0000003d;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -644,6 +644,27 @@ button.close {
   100% {
     -webkit-transform: translate(1px, 2px) rotate(0deg);
             transform: translate(1px, 2px) rotate(0deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-title {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+  .round-border {
+    height: 3rem;
+    border: 3px solid white;
+    width: 3rem;
+  }
+  .round-border {
+    height: 3rem;
+    border: 3px solid white;
+    font-size: 1.4rem;
+    width: 3rem;
+    -ms-flex-pack: center;
+    display: -ms-flexbox;
+    line-height: 2.7rem;
   }
 }
 /*# sourceMappingURL=testing.css.map */
