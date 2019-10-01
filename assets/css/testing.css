@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+.modal-dialog {
+  max-width: 100% !important;
+}
+
 .dark-mask {
   padding: 2rem 0 3rem;
   height: 100%;
@@ -24,6 +28,7 @@ a {
   width: 80vw;
   -webkit-box-shadow: -2px 2px 6px 0px black;
           box-shadow: -2px 2px 6px 0px black;
+  margin-bottom: 3rem;
 }
 
 .general-text {
@@ -330,10 +335,17 @@ a {
 }
 
 /* Gallery */
+.photo-gallery-text {
+  padding-right: 2rem;
+}
+
 .table-box {
   overflow: auto;
   border-radius: 0.5rem;
   margin: 1rem -0.9rem;
+  -webkit-box-shadow: 0 0 8px 2px black;
+          box-shadow: 0 0 8px 2px black;
+  padding: 0;
 }
 
 .tr-sol {
@@ -350,11 +362,6 @@ a {
   background-color: #ffffff63;
   padding: 2rem 1rem;
   border-radius: 0.5rem;
-}
-
-.gallery-video {
-  height: 40vw;
-  width: 100%;
 }
 
 .vg-general-button {
@@ -426,22 +433,64 @@ a {
   margin: auto;
 }
 
+.R2Dgame-row {
+  font-size: 1.8rem;
+  margin: 3rem 0;
+}
+
 .mars-rover-2d {
-  width: 10rem;
-  height: 10rem;
-  margin: 1rem;
+  width: 100%;
   border-radius: 0.5rem;
 }
 
+.fa-desktop,
 .fa-android,
 .fa-apple {
   display: inline-block;
 }
 
+.R2D-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.R2D-buttons a {
+  color: inherit;
+  margin: 0.3rem;
+}
+
+.R2D-buttons i {
+  margin: 0;
+}
+
+.R2D-buttons .hr-divider {
+  width: 80%;
+  margin-left: 0;
+  margin-top: 0;
+}
+
 /* Modal */
+iframe {
+  width: 80vw;
+  height: 80vh;
+}
+
 button.close {
   padding: 0 1rem;
   text-align: right;
+  font-size: 3rem;
+  color: white;
 }
 
 .modal-content {
