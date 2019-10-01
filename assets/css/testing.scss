@@ -14,6 +14,10 @@ a {
     text-decoration: none;
 }
 
+.modal-dialog {
+    max-width: 100%!important;
+}
+
 $orange-color: #e55300;
 $orange-hover: #ff701f;
 $text-shadow: 0px 1px 1px black;
@@ -400,9 +404,28 @@ $lighter-bg: #ffffff63;
     border-radius: 0.5rem;
 }
 
+.fa-desktop,
 .fa-android,
 .fa-apple {
     display: inline-block;
+}
+
+.R2D-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-end;
+    // button {
+    //     width: 15rem;
+    //     margin: 0.3rem;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: start;
+    // }
+    a {
+        color: inherit;
+        margin: 0.3rem;
+    }
 }
 
 
@@ -522,3 +545,5 @@ button.close {
         line-height: 2.7rem;
     }
 }
+
+;
