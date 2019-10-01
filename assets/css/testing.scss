@@ -397,6 +397,11 @@ $lighter-bg: #ffffff63;
     margin: auto;
 }
 
+.R2Dgame-row {
+    font-size: 1.8rem;
+    margin: 3rem 0;
+}
+
 .mars-rover-2d {
     width: 100%;
     border-radius: 0.5rem;
@@ -426,6 +431,11 @@ $lighter-bg: #ffffff63;
     }
     i {
         margin: 0;
+    }
+    .hr-divider {
+        width: 80%;
+        margin-left: 0;
+        margin-top: 0;
     }
 }
 
