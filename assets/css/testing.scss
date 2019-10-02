@@ -324,7 +324,6 @@
     /* Gallery */
     
     .photo-gallery-text {
-        padding-right: 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -332,7 +331,6 @@
     .table-box {
         overflow: auto;
         border-radius: 0.5rem;
-        margin: 1rem -0.9rem;
         box-shadow: $box-shadow;
         padding: 0;
     }
@@ -426,8 +424,9 @@
     
     .mars-rover-2D {
         width: 100%;
+        max-width: 30vw;
         border-radius: 0.5rem;
-        margin: 1rem 0;
+        margin: 1rem auto;
     }
     
     .fa-desktop,
@@ -571,7 +570,7 @@
     @media screen and (min-width: 768px) {
         .main-title {
             font-size: 5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         .round-border {
             height: 3rem;
@@ -614,6 +613,6 @@
             padding-right: 2rem;
         }
         .table-box {
-            margin: 0;
+            margin: 1rem -0.9rem;
         }
     }

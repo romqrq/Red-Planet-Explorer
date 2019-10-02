@@ -387,7 +387,6 @@ input {
 
 /* Gallery */
 .photo-gallery-text {
-  padding-right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,7 +399,6 @@ input {
 .table-box {
   overflow: auto;
   border-radius: 0.5rem;
-  margin: 1rem -0.9rem;
   -webkit-box-shadow: 0 0 8px 2px black;
           box-shadow: 0 0 8px 2px black;
   padding: 0;
@@ -502,8 +500,9 @@ input {
 
 .mars-rover-2D {
   width: 100%;
+  max-width: 30vw;
   border-radius: 0.5rem;
-  margin: 1rem 0;
+  margin: 1rem auto;
 }
 
 .fa-desktop,
@@ -766,7 +765,7 @@ button.close {
 @media screen and (min-width: 768px) {
   .main-title {
     font-size: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .round-border {
     height: 3rem;
@@ -813,7 +812,7 @@ button.close {
     padding-right: 2rem;
   }
   .table-box {
-    margin: 0;
+    margin: 1rem -0.9rem;
   }
 }
 /*# sourceMappingURL=testing.css.map */
