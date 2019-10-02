@@ -5,7 +5,6 @@ html {
 }
 
 body {
-  background-color: #ded9cc;
   text-align: center;
 }
 
@@ -750,8 +749,24 @@ button.close {
 }
 
 @media screen and (min-width: 768px) {
+  body {
+    background: linear-gradient(-45deg, #57e5e8, #369dce, #7fd2ef, #71eace);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+  }
   /*Side console */
   .side-console {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -780,6 +795,8 @@ button.close {
     position: absolute;
     left: 10%;
     top: 5%;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }
   .medium-text {
     font-size: 1.5rem;
@@ -857,6 +874,31 @@ button.close {
   }
   .R2D-buttons .mars-rover-2D {
     max-width: 30vw;
+  }
+}
+
+/*Media queries for background*/
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 /*# sourceMappingURL=testing.css.map */
