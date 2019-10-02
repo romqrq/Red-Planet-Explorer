@@ -10,7 +10,7 @@
         scroll-behavior: smooth;
     }
     
-    body {}
+    body {
         text-align: center;
     }
     
@@ -570,19 +570,25 @@
         }
         /*Side console */
         .side-console {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
             position: absolute;
             top: 3%;
             left: 0;
             bottom: 0;
             height: 94%;
             width: 10%;
-            padding: 1rem;
+            padding: 0;
             background-image: url(../images/bg-side-console.jpg);
-            @include border-radius;
+            @include bg-fitting;
+            border-radius: 1rem;
+            .dark-mask {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: #0000009e;
+            }
         }
         .move-front {
             z-index: 1;

@@ -750,13 +750,28 @@ button.close {
 
 @media screen and (min-width: 768px) {
   body {
-    background: linear-gradient(-45deg, #57e5e8, #369dce, #7fd2ef, #71eace);
+    height: 100vh;
+    background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
     background-size: 400% 400%;
     -webkit-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
   }
   /*Side console */
   .side-console {
+    position: absolute;
+    top: 3%;
+    left: 0;
+    bottom: 0;
+    height: 94%;
+    width: 10%;
+    padding: 0;
+    background-image: url(../images/bg-side-console.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1rem;
+  }
+  .side-console .dark-mask {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -770,15 +785,9 @@ button.close {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    position: absolute;
-    top: 3%;
-    left: 0;
-    bottom: 0;
-    height: 94%;
-    width: 10%;
     padding: 1rem;
-    background-color: green;
-    border-radius: 0.5rem !important;
+    border-radius: 1rem;
+    background-color: #0000009e;
   }
   .move-front {
     z-index: 1;
