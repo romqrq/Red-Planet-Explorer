@@ -739,5 +739,10 @@ button.close {
   .carousel-caption .weather-sun-date {
     padding: 0 2.5rem;
   }
+  #accordion,
+  .input-group {
+    max-width: 60vw;
+    margin: auto;
+  }
 }
 /*# sourceMappingURL=testing.css.map */
