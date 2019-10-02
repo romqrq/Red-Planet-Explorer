@@ -1,6 +1,11 @@
     /*General*/
     
     @import url('https://fonts.googleapis.com/css?family=Revalia|Roboto:400,500|Jura:300,400,500,700&display=swap');
+    $orange-color: #e55300;
+    $orange-hover: #ff701f;
+    $text-shadow: 0px 1px 1px black;
+    $box-shadow: 0 0 8px 2px black;
+    $lighter-bg: #ffffff63;
     html {
         scroll-behavior: smooth;
     }
@@ -28,11 +33,26 @@
         max-width: 100%!important;
     }
     
-    $orange-color: #e55300;
-    $orange-hover: #ff701f;
-    $text-shadow: 0px 1px 1px black;
-    $box-shadow: 0 0 8px 2px black;
-    $lighter-bg: #ffffff63;
+    .form-control:focus {
+        color: black;
+        background-color: $orange-color!important;
+        border: none;
+        box-shadow: none;
+    }
+    
+    input:-internal-autofill-selected {
+        background-color: $orange-color!important;
+         ::placeholder {
+            /* Firefox, Chrome, Opera */
+            color: black;
+            opacity: 1;
+        }
+    }
+    
+    input {
+        color: black!important;
+    }
+    
     @mixin border-radius {
         -webkit-border-radius: 0.5rem!important;
         -moz-border-radius: 0.5rem!important;
@@ -399,19 +419,15 @@
         margin: auto;
     }
     
-    .R2Dgame-row {
-        font-size: 1.8rem;
-        margin: 3rem 0;
-    }
-    
     .R2D-img-div {
         display: flex;
         align-items: center;
     }
     
-    .mars-rover-2d {
+    .mars-rover-2D {
         width: 100%;
         border-radius: 0.5rem;
+        margin: 1rem 0;
     }
     
     .fa-desktop,
@@ -423,7 +439,7 @@
     .R2D-buttons {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         justify-content: space-between;
         // button {
         //     width: 15rem;
@@ -442,9 +458,6 @@
         .hr-divider {
             width: 80%;
             margin: 0 0 1rem 0;
-            // margin-left: 0;
-            // margin-top: 0;
-            // margin-bottom: 1rem;
         }
     }
     /* Modal */
@@ -464,6 +477,13 @@
     .modal-content {
         background-color: transparent;
         border: none;
+    }
+    
+    #modalBody {
+        img {
+            max-width: 85vh;
+            margin: auto;
+        }
     }
     
     .img-thumbnail {
@@ -586,5 +606,14 @@
         .input-group {
             max-width: 60vw;
             margin: auto;
+        }
+    }
+    
+    @media screen and (min-width: 769px) {
+        .photo-gallery-text {
+            padding-right: 2rem;
+        }
+        .table-box {
+            margin: 0;
         }
     }
