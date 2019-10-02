@@ -19,6 +19,11 @@
         text-decoration: none;
     }
     
+    .btn.focus,
+    .btn:focus {
+        box-shadow: none;
+    }
+    
     .modal-dialog {
         max-width: 100%!important;
     }
@@ -29,10 +34,10 @@
     $box-shadow: 0 0 8px 2px black;
     $lighter-bg: #ffffff63;
     @mixin border-radius {
-        -webkit-border-radius: 0.5rem;
-        -moz-border-radius: 0.5rem;
-        -ms-border-radius: 0.5rem;
-        border-radius: 0.5rem;
+        -webkit-border-radius: 0.5rem!important;
+        -moz-border-radius: 0.5rem!important;
+        -ms-border-radius: 0.5rem!important;
+        border-radius: 0.5rem!important;
     }
     
     @mixin font-style {
@@ -87,7 +92,7 @@
     }
     
     .orange-button {
-        @include border-radius !important;
+        @include border-radius;
         @include font-style;
         background-color: $orange-color;
         color: black;
@@ -300,6 +305,8 @@
     
     .photo-gallery-text {
         padding-right: 2rem;
+        display: flex;
+        flex-direction: column;
     }
     
     .table-box {
