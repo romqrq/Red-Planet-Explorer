@@ -11,7 +11,6 @@
     }
     
     body {
-        background-color: #ded9cc;
         text-align: center;
     }
     
@@ -38,19 +37,6 @@
         background-color: $orange-color!important;
         border: none;
         box-shadow: none;
-    }
-    
-    input:-internal-autofill-selected {
-        background-color: $orange-color!important;
-         ::placeholder {
-            /* Firefox, Chrome, Opera */
-            color: black;
-            opacity: 1;
-        }
-    }
-    
-    input {
-        color: black!important;
     }
     
     @mixin border-radius {
@@ -86,7 +72,7 @@
         border-top: 3px solid rgb(255, 255, 255);
         width: 80vw;
         box-shadow: -2px 2px 6px 0px black;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
     
     .general-text {
@@ -100,7 +86,7 @@
         @include font-style;
         text-shadow: $text-shadow;
         color: white;
-        font-size: 1.5rem
+        font-size: 1.2rem
     }
     
     .heading-text {
@@ -228,6 +214,12 @@
         background-color: black;
     }
     
+    .carousel-item,
+    .carousel-item.active {
+        display: flex;
+        justify-content: center;
+    }
+    
     .carousel-img {
         height: 70vh;
     }
@@ -320,11 +312,13 @@
             border: none;
             background-color: #00000059;
         }
+        .card-header {
+            padding: 0;
+        }
     }
     /* Gallery */
     
     .photo-gallery-text {
-        padding-right: 2rem;
         display: flex;
         flex-direction: column;
     }
@@ -332,7 +326,6 @@
     .table-box {
         overflow: auto;
         border-radius: 0.5rem;
-        margin: 1rem -0.9rem;
         box-shadow: $box-shadow;
         padding: 0;
     }
@@ -421,13 +414,13 @@
     
     .R2D-img-div {
         display: flex;
-        align-items: center;
+        justify-content: flex-end;
     }
     
     .mars-rover-2D {
         width: 100%;
         border-radius: 0.5rem;
-        margin: 1rem 0;
+        margin: auto 0;
     }
     
     .fa-desktop,
@@ -439,15 +432,10 @@
     .R2D-buttons {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         justify-content: space-between;
-        // button {
-        //     width: 15rem;
-        //     margin: 0.3rem;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: start;
-        // }
+        text-align: left;
+        padding-left: 0;
         a {
             color: inherit;
             margin: 0.3rem;
@@ -456,8 +444,11 @@
             margin: 0;
         }
         .hr-divider {
-            width: 80%;
+            width: 100%;
             margin: 0 0 1rem 0;
+        }
+        button {
+            width: 100%;
         }
     }
     /* Modal */
@@ -569,9 +560,63 @@
     }
     
     @media screen and (min-width: 768px) {
+        body {
+            height: 100vh;
+            background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
+            background-size: 400% 400%;
+            -webkit-animation: Gradient 15s ease infinite;
+            -moz-animation: Gradient 15s ease infinite;
+            animation: Gradient 15s ease infinite;
+        }
+        /*Side console */
+        .side-console {
+            position: absolute;
+            top: 3%;
+            left: 0;
+            bottom: 0;
+            height: 94%;
+            width: 10%;
+            padding: 0;
+            background-image: url(../images/bg-side-console.jpg);
+            @include bg-fitting;
+            border-radius: 1rem;
+            .dark-mask {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+                border-radius: 1rem;
+                background-color: #0000009e;
+            }
+        }
+        .move-front {
+            z-index: 1;
+            width: 90%;
+        }
+        .move-back {
+            z-index: 0;
+            width: 0%;
+        }
+        .main-screen-container,
+        .content-section {
+            max-width: 90%;
+            max-height: 90%;
+            position: absolute;
+            left: 10%;
+            top: 5%;
+            border-bottom-right-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+        .medium-text {
+            font-size: 1.5rem
+        }
+        .hr-divider {
+            margin-bottom: 3rem;
+        }
         .main-title {
             font-size: 5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
         .round-border {
             height: 3rem;
@@ -588,8 +633,7 @@
             line-height: 2.7rem;
         }
         .carousel-img {
-            width: 100%;
-            height: 100%;
+            min-height: 100%;
         }
         .carousel-caption {
             justify-content: flex-end;
@@ -614,6 +658,62 @@
             padding-right: 2rem;
         }
         .table-box {
-            margin: 0;
+            margin: 1rem -0.9rem;
+        }
+    }
+    
+    @media screen and (min-width: 1025px) {
+        .carousel-img {
+            width: 100%;
+        }
+        .mars-rover-2D {
+            margin: 1rem auto;
+        }
+        .R2D-buttons {
+            align-items: start;
+            .hr-divider {
+                width: 100%;
+                margin: 0 0 1rem 0;
+            }
+            .mars-rover-2D {
+                max-width: 30vw;
+            }
+        }
+    }
+    /*Media queries for background*/
+    
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
         }
     }

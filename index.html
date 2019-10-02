@@ -16,8 +16,29 @@
 </head>
 
 <body onload=writeWeatherToDocument()>
+    <!--Desktop only side console-->
+    <div class="container side-console">
+        <div class="dark-mask">
+            <div class="sc-title">
+                <p>Red Planet Explorer</p>
+            </div>   
+            <div class="sc-buttons">
+                <button class="orange-button" href="#weather-section">Weather</button>
+                <button class="orange-button" href="#manifest">Rovers</button>
+                <button class="orange-button" href="#photos">Gallery</button>
+                <button class="orange-button" href="#games">Games</button>
+            </div>
+            <div class="sc-social">
+                <i class="fab fa-facebook-f round-border"></i>
+                <i class="fab fa-instagram round-border"></i>
+                <i class="fab fa-twitter round-border"></i>
+                <i class="fab fa-pinterest-p round-border"></i>
+            </div>
+        </div>
+    </div>
+
     <header>
-        <div class="container-fluid main-screen-container">
+        <div class="container-fluid main-screen-container move-front">
             <div class="row social-row">
                 <div class="col-12 social-col">
                     <i class="fab fa-facebook-f round-border"></i>
@@ -27,13 +48,13 @@
                 </div>
             </div>
             <div class="row text-center" role="navigation">
-                <a class="col-3 medium-text" href="#">Weather</a>
-                <a class="col-3 medium-text" href="#">Rovers</a>
-                <a class="col-3 medium-text" href="#">Gallery</a>
-                <a class="col-3 medium-text" href="#">Games</a>
+                <a class="col-3 medium-text" href="#weather-section">Weather</a>
+                <a class="col-3 medium-text" href="#manifest">Rovers</a>
+                <a class="col-3 medium-text" href="#photos">Gallery</a>
+                <a class="col-3 medium-text" href="#games">Games</a>
             </div>
             <hr class="hr-divider">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-12 text-center">
                     <p class="main-title">Red Planet Explorer</p>
                 </div>
@@ -51,7 +72,7 @@
             </div>
         </div>
     </header>
-    <section class="content-section" id="weather-section">
+    <section class="content-section move-back" id="weather-section">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -87,7 +108,7 @@
             </div>
         </div>
     </section>
-    <section class="content-section">
+    <section class="content-section move-back" id="manifest">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -236,7 +257,7 @@
             <!--<div class="container-fluid manifest-rover-facts" id="roverFacts"></div>-->
         </div>
     </section>
-    <section class="content-section">
+    <section class="content-section move-back" id="latest">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -250,7 +271,7 @@
                 <p>For Spirit and Oportunity, you will find their last images before they lost connection with us.</p>
                 <p>Opportunity sent a photo of the dark sky during the 2018 planetary storm that put an end to Oppy's efforts on Mars. The black bar on the photo means that it wasn't fully transmitted. You can find out more <a href="https://www.space.com/mars-rover-opportunity-last-photographs.html">here</a>.</p>
                 <p>Spirit sent photos of the sun from the sandy area where it got trapped. You can find more pictures <a href="https://nssdc.gsfc.nasa.gov/planetary/mars/mars_exploration_rovers/mera_images.html">here</a>.</p>
-                <p>You can also look at the rovers mission updates for <a href "https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/">Opportunity</a> and <a href="https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2011/">Spirit</a></p>
+                <p>You can also look at the rovers mission updates for <a href="https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/">Opportunity</a> and <a href="https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2011/">Spirit</a></p>
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
@@ -266,7 +287,7 @@
             </div>
         </div>
     </section>
-    <section class="content-section dark-bg">
+    <section class="content-section move-back" id="photos">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -307,7 +328,7 @@
                                     <option value="pancam">PANCAM</option>
                                     <option value="minites">MINITES</option>
                                 </select>
-                                <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
+                                <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
                             </div>
                         </div>
                     </div>
@@ -390,7 +411,7 @@
             </div>
         </div>
     </section>
-    <section class="content-section">
+    <section class="content-section move-back" id="videos">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -435,7 +456,7 @@
             </div>
         </div>
     </section>
-    <section class="content-section">
+    <section class="content-section move-back" id="games">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">
                 <div class="heading-text">
@@ -445,34 +466,33 @@
             <hr class="hr-divider">
             <div class="container-fluid general-text">
                 <div>
-                    <p>Drive Curiosity and explore the red planet!</p>
-
-
+                    <p>On this game you can fiddle around the Curiosity Rover and explore some of its functionalities, equipments and structure.</p>
+                    <p>You can also take control of the Mars exploration driving Curiosity through Martian terrain.</p>
                     <embed class="rover-explorer" src="https://eyes.nasa.gov/curiosity/">
                 </div>
                 <div class="row">
-                    <div class="col-12 offset-lg-1">
+                    <div class="col-12 col-lg-3 offset-lg-2">
                         <p>How far can you go on this fun and quite addictive rover exploration?</p>
                         <p>My high score is 79! Can you beat it?</p>
                     </div>
-                    <div class="col-12 col-lg-2 R2D-img-div">
+                    <div class="col-6 col-lg-2 R2D-img-div">
                         <img class="mars-rover-2D" src="assets/images/gamee-mars-rover.jpg">
                     </div>
-                    <div class="col-12 R2D-buttons">
-                        <p>Play on: </p>
+                    <div class="col-6 col-lg-3 R2D-buttons">
+                        <p>Choose where to play: </p>
                         <hr class="hr-divider">
-                        <!-- <button type="button" class="orange-button" data-toggle="modal" data-target="#R2DModal"><i class="fas fa-desktop"></i> 
+                        <button type="button" class="orange-button" data-toggle="modal" data-target="#R2DModal"> 
                             Desktop
                         </button>
-                        <button type="button" class="orange-button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"><i class="fab fa-android round" ></i>
+                        <button type="button" class="orange-button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app">
                             Android
                         </button>
-                        <button type="button" class="orange-button" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple" ></i>
+                        <button type="button" class="orange-button" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210">
                             Apple
-                        </button> -->
-                        <a href="https://www.gamee.com/game/0Moq0ctcY"><i class="fas fa-desktop round-border"></i> Desktop</a>
+                        </button>
+                        <!-- <a href="https://www.gamee.com/game/0Moq0ctcY"><i class="fas fa-desktop round-border"></i> Desktop</a>
                         <a href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"><i class="fab fa-android round-border"></i> Android</a>
-                        <a href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple round-border"></i> Apple</a>
+                        <a href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple round-border"></i> Apple</a> -->
                     </div>
                 </div>
             </div>
