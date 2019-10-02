@@ -16,6 +16,25 @@
 </head>
 
 <body onload=writeWeatherToDocument()>
+    <!--Desktop only side console-->
+    <div class="container side-console">
+        <div class="sc-title">
+            <p>Red Planet Explorer</p>
+        </div>   
+        <div class="sc-buttons">
+            <button class="orange-button" href="#weather-section">Weather</button>
+            <button class="orange-button" href="#manifest">Rovers</button>
+            <button class="orange-button" href="#photos">Gallery</button>
+            <button class="orange-button" href="#games">Games</button>
+        </div>
+        <div class="sc-social">
+            <i class="fab fa-facebook-f round-border"></i>
+            <i class="fab fa-instagram round-border"></i>
+            <i class="fab fa-twitter round-border"></i>
+            <i class="fab fa-pinterest-p round-border"></i>
+        </div>
+    </div>
+
     <header>
         <div class="container-fluid main-screen-container">
             <div class="row social-row">
@@ -33,7 +52,7 @@
                 <a class="col-3 medium-text" href="#games">Games</a>
             </div>
             <hr class="hr-divider">
-            <div class="row">
+            <div class="row mb-3">
                 <div class="col-12 text-center">
                     <p class="main-title">Red Planet Explorer</p>
                 </div>
@@ -307,7 +326,7 @@
                                     <option value="pancam">PANCAM</option>
                                     <option value="minites">MINITES</option>
                                 </select>
-                                <button class="btn orange-button" onclick="writeParamsToDocument()">Options</button>
+                                <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
                             </div>
                         </div>
                     </div>
@@ -454,24 +473,24 @@
                         <p>How far can you go on this fun and quite addictive rover exploration?</p>
                         <p>My high score is 79! Can you beat it?</p>
                     </div>
-                    <div class="col-12 col-lg-2 R2D-img-div">
+                    <div class="col-6 col-lg-2 R2D-img-div">
                         <img class="mars-rover-2D" src="assets/images/gamee-mars-rover.jpg">
                     </div>
-                    <div class="col-12 col-lg-3 R2D-buttons">
+                    <div class="col-6 col-lg-3 R2D-buttons">
                         <p>Choose where to play: </p>
                         <hr class="hr-divider">
-                        <!-- <button type="button" class="orange-button" data-toggle="modal" data-target="#R2DModal"><i class="fas fa-desktop"></i> 
+                        <button type="button" class="orange-button" data-toggle="modal" data-target="#R2DModal"> 
                             Desktop
                         </button>
-                        <button type="button" class="orange-button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"><i class="fab fa-android round" ></i>
+                        <button type="button" class="orange-button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app">
                             Android
                         </button>
-                        <button type="button" class="orange-button" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple" ></i>
+                        <button type="button" class="orange-button" href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210">
                             Apple
-                        </button> -->
-                        <a href="https://www.gamee.com/game/0Moq0ctcY"><i class="fas fa-desktop round-border"></i> Desktop</a>
+                        </button>
+                        <!-- <a href="https://www.gamee.com/game/0Moq0ctcY"><i class="fas fa-desktop round-border"></i> Desktop</a>
                         <a href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app"><i class="fab fa-android round-border"></i> Android</a>
-                        <a href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple round-border"></i> Apple</a>
+                        <a href="https://itunes.apple.com/cz/app/gamee-play-win-share!/id945638210"><i class="fab fa-apple round-border"></i> Apple</a> -->
                     </div>
                 </div>
             </div>

@@ -36,38 +36,6 @@ a:hover {
           box-shadow: none;
 }
 
-input:-internal-autofill-selected {
-  background-color: #e55300 !important;
-}
-
-input:-internal-autofill-selected ::-webkit-input-placeholder {
-  /* Firefox, Chrome, Opera */
-  color: black;
-  opacity: 1;
-}
-
-input:-internal-autofill-selected :-ms-input-placeholder {
-  /* Firefox, Chrome, Opera */
-  color: black;
-  opacity: 1;
-}
-
-input:-internal-autofill-selected ::-ms-input-placeholder {
-  /* Firefox, Chrome, Opera */
-  color: black;
-  opacity: 1;
-}
-
-input:-internal-autofill-selected ::placeholder {
-  /* Firefox, Chrome, Opera */
-  color: black;
-  opacity: 1;
-}
-
-input {
-  color: black !important;
-}
-
 .dark-mask {
   padding: 2rem 0 3rem;
   height: 100%;
@@ -79,7 +47,7 @@ input {
   width: 80vw;
   -webkit-box-shadow: -2px 2px 6px 0px black;
           box-shadow: -2px 2px 6px 0px black;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .general-text {
@@ -95,7 +63,7 @@ input {
   font-weight: 700;
   text-shadow: 0px 1px 1px black;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .heading-text {
@@ -145,6 +113,27 @@ input {
   margin: 0 0.5rem;
   font-weight: 900;
   text-shadow: 0px 1px 1px black;
+}
+
+/* Tablet and Desktop */
+/*Side console */
+.side-console {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 10vw;
+  background-color: green;
 }
 
 /* Main Screen */
@@ -267,6 +256,16 @@ input {
   background-color: black;
 }
 
+.carousel-item,
+.carousel-item.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .carousel-img {
   height: 70vh;
 }
@@ -385,6 +384,10 @@ input {
   background-color: #00000059;
 }
 
+#accordion .card-header {
+  padding: 0;
+}
+
 /* Gallery */
 .photo-gallery-text {
   display: -webkit-box;
@@ -493,16 +496,15 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .mars-rover-2D {
   width: 100%;
-  max-width: 30vw;
   border-radius: 0.5rem;
-  margin: 1rem auto;
+  margin: auto 0;
 }
 
 .fa-desktop,
@@ -519,12 +521,14 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: left;
+  padding-left: 0;
 }
 
 .R2D-buttons a {
@@ -537,8 +541,12 @@ input {
 }
 
 .R2D-buttons .hr-divider {
-  width: 80%;
+  width: 100%;
   margin: 0 0 1rem 0;
+}
+
+.R2D-buttons button {
+  width: 100%;
 }
 
 /* Modal */
@@ -763,6 +771,12 @@ button.close {
 }
 
 @media screen and (min-width: 768px) {
+  .medium-text {
+    font-size: 1.5rem;
+  }
+  .hr-divider {
+    margin-bottom: 3rem;
+  }
   .main-title {
     font-size: 5rem;
     margin-bottom: 4rem;
@@ -782,8 +796,7 @@ button.close {
     line-height: 2.7rem;
   }
   .carousel-img {
-    width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
   .carousel-caption {
     -webkit-box-pack: end;
@@ -813,6 +826,27 @@ button.close {
   }
   .table-box {
     margin: 1rem -0.9rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .carousel-img {
+    width: 100%;
+  }
+  .mars-rover-2D {
+    margin: 1rem auto;
+  }
+  .R2D-buttons {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .R2D-buttons .hr-divider {
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .R2D-buttons .mars-rover-2D {
+    max-width: 30vw;
   }
 }
 /*# sourceMappingURL=testing.css.map */
