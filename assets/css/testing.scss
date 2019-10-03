@@ -590,6 +590,7 @@
                 padding: 1rem;
                 border-radius: 1rem;
                 background-color: #0000009e;
+                box-shadow: inset 0 0 12px 5px black;
             }
         }
         // .move-front {
@@ -600,22 +601,26 @@
             margin-left: -110%;
         }
         .slide-hide {
+            height: 95%;
             animation-name: slidePageHide;
             animation-duration: 2s;
-            animation-timing-function: linear;
+            animation-timing-function: ease-in-out;
             animation-direction: normal;
         }
         .slide-show {
+            height: 95%;
             z-index: 4;
             animation-name: slidePageShow;
             animation-duration: 2s;
-            animation-timing-function: linear;
+            animation-timing-function: ease-in-out;
             animation-direction: normal;
         }
         .main-screen-container,
         .content-section {
-            max-width: 90%;
-            max-height: 90%;
+            width: 89%;
+            height: 90%;
+            overflow-y: auto;
+            overflow-x: hidden;
             position: absolute;
             left: 10%;
             top: 5%;

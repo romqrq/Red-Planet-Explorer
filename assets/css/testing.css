@@ -791,35 +791,41 @@ button.close {
     padding: 1rem;
     border-radius: 1rem;
     background-color: #0000009e;
+    -webkit-box-shadow: inset 0 0 12px 5px black;
+            box-shadow: inset 0 0 12px 5px black;
   }
   .move-back {
     margin-left: -110%;
   }
   .slide-hide {
+    height: 95%;
     -webkit-animation-name: slidePageHide;
             animation-name: slidePageHide;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
   .slide-show {
+    height: 95%;
     z-index: 4;
     -webkit-animation-name: slidePageShow;
             animation-name: slidePageShow;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
   .main-screen-container,
   .content-section {
-    max-width: 90%;
-    max-height: 90%;
+    width: 89%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     left: 10%;
     top: 5%;
