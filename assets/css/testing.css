@@ -797,22 +797,19 @@ button.close {
     margin-left: -110%;
   }
   .slide-hide {
-    z-index: 0;
     -webkit-animation-name: slidePage;
             animation-name: slidePage;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
+    animation-direction: reverse;
   }
   .slide-show {
-    z-index: 3;
     -webkit-animation-name: slidePage;
             animation-name: slidePage;
-    -webkit-animation-duration: 4s;
-            animation-duration: 4s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
     -webkit-animation-direction: normal;
