@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     autoPlayYouTubeModal();
+    switchPages();
 
     $("#launch-button").click(function() {
         $("header").addClass("shake-animation");
@@ -38,4 +39,23 @@ $(document).ready(function() {
             });
         });
     }
+
+    //Function to switch the pages for tablets and desktop
+    function switchPages() {
+        var trigger = $(".sc-buttons > button");
+        console.log(trigger);
+
+        trigger.click(function() {
+
+            var selectedSectionID = $(this).attr("href");
+            $(selectedSectionID).addClass("move-front, slide-show").removeClass("move-back");
+
+            var siblingsOnly = $(this).siblings();
+            siblingsOnly.each(function(i) {
+                var otherSectionsID = $(this).attr("href");
+                $(otherSectionsID).removeClass("move-front, slide-show").addClass("move-back");
+            });
+
+        })
+    };
 });
