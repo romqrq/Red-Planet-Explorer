@@ -43,17 +43,20 @@ $(document).ready(function() {
     //Function to switch the pages for tablets and desktop
     function switchPages() {
         var trigger = $(".sc-buttons > button");
-        console.log(trigger);
 
         trigger.click(function() {
 
             var selectedSectionID = $(this).attr("href");
-            $(selectedSectionID).addClass("move-front, slide-show").removeClass("move-back");
+            $(selectedSectionID).addClass("slide-show").removeClass("move-back slide-hide");
 
             var siblingsOnly = $(this).siblings();
             siblingsOnly.each(function(i) {
                 var otherSectionsID = $(this).attr("href");
-                $(otherSectionsID).removeClass("move-front, slide-show").addClass("move-back");
+                $(otherSectionsID).removeClass("slide-show").addClass("slide-hide");
+
+                setTimeout(function() {
+                    $(otherSectionsID).addClass("move-back");
+                }, 2000)
             });
 
         })
