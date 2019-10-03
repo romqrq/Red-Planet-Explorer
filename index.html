@@ -16,6 +16,7 @@
 </head>
 
 <body onload=writeWeatherToDocument()>
+        <header>
     <!--Desktop only side console-->
     <div class="container side-console">
         <div class="dark-mask">
@@ -23,9 +24,12 @@
                 <p>Red Planet Explorer</p>
             </div>   
             <div class="sc-buttons">
+                    <button class="orange-button" href="#home">Home</button>
                 <button class="orange-button" href="#weather-section">Weather</button>
                 <button class="orange-button" href="#manifest">Rovers</button>
-                <button class="orange-button" href="#photos">Gallery</button>
+                <button class="orange-button" href="#latest">Latest</button>
+                <button class="orange-button" href="#photos">Photos</button>
+                <button class="orange-button" href="#videos">Videos</button>
                 <button class="orange-button" href="#games">Games</button>
             </div>
             <div class="sc-social">
@@ -36,9 +40,9 @@
             </div>
         </div>
     </div>
-
-    <header>
-        <div class="container-fluid main-screen-container move-front">
+</header>
+    <section class="content-section main-screen-container slide-show" id="home">
+        <div class="container-fluid ">
             <div class="row social-row">
                 <div class="col-12 social-col">
                     <i class="fab fa-facebook-f round-border"></i>
@@ -71,7 +75,7 @@
                 </div>
             </div>
         </div>
-    </header>
+    </section>
     <section class="content-section move-back" id="weather-section">
         <div class="container-fluid dark-mask">
             <div class="section-heading container-fluid">

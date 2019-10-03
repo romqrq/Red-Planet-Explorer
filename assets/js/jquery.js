@@ -1,6 +1,6 @@
 $(document).ready(function() {
-
     autoPlayYouTubeModal();
+    switchPages();
 
     $("#launch-button").click(function() {
         $("header").addClass("shake-animation");
@@ -32,9 +32,33 @@ $(document).ready(function() {
             var theModal = $(this).data("target"),
                 videoSRC = $(this).attr("data-theVideo"),
                 videoSRCauto = videoSRC + "?autoplay=1";
-            $(theModal + ' iframe').attr('src', videoSRCauto);
-            $(theModal + ' button.close').click(function() {
-                $(theModal + ' iframe').attr('src', videoSRC);
+            $(theModal + " iframe").attr("src", videoSRCauto);
+            $(theModal + " button.close").click(function() {
+                $(theModal + " iframe").attr("src", videoSRC);
+            });
+        });
+    }
+
+    //Function to switch the pages for tablets and desktop
+    function switchPages() {
+        var trigger = $(".sc-buttons > button");
+
+        trigger.click(function() {
+            var selectedSectionID = $(this).attr("href");
+            $(selectedSectionID)
+                .addClass("slide-show")
+                .removeClass("slide-hide, move-back");
+
+            var siblingsOnly = $(this).siblings();
+            siblingsOnly.each(function(i) {
+                var otherSectionsID = $(this).attr("href");
+                $(otherSectionsID)
+                    .removeClass("slide-show")
+                    .addClass("slide-hide");
+
+                setTimeout(function() {
+                    $(otherSectionsID).addClass("move-back");
+                }, 2000);
             });
         });
     }

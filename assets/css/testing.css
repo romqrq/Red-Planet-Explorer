@@ -764,11 +764,14 @@ button.close {
     bottom: 0;
     height: 94%;
     width: 10%;
+    z-index: 5;
     padding: 0;
     background-image: url(../images/bg-side-console.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    -webkit-box-shadow: 0 0 8px 2px black;
+            box-shadow: 0 0 8px 2px black;
     border-radius: 1rem;
   }
   .side-console .dark-mask {
@@ -788,19 +791,41 @@ button.close {
     padding: 1rem;
     border-radius: 1rem;
     background-color: #0000009e;
-  }
-  .move-front {
-    z-index: 1;
-    width: 90%;
+    -webkit-box-shadow: inset 0 0 12px 5px black;
+            box-shadow: inset 0 0 12px 5px black;
   }
   .move-back {
-    z-index: 0;
-    width: 0%;
+    margin-left: -110%;
+  }
+  .slide-hide {
+    height: 95%;
+    -webkit-animation-name: slidePageHide;
+            animation-name: slidePageHide;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+  }
+  .slide-show {
+    height: 95%;
+    z-index: 4;
+    -webkit-animation-name: slidePageShow;
+            animation-name: slidePageShow;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
   }
   .main-screen-container,
   .content-section {
-    max-width: 90%;
-    max-height: 90%;
+    width: 89%;
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
     position: absolute;
     left: 10%;
     top: 5%;
@@ -841,6 +866,7 @@ button.close {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: end;
+    z-index: 3;
   }
   .carousel-caption .hr-divider {
     width: 19rem;
@@ -886,7 +912,43 @@ button.close {
   }
 }
 
-/*Media queries for background*/
+/* Keyframes for switching pages */
+@-webkit-keyframes slidePageShow {
+  from {
+    margin-left: -110%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+@keyframes slidePageShow {
+  from {
+    margin-left: -110%;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@-webkit-keyframes slidePageHide {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -110%;
+  }
+}
+
+@keyframes slidePageHide {
+  from {
+    margin-left: 0;
+  }
+  to {
+    margin-left: -110%;
+  }
+}
+
+/*Keyframes for background*/
 @-webkit-keyframes Gradient {
   0% {
     background-position: 0% 50%;
