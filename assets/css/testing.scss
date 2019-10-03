@@ -576,7 +576,7 @@
             bottom: 0;
             height: 94%;
             width: 10%;
-            z-index: 4;
+            z-index: 5;
             padding: 0;
             background-image: url(../images/bg-side-console.jpg);
             @include bg-fitting;
@@ -597,17 +597,17 @@
         //     width: 90%;
         // }
         .move-back {
-            z-index: 0;
             margin-left: -110%;
         }
         .slide-hide {
-            animation-name: slidePage;
+            animation-name: slidePageHide;
             animation-duration: 2s;
             animation-timing-function: linear;
-            animation-direction: reverse;
+            animation-direction: normal;
         }
         .slide-show {
-            animation-name: slidePage;
+            z-index: 4;
+            animation-name: slidePageShow;
             animation-duration: 2s;
             animation-timing-function: linear;
             animation-direction: normal;
@@ -652,6 +652,7 @@
         .carousel-caption {
             justify-content: flex-end;
             align-items: end;
+            z-index: 3;
             .hr-divider {
                 width: 19rem;
                 margin-left: 0;
@@ -696,12 +697,21 @@
     }
     /* Keyframes for switching pages */
     
-    @keyframes slidePage {
+    @keyframes slidePageShow {
         from {
             margin-left: -110%;
         }
         to {
             margin-left: 0;
+        }
+    }
+
+    @keyframes slidePageHide {
+        from {
+            margin-left: 0;
+        }
+        to {
+            margin-left: -110%;
         }
     }
     /*Keyframes for background*/
