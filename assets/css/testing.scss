@@ -38,6 +38,10 @@
         border: none;
         box-shadow: none;
     }
+
+    ::-webkit-scrollbar {
+        border-radius: 0.5rem;
+    }
     
     @mixin border-radius {
         -webkit-border-radius: 0.5rem!important;
@@ -111,7 +115,7 @@
         @include border-radius;
         background-color: #29292859;
         box-shadow: inset 0 0 10px 5px black;
-        background-image: url(../images/bg-content-section-2.jpeg);
+        background-image: url(../images/bg-content-section-2.jpg);
         @include bg-fitting;
     }
     
@@ -559,7 +563,7 @@
         }
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 769px) {
         body {
             height: 100vh;
             background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
@@ -568,6 +572,11 @@
             -moz-animation: Gradient 15s ease infinite;
             animation: Gradient 15s ease infinite;
         }
+
+        .hide-md {
+            display: none;
+        }
+
         /*Side console */
         .side-console {
             position: absolute;
@@ -592,11 +601,27 @@
                 background-color: #0000009e;
                 box-shadow: inset 0 0 12px 5px black;
             }
+            p {
+                font-family: "Revalia", "Jura", sans-serif;
+                color: white;
+                font-size: 1.2rem;            
+            }
+                
+            button {
+                width: 100%;
+                padding: 0.3rem;
+                margin: 0.2rem 0;
+            }
+
+            button:focus {
+                box-shadow: 0 0 5px 1px #1a72da96;
+                outline: none;
+            }
+
+            i {
+                margin: 0.2rem;
+            }
         }
-        // .move-front {
-        //     z-index: 3;
-        //     width: 90%;
-        // }
         .move-back {
             margin-left: -110%;
         }
