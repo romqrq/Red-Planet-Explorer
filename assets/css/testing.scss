@@ -38,8 +38,8 @@
         border: none;
         box-shadow: none;
     }
-
-    ::-webkit-scrollbar {
+    
+     ::-webkit-scrollbar {
         border-radius: 0.5rem;
     }
     
@@ -84,13 +84,15 @@
         text-shadow: $text-shadow;
         color: white;
         font-size: 1.2rem;
+        padding: 1rem;
     }
     
     .medium-text {
         @include font-style;
         text-shadow: $text-shadow;
         color: white;
-        font-size: 1.2rem
+        font-size: 1.2rem;
+        padding: 1rem;
     }
     
     .heading-text {
@@ -113,10 +115,15 @@
     
     .content-section {
         @include border-radius;
+        padding: 2rem 1rem;
         background-color: #29292859;
         box-shadow: inset 0 0 10px 5px black;
         background-image: url(../images/bg-content-section-2.jpg);
         @include bg-fitting;
+
+        .container-fluid {
+            padding:0;
+        }
     }
     
     .round-border {
@@ -134,10 +141,9 @@
     }
     /* Main Screen */
     
-    .main-screen-container {
+    .#home {
         height: 100vh;
         max-width: 100vw;
-        padding: 1rem;
         background-image: url("../images/mars-atmosphere.jpg");
         @include bg-fitting;
         background-color: black;
@@ -145,6 +151,10 @@
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 1px 4px 9px 0px black;
+    
+        .hr-divider {
+            margin-bottom: 0;
+        }
     }
     
     .social-row {
@@ -572,11 +582,9 @@
             -moz-animation: Gradient 15s ease infinite;
             animation: Gradient 15s ease infinite;
         }
-
         .hide-md {
             display: none;
         }
-
         /*Side console */
         .side-console {
             position: absolute;
@@ -604,20 +612,17 @@
             p {
                 font-family: "Revalia", "Jura", sans-serif;
                 color: white;
-                font-size: 1.2rem;            
+                font-size: 1.2rem;
             }
-                
             button {
                 width: 100%;
                 padding: 0.3rem;
                 margin: 0.2rem 0;
             }
-
             button:focus {
                 box-shadow: 0 0 5px 1px #1a72da96;
                 outline: none;
             }
-
             i {
                 margin: 0.2rem;
             }
@@ -640,7 +645,7 @@
             animation-timing-function: ease-in-out;
             animation-direction: normal;
         }
-        .main-screen-container,
+        #home,
         .content-section {
             width: 89%;
             height: 90%;
@@ -651,6 +656,7 @@
             top: 5%;
             border-bottom-right-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
+            box-shadow: $box-shadow;
         }
         .medium-text {
             font-size: 1.5rem
@@ -735,7 +741,7 @@
             margin-left: 0;
         }
     }
-
+    
     @keyframes slidePageHide {
         from {
             margin-left: 0;

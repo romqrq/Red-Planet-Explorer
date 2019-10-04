@@ -18,7 +18,7 @@
 <body onload=writeWeatherToDocument()>
     <header>
         <!--Desktop only side console-->
-        <div class="container side-console">
+        <div class="container side-console d-none ">
             <div class="dark-mask">
                 <div>
                     <p>Red Planet Explorer</p>
@@ -41,8 +41,8 @@
             </div>
         </div>
     </header>
-    <section class="content-section main-screen-container slide-show" id="home">
-        <div class="container-fluid ">
+    <section class="content-section slide-show" id="home">
+        <div class="container-fluid main-screen-container">
             <div class="row social-row hide-md">
                 <div class="col-12 social-col">
                     <i class="fab fa-facebook-f round-border"></i>
@@ -91,24 +91,25 @@
                 <p>The data below shows the latest weather information received from the InSight Lander.</p>
                 <p>The atmospheric pressure in Mars is less than 1% of the pressure on Earth. So the data was formatted and it shows the variation inside the 1% compared to Earth Atmospheric pressure. So when you see 0.7, it means 0.007atm.</p>
             </div>
-            <div class="container-fluid weather-container">
-                <div class="carousel slide carousel-fade h-100" data-ride="carousel" id="weather-carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/images/carousel/insight-lander.jpg" class="d-block carousel-img" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/carousel/rover-mars-surface.jpg" class="d-block carousel-img" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
-                        </div>
+        </div>
+
+        <div class="container-fluid weather-container">
+            <div class="carousel slide carousel-fade h-100" data-ride="carousel" id="weather-carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/images/carousel/insight-lander.jpg" class="d-block carousel-img" alt="...">
                     </div>
-                    <div class="carousel-caption d-md-block" id="dataWeather"></div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/rover-mars-surface.jpg" class="d-block carousel-img" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
+                    </div>
                 </div>
+                <div class="carousel-caption d-md-block" id="dataWeather"></div>
             </div>
         </div>
     </section>

@@ -59,6 +59,7 @@ a:hover {
   text-shadow: 0px 1px 1px black;
   color: white;
   font-size: 1.2rem;
+  padding: 1rem;
 }
 
 .medium-text {
@@ -67,6 +68,7 @@ a:hover {
   text-shadow: 0px 1px 1px black;
   color: white;
   font-size: 1.2rem;
+  padding: 1rem;
 }
 
 .heading-text {
@@ -91,6 +93,7 @@ a:hover {
 
 .content-section {
   border-radius: 0.5rem !important;
+  padding: 2rem 1rem;
   background-color: #29292859;
   -webkit-box-shadow: inset 0 0 10px 5px black;
           box-shadow: inset 0 0 10px 5px black;
@@ -98,6 +101,10 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.content-section .container-fluid {
+  padding: 0;
 }
 
 .round-border {
@@ -122,7 +129,6 @@ a:hover {
 .main-screen-container {
   height: 100vh;
   max-width: 100vw;
-  padding: 1rem;
   background-image: url("../images/mars-atmosphere.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -140,6 +146,10 @@ a:hover {
           justify-content: space-evenly;
   -webkit-box-shadow: 1px 4px 9px 0px black;
           box-shadow: 1px 4px 9px 0px black;
+}
+
+.main-screen-container .hr-divider {
+  margin-bottom: 0;
 }
 
 .social-row {
@@ -856,6 +866,8 @@ button.close {
     top: 5%;
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    -webkit-box-shadow: 0 0 8px 2px black;
+            box-shadow: 0 0 8px 2px black;
   }
   .medium-text {
     font-size: 1.5rem;
