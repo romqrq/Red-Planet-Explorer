@@ -29,6 +29,7 @@ function getParamsData(cb) {
             // document.getElementById("data").innerHTML = JSON.parse(this.responseText);
             console.log(JSON.parse(this.responseText));
             cb(JSON.parse(this.responseText));
+            console.log(cb);
         }
     };
     xhr.open(

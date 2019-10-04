@@ -232,8 +232,7 @@ function getParamsData(cb) {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // document.getElementById("data").innerHTML = JSON.parse(this.responseText);
-            console.log(JSON.parse(this.responseText));
+            // console.log(JSON.parse(this.responseText));
             cb(JSON.parse(this.responseText));
         }
     };
@@ -250,6 +249,16 @@ function writeParamsToDocument() {
 
     getParamsData(function(data) {
         data = data.photos;
+        console.log(data[0].rover);
+        var minDate = data[0].rover.landing_date;
+        var maxDate = data[0].rover.max_date;
+        var maxSol = data[0].rover.max_sol;
+
+        var cn = data[0].rover.cameras;
+        var camList = [];
+        cn.forEach(function(camera) {
+            camList.push(camera.name);
+        });
 
         data.forEach(function(item) {
             el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
