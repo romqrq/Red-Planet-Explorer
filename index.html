@@ -313,7 +313,7 @@
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                         <div class="input-group mb-5">
                             <div class="input-group mb-3">
-                                <select class="custom-select orange-button" id="inputRoverName">
+                                <select class="custom-select orange-button" onchange="writeRangeToDocument()" id="inputRoverName">
                                     <option selected>Choose...</option>
                                     <option value="curiosity">Curiosity</option>
                                     <option value="spirit">Spirit</option>
@@ -322,7 +322,7 @@
                                 <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
                                 <select class="custom-select orange-button" id="inputCamName">
                                     <option selected>Choose...</option>
-                                    <option value="fhaz">FHAZ</option>
+                                    <!-- <option value="fhaz">FHAZ</option>
                                     <option value="rhaz">RHAZ</option>
                                     <option value="mast">Mast</option>
                                     <option value="chemcam">CHEMCAM</option>
@@ -330,7 +330,7 @@
                                     <option value="mardi">MARDI</option>
                                     <option value="navcam">NAVCAM</option>
                                     <option value="pancam">PANCAM</option>
-                                    <option value="minites">MINITES</option>
+                                    <option value="minites">MINITES</option> -->
                                 </select>
                                 <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
                             </div>
@@ -640,6 +640,7 @@
     <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
     <script type="text/javascript" src="assets/js/jquery.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/main-test.js"></script>
 
 
 
