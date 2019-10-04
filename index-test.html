@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Planet Explorer</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css" type="text/css" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" type="text/css" /> -->
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+
+</head>
+
+<body onload=writeWeatherToDocument()>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="input-group mb-5">
+                <div class="input-group mb-3">
+                    <select class="custom-select orange-button" id="inputRoverName">
+                        <option selected>Choose...</option>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="spirit">Spirit</option>
+                        <option value="opportunity">Opportunity</option>
+                    </select>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sol or Date</button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Sol</a>
+                                <a class="dropdown-item" href="#">Date</a>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" id="solTextInput" aria-label="Text input choose Sol or Earth date">
+                    </div>
+                    <!-- <input type="text" class="form-control orange-button" placeholder="Sol Nº" id="solTextInput"> -->
+                    <select class="custom-select orange-button" id="inputCamName">
+                        <option selected>Choose...</option>
+                        <option value="fhaz">FHAZ</option>
+                        <option value="rhaz">RHAZ</option>
+                        <option value="mast">Mast</option>
+                        <option value="chemcam">CHEMCAM</option>
+                        <option value="mahli">MAHLI</option>
+                        <option value="mardi">MARDI</option>
+                        <option value="navcam">NAVCAM</option>
+                        <option value="pancam">PANCAM</option>
+                        <option value="minites">MINITES</option>
+                    </select>
+                    <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.js"></script>-->
+    <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+
+
+</body>
+
+</html>
