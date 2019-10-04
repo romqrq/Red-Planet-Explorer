@@ -12,6 +12,17 @@
     
     body {
         text-align: center;
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #dc4f00;
+            outline: 1px solid #949494;
+            border-radius: 0.5rem;
+        }
+
+        ::-webkit-scrollbar {
+        border-radius: 0.5rem;
+        background-color: #d84e0094;
+        }
     }
     
     a {
@@ -37,10 +48,6 @@
         background-color: $orange-color!important;
         border: none;
         box-shadow: none;
-    }
-    
-     ::-webkit-scrollbar {
-        border-radius: 0.5rem;
     }
     
     @mixin border-radius {
@@ -141,7 +148,10 @@
     }
     /* Main Screen */
     
-    .#home {
+    #home {
+        padding: 0;
+    }
+    .main-screen-container{
         height: 100vh;
         max-width: 100vw;
         background-image: url("../images/mars-atmosphere.jpg");
@@ -151,7 +161,8 @@
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 1px 4px 9px 0px black;
-    
+        padding: 1rem!important;
+        @include border-radius;
         .hr-divider {
             margin-bottom: 0;
         }
@@ -463,6 +474,7 @@
         }
         button {
             width: 100%;
+            height: 20%;
         }
     }
     /* Modal */
@@ -573,6 +585,12 @@
         }
     }
     
+    @media screen and (max-width: 768px) {
+        .hide-sm {
+            display: none;
+        }
+    }
+
     @media screen and (min-width: 769px) {
         body {
             height: 100vh;
@@ -645,6 +663,12 @@
             animation-timing-function: ease-in-out;
             animation-direction: normal;
         }
+        #home {
+            .main-screen-container {
+                height: 100%;
+            }
+        }
+
         #home,
         .content-section {
             width: 89%;
