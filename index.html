@@ -23,13 +23,13 @@
                     <p>Red Planet Explorer</p>
                 </div>   
                 <div class="sc-buttons">
-                    <button class="orange-button" href="#home">Home</button>
-                    <button class="orange-button" href="#weather-section">Weather</button>
-                    <button class="orange-button" href="#manifest">Rovers</button>
-                    <button class="orange-button" href="#latest">Latest</button>
-                    <button class="orange-button" href="#photos">Photos</button>
-                    <button class="orange-button" href="#videos">Videos</button>
-                    <button class="orange-button" href="#games">Games</button>
+                    <a class="btn orange-button" role="button" href="#home">Home</a>
+                    <a class="btn orange-button" role="button" href="#weather-section">Weather</a>
+                    <a class="btn orange-button" role="button" href="#manifest">Rovers</a>
+                    <a class="btn orange-button" role="button" href="#latest">Latest</a>
+                    <a class="btn orange-button" role="button" href="#photos">Photos</a>
+                    <a class="btn orange-button" role="button" href="#videos">Videos</a>
+                    <a class="btn orange-button" role="button" href="#games">Games</a>
                 </div>
                 <div class="sc-social">
                     <i class="fab fa-facebook-f round-border"></i>
@@ -307,8 +307,8 @@
                         <p>How to search for images:</p>
                         <ol>
                             <li class="text-left">Select a Rover.</li>
-                            <li class="text-left">Type the sol number - Check the red row on the table below.</li>
-                            <li class="text-left">Choose one of the cameras carried by your chosen rover.</li>
+                            <li class="text-left">It will automatically load the last Sol where pictures were sent. You can choose any number between 0 (zero) and the last Sol.</li>
+                            <li class="text-left">Once you choose the rover, it will automatically load the cameras carried by that specific rover. You can choose from the dropdown list.</li>
                         </ol>
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                         <div class="input-group mb-5">
@@ -321,22 +321,13 @@
                                 </select>
                                 <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
                                 <select class="custom-select orange-button" id="inputCamName">
-                                    <option selected>Choose...</option>
-                                    <!-- <option value="fhaz">FHAZ</option>
-                                    <option value="rhaz">RHAZ</option>
-                                    <option value="mast">Mast</option>
-                                    <option value="chemcam">CHEMCAM</option>
-                                    <option value="mahli">MAHLI</option>
-                                    <option value="mardi">MARDI</option>
-                                    <option value="navcam">NAVCAM</option>
-                                    <option value="pancam">PANCAM</option>
-                                    <option value="minites">MINITES</option> -->
+                                    <!-- <option selected>Choose...</option> -->
                                 </select>
                                 <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
                             </div>
                         </div>
                     </div>
-                    <div class="table-box col-12 col-lg-6 hide-sm">
+                    <!-- <div class="table-box col-12 col-lg-6 hide-sm">
                         <table class="table">
                             <thead>
                                 <tr class="tr-sol">
@@ -409,7 +400,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    </div> -->
                 </div>
                 <div id="data2"></div>
             </div>
@@ -480,7 +471,7 @@
                         <p>My high score is 79! Can you beat it?</p>
                     </div>
                     <div class="col-6 col-lg-2 R2D-img-div">
-                        <img class="mars-rover-2D" src="assets/images/gamee-mars-rover.jpg">
+                        <img class="mars-rover-2D" src="assets/images/gamee-mars-rover.jpg" alt="Logo Mars Rover game">
                     </div>
                     <div class="col-6 col-lg-3 R2D-buttons">
                         <p>Choose where to play: </p>
@@ -504,7 +495,8 @@
     </section>
 
     <!-- modal image Gallery -->
-    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-labelledby="GalleryImage" aria-hidden="true">
+    <!--aria-labelledby="GalleryImage"-->
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog"  aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -516,8 +508,8 @@
     </div>
 
     <!-- Video Gallery Modals -->
-
-    <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-labelledby="ChoosingLandingSite" aria-hidden="true">
+    <!-- aria-labelledby="ChoosingLandingSite"  -->
+    <div class="modal fade" id="modalVideo" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
