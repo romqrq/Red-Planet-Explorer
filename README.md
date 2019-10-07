@@ -19,11 +19,11 @@ for these stories we considered both tech savvy and the average internet user th
 
 All the sections and functionalities are easily accessible from the navigation bar and most of them won't take more than 3 clicks/taps from the home page to the end of the process.
 
-## Features
+## Features <---->
 
 ### Existing Features
 
-1. Header - DOBI logo and when the customer clicks on it, it brings the customer to the home page.
+<!-- 1. Header/Navigation Bar - Contains website logo and links to the different sections. (on small resolution).
 2. Navigation Bar - Navigation bar fixed at the top of the screen keeping always visible the menu, the company logo and social media links. Menu collapsed on small screen sizes and expanded from 676px and up.
 3. Footer - Gives access to a short description of the company mission and quote button.
 4. Home - Carousel with images and text that "talk" to the customer telling what the company does and progressing through different situations where the product can be used and closing saying it is available for "home" or "business".
@@ -42,7 +42,7 @@ All the sections and functionalities are easily accessible from the navigation b
 17. Support - FAQ section with accordion to show/hide answers.
 18. Support - Form where the customer can fill with their question or quote request. Elements position is responsive.
 19. About - Company history
-20. About - Cards with team pictures and individual roles within the company.
+20. About - Cards with team pictures and individual roles within the company. -->
 
 ### Features Left to Implement
 
@@ -87,15 +87,15 @@ The [W3C Validator](https://validator.w3.org/) was used to check the HTML code. 
 
 The project deployment was made using GitHub.
 
-1. Created the cloud9 environment and files.
+1. Created the local environment and files.
 2. Created the equivalent repository on GitHub.
-3. Pushed the files from cloud9 to the GitHub repository.
+3. Pushed the local files to the GitHub repository.
 4. On GitHub environment, opened the tab "Settings"
 5. Accessed the "github Pages" section
 6. Selected "master branch" and saved.
 7. After a few seconds the page was published.
 
-From this point, all the changes on the pages were made straight from Cloud9 as I pushed the content.
+From this point, all the changes on the pages were made straight from my local file/branch management through GitKraken as I pushed the content.
 
 If you wish to run the code locally, it is possible once you have saved the files for the page you wish to run (html, css, images and/or videos).
 
