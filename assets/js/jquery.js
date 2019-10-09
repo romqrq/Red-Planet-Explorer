@@ -4,7 +4,7 @@ $(document).ready(function() {
 
     $("#weightCheck").click(function() {
         var weight = $("#weightInput").val();
-
+        var testValue = $.isNumeric(weight);
         var kgVal = $("#kgRadio:checked").val();
         var lbVal = $("#lbRadio:checked").val();
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
             var weightOnMars = wom.toFixed(1);
         }
 
-        if (weightOnMars == NaN) {
+        if (testValue == false) {
             $("#weightResult").html("<h4>Please insert a valid number. (i.e. 75.6 or 2483.8)</h4>")
         } else {
             $("#weightResult").html(`<h4>On Mars, that weight would be equivalent to ${weightOnMars}${unit}!</h4>`)
