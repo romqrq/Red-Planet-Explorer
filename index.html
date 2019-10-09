@@ -458,7 +458,7 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div class="container-fluid general-text">
+            <div class="container-fluid general-text weight-container">
                 <div class="row">
                     <h3>Guess weight</h3>
                     <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
@@ -466,25 +466,18 @@
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div>
-                            <div class="form-check">
-                                    <label class="form-check-label">
-                                      <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
-                                    </label>
-                                  </div>
-                                  <div class="form-check">
-                                    <label class="form-check-label">
-                                      <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
-                                    </label>
-                                  </div>
-                    </div>
-                    <!-- <div class="btn-group" role="group" aria-label="Basic example">
-                        <button type="radio" class="btn orange-button" >Kilograms</button>
-                        <button type="radio" class="btn orange-button" >Pounds</button>
-                        
-                    </div> -->
+                        <div class="form-check col-6 col-md-12 orange-button">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
+                            </label>
+                        </div>
+                        <div class="form-check col-6 col-md-12 orange-button">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
+                            </label>
+                        </div>
                     <button class="btn orange-button" id="weightCheck">Go</button>
-                    <div id="weightResult"></div>
+                    <div class="weight-result" id="weightResult"></div>
                 </div>
                 <div>
                     <p>On this game you can fiddle around the Curiosity Rover and explore some of its functionalities, equipments and structure.</p>
