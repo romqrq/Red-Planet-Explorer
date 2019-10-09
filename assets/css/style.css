@@ -32,6 +32,7 @@ a:hover {
 .btn:focus {
   -webkit-box-shadow: none;
           box-shadow: none;
+  outline: none;
 }
 
 .modal-dialog {
@@ -441,6 +442,16 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .vg-earth-button {

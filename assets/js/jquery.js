@@ -28,7 +28,7 @@ $(document).ready(function() {
 
     //Function to switch the pages for tablets and desktop
     function switchPages() {
-        var trigger = $(".sc-buttons > button");
+        var trigger = $(".sc-buttons > a");
 
         trigger.click(function() {
             var selectedSectionID = $(this).attr("href");
