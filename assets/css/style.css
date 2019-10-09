@@ -496,6 +496,16 @@ a:hover {
 }
 
 /* Explore */
+.weight-container .row {
+  margin: 0;
+}
+
+.weight-container h3 {
+  margin: auto;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
 .weight-container .form-check {
   padding: 0.25rem;
   display: -webkit-box;
@@ -523,6 +533,10 @@ a:hover {
 .weight-container .weight-result {
   width: 100%;
   margin: 2rem auto;
+}
+
+.weight-container h4 {
+  font-weight: 700;
 }
 
 .rover-explorer {
