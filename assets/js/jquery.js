@@ -2,6 +2,33 @@ $(document).ready(function() {
     autoPlayYouTubeModal();
     switchPages();
 
+    $("#weightCheck").click(function() {
+        var weight = $("#weightInput").val();
+
+        var kgVal = $("#kgRadio:checked").val();
+        var lbVal = $("#lbRadio:checked").val();
+
+        if (kgVal == "on") {
+            var unit = "kg";
+            var mass = weight / 9.8;
+            var wom = mass * 3.711;
+            var weightOnMars = wom.toFixed(1);
+        } else if (lbVal == "on") {
+            var unit = "lb";
+            var weightInKG = weight / 2.20462;
+            var mass = weightInKG / 9.8;
+            var wom = mass * 3.711;
+            var weightOnMars = wom.toFixed(1);
+        }
+
+        if (weightOnMars == NaN) {
+            $("#weightResult").html("<p>Please insert a valid number. (i.e. 75.6 or 2483.8)</p>")
+        } else {
+            $("#weightResult").html(`On Mars, that weight would be equivalent to ${weightOnMars}${unit}!`)
+        };
+    });
+
+
     $("#launch-button").click(function() {
         $("header").addClass("shake-animation");
         $("#launch-button").removeClass("launch-button-animation");
@@ -49,4 +76,6 @@ $(document).ready(function() {
             });
         });
     }
+
+
 });
