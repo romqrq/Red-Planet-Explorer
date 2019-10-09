@@ -428,6 +428,26 @@
     }
     /* Explore */
     
+    .weight-container {
+        .form-check {
+            padding: 0.25rem;
+            display: flex;
+            justify-content: center;
+        }
+        .form-check-label {
+            display: flex;
+            align-items: center;
+        }
+        .form-check-input {
+            margin-top: 0;
+            margin-left: -1rem;
+        }
+        .weight-result {
+            width: 100%;
+            margin: 2rem auto;
+        }
+    }
+    
     .rover-explorer {
         height: 70vh;
         width: 100%;

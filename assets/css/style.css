@@ -496,6 +496,35 @@ a:hover {
 }
 
 /* Explore */
+.weight-container .form-check {
+  padding: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weight-container .form-check-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.weight-container .form-check-input {
+  margin-top: 0;
+  margin-left: -1rem;
+}
+
+.weight-container .weight-result {
+  width: 100%;
+  margin: 2rem auto;
+}
+
 .rover-explorer {
   height: 70vh;
   width: 100%;

@@ -458,25 +458,26 @@
                 </div>
             </div>
             <hr class="hr-divider">
-            <div class="container-fluid general-text">
+            <div class="container-fluid general-text weight-container">
                 <div class="row">
                     <h3>Guess weight</h3>
                     <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
                     <p>You can find it all out with this calculator!!</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="weight kg" id="weightKg" value="Kg" checked>
-                        <label class="form-check-label" for="weightKg">
-                            Kilograms
-                        </label>
-                        <input class="form-check-input" type="radio" name="weight lb" id="weightLb" value="Lb" checked>
-                        <label class="form-check-label" for="weightLb">
-                            Pounds
-                        </label>
-                    </div>
-                    <div id="weightResult"></div>
+                        <div class="form-check col-6 col-md-12 orange-button">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
+                            </label>
+                        </div>
+                        <div class="form-check col-6 col-md-12 orange-button">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
+                            </label>
+                        </div>
+                    <button class="btn orange-button" id="weightCheck">Go</button>
+                    <div class="weight-result" id="weightResult"></div>
                 </div>
                 <div>
                     <p>On this game you can fiddle around the Curiosity Rover and explore some of its functionalities, equipments and structure.</p>
