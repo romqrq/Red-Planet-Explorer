@@ -22,9 +22,9 @@ $(document).ready(function() {
         }
 
         if (weightOnMars == NaN) {
-            $("#weightResult").html("<p>Please insert a valid number. (i.e. 75.6 or 2483.8)</p>")
+            $("#weightResult").html("<h4>Please insert a valid number. (i.e. 75.6 or 2483.8)</h4>")
         } else {
-            $("#weightResult").html(`On Mars, that weight would be equivalent to ${weightOnMars}${unit}!`)
+            $("#weightResult").html(`<h4>On Mars, that weight would be equivalent to ${weightOnMars}${unit}!</h4>`)
         };
     });
 
