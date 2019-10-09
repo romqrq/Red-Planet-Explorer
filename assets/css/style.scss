@@ -429,6 +429,20 @@
     /* Explore */
     
     .weight-container {
+        .row {
+            margin: 0;
+        }
+        h3 {
+            margin: auto;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        .weight-text {
+            width: 100%;
+        }
+        .input-group {
+            padding: 0;
+        }
         .form-check {
             padding: 0.25rem;
             display: flex;
@@ -437,14 +451,18 @@
         .form-check-label {
             display: flex;
             align-items: center;
+            margin-left: 0.5rem;
         }
         .form-check-input {
-            margin-top: 0;
-            margin-left: -1rem;
+            margin: 0;
+            left: 0.7rem;
         }
         .weight-result {
             width: 100%;
             margin: 2rem auto;
+        }
+        h4 {
+            font-weight: 700;
         }
     }
     
@@ -485,19 +503,17 @@
         text-align: left;
         padding-left: 0;
         a {
-            color: inherit;
-            margin: 0.3rem;
-        }
-        i {
-            margin: 0;
+            color: black;
+            margin: 0.1rem;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .hr-divider {
             width: 100%;
             margin: 0 0 1rem 0;
-        }
-        button {
-            width: 100%;
-            height: 20%;
         }
     }
     /* Modal */
