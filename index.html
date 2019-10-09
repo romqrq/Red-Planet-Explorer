@@ -460,33 +460,37 @@
             <hr class="hr-divider">
             <div class="container-fluid general-text weight-container">
                 <div class="row">
-                    <h3>Guess weight</h3>
-                    <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
-                    <p>You can find it all out with this calculator!</p>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="weight-text">
+                        <h3>Guess weight</h3>
+                        <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
+                        <p>You can find it all out with this calculator!</p>
                     </div>
-                        <div class="form-check col-6 col-md-12 orange-button">
+                    <div class="input-group col-md-6">
+                        <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="weight">
+                    </div>
+                        <div class="form-check col-6 col-md-2 orange-button">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
                             </label>
                         </div>
-                        <div class="form-check col-6 col-md-12 orange-button">
+                        <div class="form-check col-6 col-md-2 orange-button">
                             <label class="form-check-label">
                                 <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
                             </label>
                         </div>
-                    <button class="btn orange-button" id="weightCheck">Go</button>
+                    <button class="btn orange-button col-md-2" id="weightCheck">Go</button>
                     <div class="weight-result" id="weightResult"></div>
                 </div>
-                <div>
+                <div class="row">
+                    <h3>Explore and drive Curiosity</h3>
                     <p>On this game you can fiddle around the Curiosity Rover and explore some of its functionalities, equipments and structure.</p>
                     <p>You can also take control of the Mars exploration driving Curiosity through Martian terrain.</p>
                     <embed class="rover-explorer" src="https://eyes.nasa.gov/curiosity/">
                 </div>
                 <div class="row">
+                    <h3>Go arcade!</h3>
                     <div class="col-12 col-lg-3 offset-lg-2">
-                        <p>How far can you go on this fun and quite addictive rover exploration?</p>
+                        <p>How far can you go on this fun and quite addictive arcade of rover exploration?</p>
                         <p>My high score is 79! Can you beat it?</p>
                     </div>
                     <div class="col-6 col-lg-2 R2D-img-div">
@@ -495,7 +499,7 @@
                     <div class="col-6 col-lg-3 R2D-buttons">
                         <p>Choose where to play: </p>
                         <hr class="hr-divider">
-                        <a class="orange-button" role="button" data-toggle="modal" data-target="#R2DModal"> 
+                        <a class="orange-button" role="button" href="https://www.gamee.com/game/0Moq0ctcY"> 
                             Desktop
                         </a>
                         <a class="orange-button" role="button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app">
