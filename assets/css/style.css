@@ -510,33 +510,14 @@ a:hover {
   width: 100%;
 }
 
-.weight-container .input-group {
+.weight-container .input-group,
+.weight-container .btn-group {
   padding: 0;
 }
 
-.weight-container .form-check {
-  padding: 0.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.weight-container .form-check-label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 0.5rem;
-}
-
-.weight-container .form-check-input {
-  margin: 0;
-  left: 0.7rem;
+.weight-container .active {
+  -webkit-box-shadow: 0 0 10px 1px black;
+          box-shadow: 0 0 10px 1px black;
 }
 
 .weight-container .weight-result {

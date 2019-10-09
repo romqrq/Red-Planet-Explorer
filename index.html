@@ -469,17 +469,15 @@
                     <div class="input-group col-md-5">
                         <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="weight">
                     </div>
-                    <div class="form-check col-6 col-md-3 orange-button">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
+                    <div class="btn-group btn-group-toggle col-md-5" data-toggle="buttons">
+                        <label class="btn orange-button active">
+                            <input type="radio" name="weightRadio" id="kgRadio" autocomplete="off" checked> Kilograms
+                        </label>
+                        <label class="btn orange-button">
+                            <input type="radio" name="weightRadio" id="lbRadio" autocomplete="off"> Pounds
                         </label>
                     </div>
-                    <div class="form-check col-6 col-md-3 orange-button">
-                        <label class="form-check-label">
-                            <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
-                        </label>
-                    </div>
-                    <button class="btn orange-button col-md-1" id="weightCheck">Go</button>
+                    <button class="btn orange-button col-md-2" id="weightCheck">Go</button>
                     <div class="weight-result" id="weightResult"></div>
                 </div>
                 <div class="row">
