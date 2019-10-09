@@ -506,6 +506,14 @@ a:hover {
   font-weight: 700;
 }
 
+.weight-container .weight-text {
+  width: 100%;
+}
+
+.weight-container .input-group {
+  padding: 0;
+}
+
 .weight-container .form-check {
   padding: 0.25rem;
   display: -webkit-box;
@@ -523,11 +531,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 0.5rem;
 }
 
 .weight-container .form-check-input {
-  margin-top: 0;
-  margin-left: -1rem;
+  margin: 0;
+  left: 0.7rem;
 }
 
 .weight-container .weight-result {
@@ -591,22 +600,16 @@ a:hover {
 }
 
 .R2D-buttons a {
-  color: inherit;
-  margin: 0.3rem;
-}
-
-.R2D-buttons i {
-  margin: 0;
+  color: black;
+  margin: 0.1rem;
+  width: 100%;
+  height: 20%;
+  text-align: center;
 }
 
 .R2D-buttons .hr-divider {
   width: 100%;
   margin: 0 0 1rem 0;
-}
-
-.R2D-buttons button {
-  width: 100%;
-  height: 20%;
 }
 
 /* Modal */
