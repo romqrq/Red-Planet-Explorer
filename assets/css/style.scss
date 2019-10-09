@@ -507,7 +507,9 @@
             margin: 0.1rem;
             width: 100%;
             height: 20%;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .hr-divider {
             width: 100%;
