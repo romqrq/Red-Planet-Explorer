@@ -70,6 +70,7 @@
             </div>
             <div class="launch-button-div hide-md">
                 <div class="launch-button-border">
+                    <!--Script in jquery.js-->
                     <button class="btn launch-button " id="launch-button">Launch!</button>
                 </div>
             </div>
@@ -289,6 +290,7 @@
                     <option value="spirit">Spirit</option>
                     <option value="opportunity">Opportunity</option>
                 </select>
+                    <!--Script in main.js-->
                     <button class="btn orange-button" onclick="writeLatestToDocument()">Show me</button>
                 </div>
                 <div id="data"></div>
@@ -317,6 +319,7 @@
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                         <div class="input-group mb-5">
                             <div class="input-group mb-3">
+                                <!--Script in main.js-->
                                 <select class="custom-select orange-button" onchange="writeRangeToDocument()" id="inputRoverName">
                                     <option selected>Choose...</option>
                                     <option value="curiosity">Curiosity</option>
@@ -325,86 +328,12 @@
                                 </select>
                                 <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº">
                                 <select class="custom-select orange-button" id="inputCamName">
-                                    <!-- <option selected>Choose...</option> -->
                                 </select>
+                                <!--Script in main.js-->
                                 <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="table-box col-12 col-lg-6 hide-sm">
-                        <table class="table">
-                            <thead>
-                                <tr class="tr-sol">
-                                    <th scope="col">Sols</th>
-                                    <th scope="col">2537</th>
-                                    <th scope="col">5111</th>
-                                    <th scope="col">2208</th>
-                                </tr>
-                                <tr>
-                                    <th scope="col">Camera</th>
-                                    <th scope="col">Cur</th>
-                                    <th scope="col">Opp</th>
-                                    <th scope="col">Spi</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">FHAZ - Front Hazard Avoidance Camera</th>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">RHAZ - Rear Hazard Avoidance Camera</th>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">MAST - Mast Camera</th>
-                                    <td>Yes</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">CHEMCAM - Chemistry and Camera Complex</th>
-                                    <td>Yes</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">MAHLI - Mars Hand Lens Imager</th>
-                                    <td>Yes</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">MARDI - Mars Descent Imager</th>
-                                    <td>Yes</td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">NAVCAM - Navigation Camera</th>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">PANCAM - Panoramic Camera</th>
-                                    <td></td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">MINITES - Miniature Thermal Emission Spectrometer</th>
-                                    <td></td>
-                                    <td>Yes</td>
-                                    <td>Yes</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
                 </div>
                 <div id="data2"></div>
             </div>
@@ -482,6 +411,7 @@
                             <input type="radio" name="weightRadio" id="lbRadio" autocomplete="off"> Pounds
                         </label>
                     </div>
+                    <!--Script in jquery.js-->
                     <button class="btn orange-button col-md-2" id="weightCheck">Go</button>
                     <div class="weight-result" id="weightResult"></div>
                 </div>
