@@ -464,18 +464,26 @@
                     <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
                     <p>You can find it all out with this calculator!!</p>
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="weight kg" id="weightKg" value="Kg" checked>
-                        <label class="form-check-label" for="weightKg">
-                            Kilograms
-                        </label>
-                        <input class="form-check-input" type="radio" name="weight lb" id="weightLb" value="Lb" checked>
-                        <label class="form-check-label" for="weightLb">
-                            Pounds
-                        </label>
+                    <div>
+                            <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" id="kgRadio" name="weightRadio" checked>Kilograms
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <label class="form-check-label">
+                                      <input type="radio" class="form-check-input" id="lbRadio" name="weightRadio">Pounds
+                                    </label>
+                                  </div>
                     </div>
+                    <!-- <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="radio" class="btn orange-button" >Kilograms</button>
+                        <button type="radio" class="btn orange-button" >Pounds</button>
+                        
+                    </div> -->
+                    <button class="btn orange-button" id="weightCheck">Go</button>
                     <div id="weightResult"></div>
                 </div>
                 <div>
