@@ -23,7 +23,7 @@ All the sections and functionalities are easily accessible from the navigation b
 
 ### Existing Features
 
-<!-- 1. Header - Contains responsive navigation bar with website logo and links to the different sections. The content is responsive to the resolution to avoid cluttering the area.
+1. Header - Contains responsive navigation bar with website logo and links to the different sections. The content is responsive to the resolution to avoid cluttering the area.
 2. Navigation Bar - Navigation bar fixed at the top of the screen keeping always visible the menu, the company logo and social media links. Menu collapsed on small screen sizes and expanded from 676px and up.
 3. Footer - On small and medium resolutions, it gives access to a short description of the website and social media buttons.
 4. Home - Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
@@ -35,18 +35,11 @@ All the sections and functionalities are easily accessible from the navigation b
 10. Latest Pictures - The input form retrieves, throught the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
 11. Gallery Explorer - Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos. Brief explanation with steps on how to use the search.
 12. Gallery Explorer - Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
-9. Services - Card linked to section with home automation content.
-10. Services - Card linked to section with business automation content.
-11. Services - Cards with product advantages. The order of the cards is responsive to screen size changing shape and position of the cards.
-12. Services - Home automation section showing positive aspects of home automation.
-13. Services - Home automation section showing positive aspects of business automation.
-14. Services - How it works section featuring a video showing an example of how home automation can be used.
-15. Services - Range - Shows known brands of products the company works on its daily basis.
-16. Support - 3 numbered steps to guide customers in case of queries.
-17. Support - FAQ section with accordion to show/hide answers.
-18. Support - Form where the customer can fill with their question or quote request. Elements position is responsive.
-19. About - Company history
-20. About - Cards with team pictures and individual roles within the company. -->
+13. Video Gallery - With a brief description text to tell the user the purpose of the content and a panel with links that automatically play youtube videos in modals.
+14. Explore - Section with different interactive activities related to mars exploration and curious facts.
+15. Explore - The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
+16. Explore - Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
+17. Explore - Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
 
 ### Features Left to Implement
 
