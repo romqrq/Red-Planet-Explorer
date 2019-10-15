@@ -146,8 +146,19 @@
     }
     /* Main Screen */
     
+    .mobile-nav {
+        position: sticky;
+        top: 1rem;
+        .row{
+            padding-right: 1rem;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
     #home {
         padding: 0;
+        margin-top: -3.8rem;
     }
     
     .main-screen-container {
@@ -160,7 +171,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 1px 4px 9px 0px black;
-        padding: 1rem!important;
+        padding: 4rem 1rem 1rem!important;
         @include border-radius;
         .hr-divider {
             margin-bottom: 0;
