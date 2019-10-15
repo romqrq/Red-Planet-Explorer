@@ -895,6 +895,9 @@ button.close {
   .side-console i {
     margin: 0.2rem;
   }
+  .side-console a {
+    margin-bottom: 0.3rem;
+  }
   .move-back {
     margin-left: -110%;
   }
@@ -902,10 +905,10 @@ button.close {
     height: 95%;
     -webkit-animation-name: slidePageHide;
             animation-name: slidePageHide;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
@@ -914,10 +917,10 @@ button.close {
     z-index: 4;
     -webkit-animation-name: slidePageShow;
             animation-name: slidePageShow;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
@@ -949,18 +952,11 @@ button.close {
     margin-bottom: 4rem;
   }
   .round-border {
-    height: 3rem;
+    height: 2.5rem;
     border: 3px solid white;
-    width: 3rem;
-  }
-  .round-border {
-    height: 3rem;
-    border: 3px solid white;
-    font-size: 1.4rem;
-    width: 3rem;
-    -ms-flex-pack: center;
-    display: -ms-flexbox;
-    line-height: 2.7rem;
+    font-size: 1rem;
+    width: 2.5rem;
+    line-height: 2.4rem;
   }
   .carousel-img {
     min-height: 100%;
