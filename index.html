@@ -14,14 +14,14 @@
 
 </head>
 
-<body onload=writeWeatherToDocument()>
+<body>
     <header>
         <!--Desktop only side console-->
-        <div class="container side-console hide-sm">
+        <nav class="container side-console hide-sm">
             <div class="dark-mask">
                 <div>
                     <p>Red Planet Explorer</p>
-                </div>   
+                </div>
                 <div class="sc-buttons">
                     <a class="btn orange-button" role="button" href="#home">Home</a>
                     <a class="btn orange-button" role="button" href="#weather-section">Weather</a>
@@ -38,8 +38,16 @@
                     <i class="fab fa-pinterest-p round-border"></i>
                 </div>
             </div>
-        </div>
+        </nav>
     </header>
+    <nav class="mobile-nav">
+        <div class="row text-center hide-md" role="navigation">
+            <a class="col-3 medium-text" href="#weather-section">Weather</a>
+            <a class="col-3 medium-text" href="#manifest">Rovers</a>
+            <a class="col-3 medium-text" href="#photos">Gallery</a>
+            <a class="col-3 medium-text" href="#explore">Explore</a>
+        </div>
+    </nav>
     <section class="content-section slide-show" id="home">
         <div class="container-fluid main-screen-container">
             <div class="row social-row hide-md">
@@ -50,12 +58,7 @@
                     <i class="fab fa-pinterest-p round-border"></i>
                 </div>
             </div>
-            <div class="row text-center hide-md" role="navigation">
-                <a class="col-3 medium-text" href="#weather-section">Weather</a>
-                <a class="col-3 medium-text" href="#manifest">Rovers</a>
-                <a class="col-3 medium-text" href="#photos">Gallery</a>
-                <a class="col-3 medium-text" href="#explore">Explore</a>
-            </div>
+
             <hr class="hr-divider">
             <div class="row mb-3">
                 <div class="col-12 text-center">
@@ -87,7 +90,8 @@
             <div class="container-fluid general-text">
                 <p>Mars is considered a planet with a great potential for human colonization. Understanding the weather is critical to determine what to expect and how can we make it more liveable for humans.</p>
                 <p>On May 5, 2018 NASA launched the InSight Lander. It landed on November 26, 2018 and since then it has been collecting weather data at the Elysium Planitia.</p>
-                <p>You can find out more about the InSight Lander Mission downloading <a href="https://mars.nasa.gov/system/downloadable_items/42134_InSight_Landing_Fact_Sheet_8.pdf">this PDF</a>.</p>
+                <p>You can find out more about the InSight Lander Mission downloading <a href="https://mars.nasa.gov/system/downloadable_items/42134_InSight_Landing_Fact_Sheet_8.pdf">this
+                        PDF</a>.</p>
                 <p>The data below shows the latest weather information received from the InSight Lander.</p>
                 <p>The atmospheric pressure in Mars is less than 1% of the pressure on Earth. So the data was formatted and it shows the variation inside the 1% compared to Earth Atmospheric pressure. So when you see 0.7, it means 0.007atm.</p>
             </div>
@@ -153,7 +157,8 @@
                         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
                             <div class="card-body">
                                 <p>Mars 3 was a robotic space probe of the Soviet Mars program, weighting 1.2kg, launched May 28, 1971, nine days after its twin spacecraft Mars 2. The probes were identical robotic spacecraft launched by Proton-K rockets
-                                    with a Blok D upper stage, each consisting of an orbiter and an attached lander. </p>
+                                    with a Blok D upper stage, each consisting of an orbiter and an attached lander.
+                                </p>
                                 <p>After the Mars 2 lander crashed on the Martian surface, the Mars 3 lander became the first spacecraft to attain a soft landing on Mars, on 2 December 1971. It failed 20 seconds after landing, having transmitted only a gray
                                     image with no details. The Mars 2 orbiter and Mars 3 orbiter continued to circle Mars and transmit images back to Earth for another eight months.</p>
                             </div>
@@ -187,7 +192,8 @@
                             <div class="card-body">
                                 <p>Spirit, also known as MER-A (Mars Exploration Rover – A), is a robotic rover on Mars weighting 185kg and it was active from 2004 to 2010.</p>
                                 <p>It landed successfully within the impact crater Gusev on Mars at 04:35 Ground UTC on January 4, 2004, three weeks before its twin, Opportunity (MER-B), which landed on the other side of the planet.</p>
-                                <p>The rover became stuck in a "sand trap" in late 2009 at an angle that hampered recharging of its batteries; its last communication with Earth was sent on March 22, 2010.</p>
+                                <p>The rover became stuck in a "sand trap" in late 2009 at an angle that hampered recharging of its batteries; its last communication with Earth was sent on March 22, 2010.
+                                </p>
                                 <iframe src='https://mars.nasa.gov/embed/8249/' width='100' height='400'></iframe>
                             </div>
                         </div>
@@ -206,7 +212,8 @@
                                     after landing, maintaining its power and key systems through continual recharging of its batteries using solar power, and hibernating during events such as dust storms to save power.</p>
                                 <p>This careful operation allowed Opportunity to exceed its operating plan by 14 years, 46 days (in Earth time), 55 times its designed lifespan and traveled a distance of 45.16 kilometers (28.06 miles).</p>
                                 <p>Mission highlights included finding extramartian meteorites such as Heat Shield Rock (Meridiani Planum meteorite), and over two years of exploring and studying Victoria crater. The rover survived moderate dust storms and
-                                    in 2011 reached Endeavour crater, which has been described as a "second landing site". The Opportunity mission is considered one of NASA's most successful ventures.</p>
+                                    in 2011 reached Endeavour crater, which has been described as a "second landing site". The Opportunity mission is considered one of NASA's most successful ventures.
+                                </p>
                                 <p>Due to the planetary 2018 dust storm on Mars, Opportunity ceased communications on June 10 and entered hibernation on June 12, 2018. It was hoped it would reboot once the weather cleared but it did not, suggesting either
                                     a catastrophic failure or that a layer of dust had covered its solar panels. On February 13, 2019, NASA officials declared that the Opportunity mission was complete, after the spacecraft had failed to respond to over
                                     1,000 signals sent since August 2018.</p>
@@ -234,35 +241,38 @@
                                     with Mars orbiters.</p>
                                 <p>Communication with orbiters is the main path for data return to Earth, since the orbiters have both more power and larger antennas than the lander, allowing for faster transmission speeds.</p>
                                 <p>Other equipment carried by the Curiosity rover are:</p>
-                                    <ul>
-                                        <li>17 different cameras</li>
-                                        <li>Robotic arm</li>
-                                        <li>Dinamic Albedo of Neutrons(DAN) - Measures hydrogen, ice or water on or under the surface.</li>
-                                        <li>Radiation Assessment Detector (RAD) - It measured radiation on the way to mars and keeps measuring it.</li>
-                                        <li>Dust Removal Tool</li>
-                                        <li>Sample Analysis at Mars (SAM) - It consists of a set of equipments to analyse organics and gases.</li>
-                                        <li>Chemistry and Mineralogy (CheMin) - Set of instruments for mineral analysis.</li>
-                                        <li>Alpha Particle X-ray Spectrometer (APXS) - Determines the elemental composition of samples.</li>
-                                        <li>Rover Environmental Monitoring Station (REMS) - Comprises of a set of instruments to measure the Mars environment: humidity, pressure, temperatures, wind speeds, and ultraviolet radiation.</li>
-                                        <li>Chemistry and Camera complex (ChemCam) - suite of two remote sensing instruments combined as one: a laser-induced breakdown spectroscopy (LIBS) and a Remote Micro Imager (RMI) telescope.</li>
-                                    </ul>
+                                <ul>
+                                    <li>17 different cameras</li>
+                                    <li>Robotic arm</li>
+                                    <li>Dinamic Albedo of Neutrons(DAN) - Measures hydrogen, ice or water on or under the surface.</li>
+                                    <li>Radiation Assessment Detector (RAD) - It measured radiation on the way to mars and keeps measuring it.</li>
+                                    <li>Dust Removal Tool</li>
+                                    <li>Sample Analysis at Mars (SAM) - It consists of a set of equipments to analyse organics and gases.</li>
+                                    <li>Chemistry and Mineralogy (CheMin) - Set of instruments for mineral analysis.
+                                    </li>
+                                    <li>Alpha Particle X-ray Spectrometer (APXS) - Determines the elemental composition of samples.</li>
+                                    <li>Rover Environmental Monitoring Station (REMS) - Comprises of a set of instruments to measure the Mars environment: humidity, pressure, temperatures, wind speeds, and ultraviolet radiation.</li>
+                                    <li>Chemistry and Camera complex (ChemCam) - suite of two remote sensing instruments combined as one: a laser-induced breakdown spectroscopy (LIBS) and a Remote Micro Imager (RMI) telescope.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
                 </div>
-            <!--<div class="container-fluid manifest-data">-->
-            <!--    <p>Latest NASA information:</p>-->
-            <!--    <button class="btn general-button" onclick="writeManifestToDocument('curiosity')">Curiosity</button>-->
-            <!--    <button class="btn general-button" onclick="writeManifestToDocument('opportunity')">Opportunity</button>-->
-            <!--    <button class="btn general-button" onclick="writeManifestToDocument('spirit')">Spirit</button>-->
-            <!--    <div class="rovers-manifest-data weather-container" id="dataManifest"></div>-->
-            <!--</div>-->
-            <!--<div class="container-fluid manifest-rover-facts" id="roverFacts"></div>-->
-            <div class="heading-text">
-                <h2>What about the future?</h2>
-            </div>
-            <p>The future is promising! With the advancements made by <a href="https://www.spacex.com/">SpaceX</a>, the costs of future missions can be significantly reduced and we might see humankind becoming an interplanetary species in a couple of decades.</p>
-            <p>You can find more information about future missions from NASA <a href="https://mars.nasa.gov/mer/#MoreMarsMissions">here!</a></p>
+                <!--<div class="container-fluid manifest-data">-->
+                <!--    <p>Latest NASA information:</p>-->
+                <!--    <button class="btn general-button" onclick="writeManifestToDocument('curiosity')">Curiosity</button>-->
+                <!--    <button class="btn general-button" onclick="writeManifestToDocument('opportunity')">Opportunity</button>-->
+                <!--    <button class="btn general-button" onclick="writeManifestToDocument('spirit')">Spirit</button>-->
+                <!--    <div class="rovers-manifest-data weather-container" id="dataManifest"></div>-->
+                <!--</div>-->
+                <!--<div class="container-fluid manifest-rover-facts" id="roverFacts"></div>-->
+                <div class="heading-text">
+                    <h2>What about the future?</h2>
+                </div>
+                <p>The future is promising! With the advancements made by <a href="https://www.spacex.com/">SpaceX</a>, the costs of future missions can be significantly reduced and we might see humankind becoming an interplanetary species in a couple of
+                    decades.
+                </p>
+                <p>You can find more information about future missions from NASA <a href="https://mars.nasa.gov/mer/#MoreMarsMissions">here!</a></p>
             </div>
         </div>
     </section>
@@ -279,19 +289,20 @@
                 <p>As Curiosity is still active, you'll find different pictures as NASA receives them.</p>
                 <p>For Spirit and Oportunity, you will find their last images before they lost connection with us.</p>
                 <p>Opportunity sent a photo of the dark sky during the 2018 planetary storm that put an end to Oppy's efforts on Mars. The black bar on the photo means that it wasn't fully transmitted. You can find out more <a href="https://www.space.com/mars-rover-opportunity-last-photographs.html">here</a>.</p>
-                <p>Spirit sent photos of the sun from the sandy area where it got trapped. You can find more pictures <a href="https://nssdc.gsfc.nasa.gov/planetary/mars/mars_exploration_rovers/mera_images.html">here</a>.</p>
+                <p>Spirit sent photos of the sun from the sandy area where it got trapped. You can find more pictures <a href="https://nssdc.gsfc.nasa.gov/planetary/mars/mars_exploration_rovers/mera_images.html">here</a>.
+                </p>
                 <p>You can also look at the rovers mission updates for <a href="https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/">Opportunity</a> and <a href="https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2011/">Spirit</a></p>
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
                     <select class="custom-select orange-button" id="inputLatestRoverPhoto">
-                    <option selected>Choose...</option>
-                    <option value="curiosity">Curiosity</option>
-                    <option value="spirit">Spirit</option>
-                    <option value="opportunity">Opportunity</option>
-                </select>
+                        <option selected>Choose...</option>
+                        <option value="curiosity">Curiosity</option>
+                        <option value="spirit">Spirit</option>
+                        <option value="opportunity">Opportunity</option>
+                    </select>
                     <!--Script in main.js-->
-                    <button class="btn orange-button" onclick="writeLatestToDocument()">Show me</button>
+                    <button class="btn orange-button" id="latestButton">Show me</button>
                 </div>
                 <div id="data"></div>
             </div>
@@ -320,7 +331,7 @@
                         <div class="input-group mb-5">
                             <div class="input-group mb-3">
                                 <!--Script in main.js-->
-                                <select class="custom-select orange-button" onchange="writeRangeToDocument()" id="inputRoverName">
+                                <select class="custom-select orange-button" id="inputRoverName">
                                     <option selected>Choose...</option>
                                     <option value="curiosity">Curiosity</option>
                                     <option value="spirit">Spirit</option>
@@ -330,7 +341,7 @@
                                 <select class="custom-select orange-button" id="inputCamName">
                                 </select>
                                 <!--Script in main.js-->
-                                <button class="btn orange-button" onclick="writeParamsToDocument()">Show me</button>
+                                <button class="btn orange-button" id="photoButton">Show me</button>
                             </div>
                         </div>
                     </div>
@@ -349,17 +360,18 @@
             <hr class="hr-divider">
             <div class="general-text">
                 <p>Getting to Mars was an enormous challenge that required much planning.</p>
-                <p>Here are some nicely short videos from NASA explaining many of the different steps on our Mars Exploration.</p>
+                <p>Here are some nicely short videos from NASA explaining many of the different steps on our Mars Exploration.
+                </p>
             </div>
             <div class="container-fluid general-text vg-container">
                 <div class="row vg-mars-stages">
 
-                    <a  class="btn col-12 col-md-6 vg-general-button vg-earth-button" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/BsB1Ecczghc">
-                    Coosing the landing site
+                    <a class="btn col-12 col-md-6 vg-general-button vg-earth-button" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/BsB1Ecczghc">
+                        Coosing the landing site
                     </a>
 
                     <a class="btn col-12 col-md-6 vg-general-button vg-travel-button" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/-nAhag_iFx0">
-                    Getting to Mars
+                        Getting to Mars
                     </a>
 
                     <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button1" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/8-X8acD_r38">
@@ -369,16 +381,16 @@
                         Landing Curiosity
                     </a>
                     <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button3" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/2t7p08hcQzs">
-                    Calling home
+                        Calling home
                     </a>
                     <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button4" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/_hN4XdS7NMY">
-                    Rover Drive
+                        Rover Drive
                     </a>
                     <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button5" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/ztL3hLIjv64">
-                    Looking for Organics
+                        Looking for Organics
                     </a>
                     <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button6" role="button" data-toggle="modal" data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/Q7UL8hvlk7k">
-                    Is Mars Red?
+                        Is Mars Red?
                     </a>
                 </div>
             </div>
@@ -398,7 +410,8 @@
                         <h3>Guess weight</h3>
                         <p>How much do you think you would weight on Mars? What about your dog? and your car?</p>
                         <p>You can find it all out with this calculator!</p>
-                        <p>To find that out just type in the weight you want to convert, select the unit and press Go!</p>
+                        <p>To find that out just type in the weight you want to convert, select the unit and press Go!
+                        </p>
                     </div>
                     <div class="input-group col-md-5">
                         <input type="text" class="form-control" id="weightInput" placeholder="Weight" aria-label="weight">
@@ -433,7 +446,7 @@
                     <div class="col-6 col-lg-3 R2D-buttons">
                         <p>Choose where to play: </p>
                         <hr class="hr-divider">
-                        <a class="orange-button" role="button" href="https://www.gamee.com/game/0Moq0ctcY"> 
+                        <a class="orange-button" role="button" href="https://www.gamee.com/game/0Moq0ctcY">
                             Desktop
                         </a>
                         <a class="orange-button" role="button" href="https://play.google.com/store/apps/details?id=com.gameeapp.android.app">
@@ -453,11 +466,11 @@
 
     <!-- modal image Gallery -->
     <!--aria-labelledby="GalleryImage"-->
-    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal fade" id="galleryModal" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body" id="modalBody"></div>
@@ -480,17 +493,17 @@
         </div>
     </div>
 
-    
+
     <footer>
 
     </footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.js"></script>-->
     <!--<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
     <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <!-- <script type="text/javascript" src="assets/js/main.js"></script> -->
     <script type="text/javascript" src="assets/js/main-test.js"></script>
 
 

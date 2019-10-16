@@ -146,8 +146,19 @@
     }
     /* Main Screen */
     
+    .mobile-nav {
+        position: sticky;
+        top: 1rem;
+        .row{
+            padding-right: 1rem;
+            max-width: 100%;
+            margin: 0;
+        }
+    }
+
     #home {
         padding: 0;
+        margin-top: -3.8rem;
     }
     
     .main-screen-container {
@@ -160,7 +171,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 1px 4px 9px 0px black;
-        padding: 1rem!important;
+        padding: 4rem 1rem 1rem!important;
         @include border-radius;
         .hr-divider {
             margin-bottom: 0;
@@ -673,6 +684,9 @@
             i {
                 margin: 0.2rem;
             }
+            a {
+                margin-bottom: 0.3rem;
+            }
         }
         .move-back {
             margin-left: -110%;
@@ -680,16 +694,16 @@
         .slide-hide {
             height: 95%;
             animation-name: slidePageHide;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
             animation-direction: normal;
         }
         .slide-show {
             height: 95%;
             z-index: 4;
             animation-name: slidePageShow;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
             animation-direction: normal;
         }
         #home {
@@ -720,19 +734,13 @@
             font-size: 5rem;
             margin-bottom: 4rem;
         }
+
         .round-border {
-            height: 3rem;
+            height: 2.5rem;
             border: 3px solid white;
-            width: 3rem;
-        }
-        .round-border {
-            height: 3rem;
-            border: 3px solid white;
-            font-size: 1.4rem;
-            width: 3rem;
-            -ms-flex-pack: center;
-            display: -ms-flexbox;
-            line-height: 2.7rem;
+            font-size: 1rem;
+            width: 2.5rem;
+            line-height: 2.4rem;
         }
         .carousel-img {
             min-height: 100%;
