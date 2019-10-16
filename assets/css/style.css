@@ -398,6 +398,10 @@ a:hover {
   width: 100%;
 }
 
+#accordion {
+  margin-bottom: 2rem;
+}
+
 #accordion .card {
   border: none;
   background-color: #00000059;
@@ -526,6 +530,7 @@ a:hover {
 .weight-container .input-group,
 .weight-container .btn-group {
   padding: 0;
+  margin: 0 auto;
 }
 
 .weight-container .active {
@@ -536,6 +541,10 @@ a:hover {
 .weight-container .weight-result {
   width: 100%;
   margin: 2rem auto;
+}
+
+.weight-container .3d-game-text {
+  margin: auto;
 }
 
 .weight-container h4 {
@@ -886,7 +895,7 @@ button.close {
             justify-content: space-between;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #0000009e;
+    background-color: #0000002e;
     -webkit-box-shadow: inset 0 0 12px 5px black;
             box-shadow: inset 0 0 12px 5px black;
   }
@@ -937,9 +946,6 @@ button.close {
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
-  #home .main-screen-container {
-    height: 100%;
-  }
   #home,
   .content-section {
     width: 89%;
@@ -953,6 +959,12 @@ button.close {
     border-top-right-radius: 0.5rem;
     -webkit-box-shadow: 0 0 8px 2px black;
             box-shadow: 0 0 8px 2px black;
+  }
+  #home {
+    top: 10.5%;
+  }
+  #home .main-screen-container {
+    height: 100%;
   }
   .medium-text {
     font-size: 1.5rem;
@@ -993,7 +1005,7 @@ button.close {
   #accordion,
   .input-group {
     max-width: 60vw;
-    margin: auto;
+    margin: 2rem auto;
   }
 }
 

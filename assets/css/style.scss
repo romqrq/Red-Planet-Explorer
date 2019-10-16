@@ -343,6 +343,7 @@
     }
     
     #accordion {
+        margin-bottom: 2rem;
         .card {
             border: none;
             background-color: #00000059;
@@ -454,6 +455,7 @@
         .input-group,
         .btn-group {
             padding: 0;
+            margin: 0 auto;
         }
         .active {
             box-shadow: 0 0 10px 1px black;
@@ -461,6 +463,9 @@
         .weight-result {
             width: 100%;
             margin: 2rem auto;
+        }
+        .3d-game-text {
+            margin: auto;
         }
         h4 {
             font-weight: 700;
@@ -664,7 +669,7 @@
                 justify-content: space-between;
                 padding: 1rem;
                 border-radius: 1rem;
-                background-color: #0000009e;
+                background-color: #0000002e;
                 box-shadow: inset 0 0 12px 5px black;
             }
             p {
@@ -706,11 +711,7 @@
             animation-timing-function: ease-out;
             animation-direction: normal;
         }
-        #home {
-            .main-screen-container {
-                height: 100%;
-            }
-        }
+        
         #home,
         .content-section {
             width: 89%;
@@ -723,6 +724,12 @@
             border-bottom-right-radius: 0.5rem;
             border-top-right-radius: 0.5rem;
             box-shadow: $box-shadow;
+        }
+        #home {
+            top: 10.5%;
+            .main-screen-container {
+                height: 100%;
+            }
         }
         .medium-text {
             font-size: 1.5rem
@@ -760,7 +767,7 @@
         #accordion,
         .input-group {
             max-width: 60vw;
-            margin: auto;
+            margin: 2rem auto;
         }
     }
     
