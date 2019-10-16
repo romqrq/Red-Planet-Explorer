@@ -174,10 +174,10 @@ function writeLatestToDocument() {
 
 //Photo search by parameters
 //Variables for parameters search
-var roverName = ""; //"curiosity";
-var solNumber = ""; //"&sol=1000";
-var camName = ""; //"&camera=FHAZ";
-var earthDate = ""; //"earth_date=2015-6-3"
+// var roverName = ""; //"curiosity";
+// var solNumber = ""; //"&sol=1000";
+// var camName = ""; //"&camera=FHAZ";
+// var earthDate = ""; //"earth_date=2015-6-3"
 
 function getParamsData(cb) {
     var rvn = document.getElementById("inputRoverName");
