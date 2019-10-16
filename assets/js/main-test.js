@@ -1,5 +1,6 @@
 //Global variables
 var URL;
+var SOLnum;
 const APIKEY = "api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b";
 const link1 = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
@@ -19,15 +20,15 @@ $("#launch-button").click(function () {
 
 //Function to scroll down to weather after "launch"
 function scrolldown() {
-  var elTarget = document.getElementById("weather-section");
+  let elTarget = document.getElementById("weather-section");
   elTarget.scrollIntoView();
 }
 
 //function to autoplay videos
 function autoPlayYouTubeModal() {
-  var trigger = $("body").find('[data-toggle="modal"]');
+  let trigger = $("body").find('[data-toggle="modal"]');
   trigger.click(function () {
-    var theModal = $(this).data("target"),
+    let theModal = $(this).data("target"),
       videoSRC = $(this).attr("data-theVideo"),
       videoSRCauto = videoSRC + "?autoplay=1";
     $(theModal + " iframe").attr("src", videoSRCauto);
@@ -39,7 +40,7 @@ function autoPlayYouTubeModal() {
 
 //function to open modals with selected images
 function openModal(imageID, imageSRC) {
-  var modalContent = document.getElementById("modalBody");
+  let modalContent = document.getElementById("modalBody");
   modalContent.innerHTML = "";
 
   modalContent.innerHTML = `
@@ -48,22 +49,22 @@ function openModal(imageID, imageSRC) {
 
 //Function for the weight calculator
 $("#weightCheck").click(function () {
-  var weight = $("#weightInput").val();
-  var testValue = $.isNumeric(weight);
-  var kgVal = $("#kgRadio:checked").val();
-  var lbVal = $("#lbRadio:checked").val();
+  let weight = $("#weightInput").val();
+  let testValue = $.isNumeric(weight);
+  let kgVal = $("#kgRadio:checked").val();
+  let lbVal = $("#lbRadio:checked").val();
 
   if (kgVal == "on") {
-    var unit = "kg";
-    var mass = weight / 9.8;
-    var wom = mass * 3.711;
-    var weightOnMars = wom.toFixed(1);
+    let unit = "kg";
+    let mass = weight / 9.8;
+    let wom = mass * 3.711;
+    let weightOnMars = wom.toFixed(1);
   } else if (lbVal == "on") {
-    var unit = "lb";
-    var weightInKG = weight / 2.20462;
-    var mass = weightInKG / 9.8;
-    var wom = mass * 3.711;
-    var weightOnMars = wom.toFixed(1);
+    let unit = "lb";
+    let weightInKG = weight / 2.20462;
+    let mass = weightInKG / 9.8;
+    let wom = mass * 3.711;
+    let weightOnMars = wom.toFixed(1);
   }
 
   if (testValue == false) {
@@ -75,24 +76,24 @@ $("#weightCheck").click(function () {
 
 //Function to switch the pages for tablets and desktop
 function switchPages() {
-  var trigger = $(".sc-buttons > a");
+  let trigger = $(".sc-buttons > a");
 
   trigger.click(function () {
-    var selectedSectionID = $(this).attr("href");
+    let selectedSectionID = $(this).attr("href");
     $(selectedSectionID)
       .addClass("slide-show")
       .removeClass("slide-hide, move-back");
 
-    var siblingsOnly = $(this).siblings();
+    let siblingsOnly = $(this).siblings();
     siblingsOnly.each(function (i) {
-      var otherSectionsID = $(this).attr("href");
+      let otherSectionsID = $(this).attr("href");
       $(otherSectionsID)
         .removeClass("slide-show")
         .addClass("slide-hide");
 
       setTimeout(function () {
         $(otherSectionsID).addClass("move-back");
-      }, 2000);
+      }, 1000);
     });
   });
 }
@@ -156,9 +157,9 @@ function getData() {
 
         //Setting sol number to use as reference to drill down to the other variables
         if (vcsATvalid) {
-          var SOLnum = sol;
+          SOLnum = sol;
         } else if (vcSLsATvalid) {
-          var SOLnum = SLsol;
+          SOLnum = SLsol;
         }
         let DLVS = JSO[SOLnum];
         let AT = JSO[SOLnum].AT;
