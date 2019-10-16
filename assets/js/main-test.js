@@ -11,7 +11,7 @@ $(document).ready(function () {
 
 //Launch button animation
 $("#launch-button").click(function () {
-  $("header").addClass("shake-animation");
+  $("body").addClass("shake-animation");
   $("#launch-button").removeClass("launch-button-animation");
   setTimeout(scrolldown, 2000);
 });
