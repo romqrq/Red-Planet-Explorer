@@ -14,7 +14,7 @@
 
 </head>
 
-<body onload=writeWeatherToDocument()>
+<body>
     <header>
         <!--Desktop only side console-->
         <nav class="container side-console hide-sm">
@@ -302,7 +302,7 @@
                         <option value="opportunity">Opportunity</option>
                     </select>
                     <!--Script in main.js-->
-                    <button class="btn orange-button" onclick="writeLatestToDocument()" id="latestButton">Show me</button>
+                    <button class="btn orange-button" id="latestButton">Show me</button>
                 </div>
                 <div id="data"></div>
             </div>
@@ -331,7 +331,7 @@
                         <div class="input-group mb-5">
                             <div class="input-group mb-3">
                                 <!--Script in main.js-->
-                                <select class="custom-select orange-button" onchange="writeRangeToDocument()" id="inputRoverName">
+                                <select class="custom-select orange-button" id="inputRoverName">
                                     <option selected>Choose...</option>
                                     <option value="curiosity">Curiosity</option>
                                     <option value="spirit">Spirit</option>
@@ -341,7 +341,7 @@
                                 <select class="custom-select orange-button" id="inputCamName">
                                 </select>
                                 <!--Script in main.js-->
-                                <button class="btn orange-button" onclick="writeParamsToDocument()" id="photoButton">Show me</button>
+                                <button class="btn orange-button" id="photoButton">Show me</button>
                             </div>
                         </div>
                     </div>
