@@ -3,6 +3,7 @@ var URL;
 const APIKEY = "api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b";
 const link1 = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
+//functions triggered on ready state
 $(document).ready(function () {
   getData("weather-section");
   autoPlayYouTubeModal();
@@ -34,6 +35,15 @@ function autoPlayYouTubeModal() {
       $(theModal + " iframe").attr("src", videoSRC);
     });
   });
+}
+
+//function to open modals with selected images
+function openModal(imageID, imageSRC) {
+  var modalContent = document.getElementById("modalBody");
+  modalContent.innerHTML = "";
+
+  modalContent.innerHTML = `
+      <img class="modal-content" src="${imageSRC}" id="${imageID}">`;
 }
 
 //Function for the weight calculator
@@ -89,18 +99,15 @@ function switchPages() {
 
 
 //Event Listeners
-// document.getElementById("weather-section").addEventListener("load", getData);
 document.getElementById("latestButton").addEventListener("click", getData);
 document.getElementById("photoButton").addEventListener("click", getData);
 document.getElementById("inputRoverName").addEventListener("change", getData);
-//Function to retrieve data from APIs
 
+//Function to retrieve data from APIs
 function getData() {
   //Conditionals to determine parameters and ultimately parse the URL to fetch
-  //Despite the intention to not use "var", some of the variables inside the conditionals needed to be accessible from outside the "let" scope.
   if ("weather-section") {
     //retrieving API weather information
-    console.log("test");
     URL = "https://mars.nasa.gov/rss/api/?feed=weather&category=insight&feedtype=json&ver=1.0";
   } else if (this.id == "latestButton") {
     //retrieving API latest photos by rover name
@@ -131,50 +138,8 @@ function getData() {
     .then((res) => res.json())
     .then((data) => {
       //conditionals to process the content to the respective sections.
-      if (this.id == "latestButton") {
-        let el = document.getElementById("data");
-        el.innerHTML = "";
-        data = data.latest_photos;
-
-        data.forEach(function (item) {
-          el.innerHTML += `<img src=${item.img_src} class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
-        });
-      } else if (this.id == "inputRoverName") {
-        let rvn = document.getElementById("inputRoverName");
-        let roverName = rvn.options[rvn.selectedIndex].value;
-
-        data = data.photos;
-        let maxSol = data[0].rover.max_sol;
-        let cn = data[0].rover.cameras;
-
-        let camNamesList = document.getElementById("inputCamName");
-        camNamesList.innerHTML = "";
-        cn.forEach(function (camera) {
-
-          camNamesList.innerHTML += `
-          <option value="${camera.name}">${camera.name}</option>
-          `;
-        });
-
-        let maxSolField = document.getElementById("solTextInput");
-        maxSolField.placeholder = maxSol;
-
-      } else if (this.id == "photoButton") {
-        let el = document.getElementById("data2");
-        el.innerHTML = "";
-
-        data = data.photos;
-
-        let cn = data[0].rover.cameras;
-        let camList = [];
-        cn.forEach(function (camera) {
-          camList.push(camera.name);
-        });
-
-        data.forEach(function (item) {
-          el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
-        });
-      } else if ("weather-section") {
+      //Weather
+      if ("weather-section") {
         let el = document.getElementById("dataWeather");
         el.innerHTML = "";
         let JSO = data;
@@ -272,6 +237,55 @@ function getData() {
                 </div>
             </div>
         </div>`;
-      };
+      }
+      //Latest photos
+      else if (this.id == "latestButton") {
+        let el = document.getElementById("data");
+        el.innerHTML = "";
+        data = data.latest_photos;
+
+        data.forEach(function (item) {
+          el.innerHTML += `<img src=${item.img_src} class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
+        });
+      }
+      //Autofill for photo gallery search 
+      else if (this.id == "inputRoverName") {
+        let rvn = document.getElementById("inputRoverName");
+        let roverName = rvn.options[rvn.selectedIndex].value;
+
+        data = data.photos;
+        let maxSol = data[0].rover.max_sol;
+        let cn = data[0].rover.cameras;
+
+        let camNamesList = document.getElementById("inputCamName");
+        camNamesList.innerHTML = "";
+        cn.forEach(function (camera) {
+
+          camNamesList.innerHTML += `
+          <option value="${camera.name}">${camera.name}</option>
+          `;
+        });
+
+        let maxSolField = document.getElementById("solTextInput");
+        maxSolField.placeholder = maxSol;
+
+      }
+      //Photos from Gallery search
+      else if (this.id == "photoButton") {
+        let el = document.getElementById("data2");
+        el.innerHTML = "";
+
+        data = data.photos;
+
+        let cn = data[0].rover.cameras;
+        let camList = [];
+        cn.forEach(function (camera) {
+          camList.push(camera.name);
+        });
+
+        data.forEach(function (item) {
+          el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
+        });
+      }
     });
 }
