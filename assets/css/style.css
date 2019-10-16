@@ -631,6 +631,7 @@ a:hover {
 iframe {
   width: 80vw;
   height: 80vh;
+  z-index: 50;
 }
 
 button.close {
@@ -643,6 +644,10 @@ button.close {
 .modal-content {
   background-color: transparent;
   border: none;
+}
+
+.modal-body {
+  z-index: 30;
 }
 
 #modalBody img {

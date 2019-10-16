@@ -526,10 +526,22 @@
         }
     }
     /* Modal */
-    
+    //Code from https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal
+    // .modal.fade .modal-dialog {
+    //     -webkit-transition: -webkit-transform 0.3s ease-out;
+    //        -moz-transition: -moz-transform 0.3s ease-out;
+    //          -o-transition: -o-transform 0.3s ease-out;
+    //             transition: transform 0.3s ease-out;
+    //   }
+      
+    //   .modal.in .modal-dialog {
+      
+    //   }
+
     iframe {
         width: 80vw;
         height: 80vh;
+        z-index: 50;
     }
     
     button.close {
@@ -542,6 +554,9 @@
     .modal-content {
         background-color: transparent;
         border: none;
+    }
+    .modal-body {
+        z-index: 30;
     }
     
     #modalBody {

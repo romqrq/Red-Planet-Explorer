@@ -25,6 +25,7 @@ function scrolldown() {
 }
 
 //function to autoplay videos
+//code from https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal
 function autoPlayYouTubeModal() {
   let trigger = $("body").find('[data-toggle="modal"]');
   trigger.click(function () {
