@@ -57,13 +57,17 @@ function videoShow() {
   $(".vg-general-button").click(function () {
     let videoLink = this.value;
     $("#videoPlayer").html(`
-    <iframe src="${videoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="${videoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="videoContent" allowfullscreen></iframe>
     `);
 
     $("#videoContainer").show()
   });
 
   $("#videoCloseButton").click(function () {
+    //code from https://stackoverflow.com/a/9040667
+    let video = $("#videoContent").attr("src");
+    $("#videoContent").attr("src", "");
+    $("#videoContent").attr("src", video);
     $("#videoContainer").hide()
   })
 }
