@@ -137,7 +137,11 @@ a:hover {
 .mobile-nav {
   position: -webkit-sticky;
   position: sticky;
-  top: 1rem;
+  top: 0;
+  z-index: 12;
+  background-color: #000000c7;
+  -webkit-box-shadow: 0px 4px 3px 0px black;
+          box-shadow: 0px 4px 3px 0px black;
 }
 
 .mobile-nav .row {
@@ -398,6 +402,10 @@ a:hover {
   width: 100%;
 }
 
+#accordion {
+  margin-bottom: 2rem;
+}
+
 #accordion .card {
   border: none;
   background-color: #00000059;
@@ -467,6 +475,11 @@ a:hover {
           justify-content: center;
 }
 
+.vg-general-button:hover {
+  -webkit-box-shadow: inset 0 0 7px 2px #c74a0f;
+          box-shadow: inset 0 0 7px 2px #c74a0f;
+}
+
 .vg-earth-button {
   background-image: url(../images/earth.jpg);
 }
@@ -508,6 +521,29 @@ a:hover {
   max-width: 100%;
 }
 
+#videoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding-top: 1rem;
+  background-color: #000000b0;
+}
+
+#videoContainer .video-close-button {
+  text-align: right;
+  padding: 0 2rem 1rem;
+}
+
+#videoContainer .fa-times-circle {
+  color: white;
+  font-size: 3rem;
+}
+
+#videoContainer iframe {
+  border: none;
+}
+
 /* Explore */
 .weight-container .row {
   margin: 0;
@@ -526,6 +562,7 @@ a:hover {
 .weight-container .input-group,
 .weight-container .btn-group {
   padding: 0;
+  margin: 0 auto;
 }
 
 .weight-container .active {
@@ -536,6 +573,10 @@ a:hover {
 .weight-container .weight-result {
   width: 100%;
   margin: 2rem auto;
+}
+
+.weight-container .game-text {
+  margin: auto;
 }
 
 .weight-container h4 {
@@ -618,6 +659,7 @@ a:hover {
 iframe {
   width: 80vw;
   height: 80vh;
+  z-index: 50;
 }
 
 button.close {
@@ -630,6 +672,10 @@ button.close {
 .modal-content {
   background-color: transparent;
   border: none;
+}
+
+.modal-body {
+  z-index: 30;
 }
 
 #modalBody img {
@@ -886,7 +932,7 @@ button.close {
             justify-content: space-between;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #0000009e;
+    background-color: #0000002e;
     -webkit-box-shadow: inset 0 0 12px 5px black;
             box-shadow: inset 0 0 12px 5px black;
   }
@@ -937,9 +983,6 @@ button.close {
     -webkit-animation-direction: normal;
             animation-direction: normal;
   }
-  #home .main-screen-container {
-    height: 100%;
-  }
   #home,
   .content-section {
     width: 89%;
@@ -953,6 +996,12 @@ button.close {
     border-top-right-radius: 0.5rem;
     -webkit-box-shadow: 0 0 8px 2px black;
             box-shadow: 0 0 8px 2px black;
+  }
+  #home {
+    top: 10.5%;
+  }
+  #home .main-screen-container {
+    height: 100%;
   }
   .medium-text {
     font-size: 1.5rem;
@@ -993,7 +1042,7 @@ button.close {
   #accordion,
   .input-group {
     max-width: 60vw;
-    margin: auto;
+    margin: 2rem auto;
   }
 }
 
