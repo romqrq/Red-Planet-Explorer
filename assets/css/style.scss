@@ -10,6 +10,13 @@
         scroll-behavior: smooth;
     }
     
+    @mixin border-radius {
+        -webkit-border-radius: 0.5rem!important;
+        -moz-border-radius: 0.5rem!important;
+        -ms-border-radius: 0.5rem!important;
+        border-radius: 0.5rem!important;
+    }
+
     body {
         text-align: center;
          ::-webkit-scrollbar-thumb {
@@ -47,13 +54,6 @@
         background-color: $orange-color!important;
         border: none;
         box-shadow: none;
-    }
-    
-    @mixin border-radius {
-        -webkit-border-radius: 0.5rem!important;
-        -moz-border-radius: 0.5rem!important;
-        -ms-border-radius: 0.5rem!important;
-        border-radius: 0.5rem!important;
     }
     
     @mixin font-style {
@@ -683,11 +683,13 @@
     @media screen and (min-width: 769px) {
         body {
             height: 100vh;
-            background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
-            background-size: 400% 400%;
-            -webkit-animation: Gradient 15s ease infinite;
-            -moz-animation: Gradient 15s ease infinite;
-            animation: Gradient 15s ease infinite;
+            background-image: url(../images/body-bg.jpg);
+            @include bg-fitting;
+            // background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
+            // background-size: 400% 400%;
+            // -webkit-animation: Gradient 15s ease infinite;
+            // -moz-animation: Gradient 15s ease infinite;
+            // animation: Gradient 15s ease infinite;
         }
         .hide-md {
             display: none;
@@ -861,40 +863,40 @@
             margin-left: -110%;
         }
     }
-    /*Keyframes for background*/
+    /*// /*Keyframes for background*/
     
-    @-webkit-keyframes Gradient {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
+    // @-webkit-keyframes Gradient {
+    //     0% {
+    //         background-position: 0% 50%
+    //     }
+    //     50% {
+    //         background-position: 100% 50%
+    //     }
+    //     100% {
+    //         background-position: 0% 50%
+    //     }
+    // }
     
-    @-moz-keyframes Gradient {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
+    // @-moz-keyframes Gradient {
+    //     0% {
+    //         background-position: 0% 50%
+    //     }
+    //     50% {
+    //         background-position: 100% 50%
+    //     }
+    //     100% {
+    //         background-position: 0% 50%
+    //     }
+    // }
     
-    @keyframes Gradient {
-        0% {
-            background-position: 0% 50%
-        }
-        50% {
-            background-position: 100% 50%
-        }
-        100% {
-            background-position: 0% 50%
-        }
-    }
+    // @keyframes Gradient {
+    //     0% {
+    //         background-position: 0% 50%
+    //     }
+    //     50% {
+    //         background-position: 100% 50%
+    //     }
+    //     100% {
+    //         background-position: 0% 50%
+    //     }
+    // */
