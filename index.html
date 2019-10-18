@@ -345,14 +345,6 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="container-fluid manifest-data">-->
-                <!--    <p>Latest NASA information:</p>-->
-                <!--    <button class="btn general-button" onclick="writeManifestToDocument('curiosity')">Curiosity</button>-->
-                <!--    <button class="btn general-button" onclick="writeManifestToDocument('opportunity')">Opportunity</button>-->
-                <!--    <button class="btn general-button" onclick="writeManifestToDocument('spirit')">Spirit</button>-->
-                <!--    <div class="rovers-manifest-data weather-container" id="dataManifest"></div>-->
-                <!--</div>-->
-                <!--<div class="container-fluid manifest-rover-facts" id="roverFacts"></div>-->
                 <div class="heading-text">
                     <h2>What about the future?</h2>
                 </div>
@@ -363,6 +355,13 @@
                 </p>
                 <p>You can find more information about future missions from NASA <a
                         href="https://mars.nasa.gov/mer/#MoreMarsMissions">here!</a></p>
+            </div>
+        </div>
+        <div class="container-fluid" id="videoContainer">
+            <div class="video-close-button">
+                <i class="far fa-times-circle" id="videoCloseButton"></i>
+            </div>
+            <div class="video-content" id=videoPlayer>
             </div>
         </div>
     </section>
@@ -467,42 +466,38 @@
             </div>
             <div class="container-fluid general-text vg-container">
                 <div class="row vg-mars-stages">
-
-                    <a class="btn col-12 col-md-6 vg-general-button vg-earth-button" role="button"
-                        href="https://www.youtube.com/embed/BsB1Ecczghc" data-toggle="modal" data-target="#modalVideo"
-                        data-theVideo="https://www.youtube.com/embed/BsB1Ecczghc">
+                    <button class="btn col-12 col-md-6 vg-general-button vg-earth-button" role="button"
+                        value="https://www.youtube.com/embed/BsB1Ecczghc">
                         Choosing the landing site
-                    </a>
-
-                    <a class="btn col-12 col-md-6 vg-general-button vg-travel-button" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/-nAhag_iFx0">
+                    </button>
+                    <button class="btn col-12 col-md-6 vg-general-button vg-travel-button" role="button"
+                        value="https://www.youtube.com/embed/-nAhag_iFx0">
                         Getting to Mars
-                    </a>
-
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button1" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/8-X8acD_r38">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button1" role="button"
+                        value="https://www.youtube.com/embed/8-X8acD_r38">
                         How to land
-                    </a>
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button2" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/syA7ml64zY4">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button2" role="button"
+                        value="https://www.youtube.com/embed/syA7ml64zY4">
                         Landing Curiosity
-                    </a>
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button3" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/2t7p08hcQzs">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button3" role="button"
+                        value="https://www.youtube.com/embed/2t7p08hcQzs">
                         Calling home
-                    </a>
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button4" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/_hN4XdS7NMY">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button4" role="button"
+                        value="https://www.youtube.com/embed/_hN4XdS7NMY">
                         Rover Drive
-                    </a>
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button5" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/ztL3hLIjv64">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button5" role="button"
+                        value="https://www.youtube.com/embed/ztL3hLIjv64">
                         Looking for Organics
-                    </a>
-                    <a class="col-6 col-md-4 col-lg-2 vg-general-button vg-button6" role="button" data-toggle="modal"
-                        data-target="#modalVideo" data-theVideo="https://www.youtube.com/embed/Q7UL8hvlk7k">
+                    </button>
+                    <button class="btn col-6 col-md-4 col-lg-2 vg-general-button vg-button6" role="button"
+                        value="https://www.youtube.com/embed/Q7UL8hvlk7k">
                         Is Mars Red?
-                    </a>
+                    </button>
                 </div>
             </div>
         </div>
