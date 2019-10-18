@@ -55,7 +55,7 @@ function videoShow() {
   $("#videoContainer").hide()
 
   $(".vg-general-button").click(function () {
-    let videoLink = this.href;
+    let videoLink = this.value;
     $("#videoPlayer").html(`
     <iframe src="${videoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     `);
