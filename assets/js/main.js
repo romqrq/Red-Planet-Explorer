@@ -113,9 +113,10 @@ function switchPages() {
     let siblingsOnly = $(this).siblings();
     siblingsOnly.each(function (i) {
       let otherSectionsID = $(this).attr("href");
-      $(otherSectionsID)
-        .removeClass("slide-show")
-        .addClass("slide-hide");
+      if ($(`${otherSectionsID}`).not('.move-back')) {
+        $(otherSectionsID)
+          .removeClass("slide-show").addClass("slide-hide");
+      }
 
       setTimeout(function () {
         $(otherSectionsID).addClass("move-back");
