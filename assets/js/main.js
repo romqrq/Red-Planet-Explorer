@@ -106,21 +106,30 @@ function switchPages() {
 
   trigger.click(function () {
     let selectedSectionID = $(this).attr("href");
-    $(selectedSectionID)
+    $(`${selectedSectionID}`)
       .addClass("slide-show")
       .removeClass("slide-hide, move-back");
 
-    let siblingsOnly = $(this).siblings();
+    let siblingsOnly = $(`${selectedSectionID}`).siblings("section");
+    console.log(siblingsOnly);
     siblingsOnly.each(function (i) {
-      let otherSectionsID = $(this).attr("href");
-      if ($(`${otherSectionsID}`).not('.move-back')) {
-        $(otherSectionsID)
-          .removeClass("slide-show").addClass("slide-hide");
+      if (!$(this).hasClass('move-back')) {
+        $(this).removeClass("slide-show").addClass("slide-hide")
       }
 
-      setTimeout(function () {
-        $(otherSectionsID).addClass("move-back");
-      }, 1000);
+      setTimeout($(this).addClass("move-back"), 500)
+      // console.log("test");
+      // setTimeout(function () {
+      //   console.log(this);
+      //   $(this).addClass("move-back");
+      // }, 500);
+      // let otherSectionsID = $(this).attr("href");
+      // $(otherSectionsID)
+      //   .removeClass("slide-show").addClass("slide-hide");
+
+      // setTimeout(function () {
+      //   $(otherSectionsID).addClass("move-back");
+      // }, 1000);
     });
   });
 }
