@@ -11,11 +11,11 @@ body {
 body ::-webkit-scrollbar-thumb {
   background-color: #dc4f00;
   outline: 1px solid #949494;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem !important;
 }
 
 body ::-webkit-scrollbar {
-  border-radius: 0.5rem;
+  border-radius: 0.5rem !important;
   background-color: #d84e0094;
 }
 
@@ -542,6 +542,7 @@ a:hover {
 
 #videoContainer iframe {
   border: none;
+  border-radius: 0.5rem !important;
 }
 
 /* Explore */
@@ -606,7 +607,7 @@ a:hover {
 
 .mars-rover-2D {
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.5rem !important;
   margin: auto 0;
 }
 
@@ -890,10 +891,10 @@ button.close {
 @media screen and (min-width: 769px) {
   body {
     height: 100vh;
-    background: linear-gradient(-45deg, #cf7637, #b13202, #da4e04, #6c1c0b);
-    background-size: 400% 400%;
-    -webkit-animation: Gradient 15s ease infinite;
-    animation: Gradient 15s ease infinite;
+    background-image: url(../images/body-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .hide-md {
     display: none;
@@ -1112,28 +1113,5 @@ button.close {
   }
 }
 
-/*Keyframes for background*/
-@-webkit-keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes Gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+/*// /*Keyframes for background*/
 /*# sourceMappingURL=style.css.map */

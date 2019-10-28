@@ -51,19 +51,23 @@ function openModal(imageID, imageSRC) {
 
 //Functions to change visibility of video player div
 function videoShow() {
-
+  console.log("working")
   $("#videoContainer").hide()
 
   $(".vg-general-button").click(function () {
     let videoLink = this.value;
     $("#videoPlayer").html(`
-    <iframe src="${videoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe src="${videoLink}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" id="videoContent" allowfullscreen></iframe>
     `);
 
     $("#videoContainer").show()
   });
 
   $("#videoCloseButton").click(function () {
+    //code from https://stackoverflow.com/a/9040667
+    let video = $("#videoContent").attr("src");
+    $("#videoContent").attr("src", "");
+    $("#videoContent").attr("src", video);
     $("#videoContainer").hide()
   })
 }
@@ -102,20 +106,30 @@ function switchPages() {
 
   trigger.click(function () {
     let selectedSectionID = $(this).attr("href");
-    $(selectedSectionID)
+    $(`${selectedSectionID}`)
       .addClass("slide-show")
       .removeClass("slide-hide, move-back");
 
-    let siblingsOnly = $(this).siblings();
+    let siblingsOnly = $(`${selectedSectionID}`).siblings("section");
+    console.log(siblingsOnly);
     siblingsOnly.each(function (i) {
-      let otherSectionsID = $(this).attr("href");
-      $(otherSectionsID)
-        .removeClass("slide-show")
-        .addClass("slide-hide");
+      if (!$(this).hasClass('move-back')) {
+        $(this).removeClass("slide-show").addClass("slide-hide")
+      }
 
-      setTimeout(function () {
-        $(otherSectionsID).addClass("move-back");
-      }, 1000);
+      setTimeout($(this).addClass("move-back"), 500)
+      // console.log("test");
+      // setTimeout(function () {
+      //   console.log(this);
+      //   $(this).addClass("move-back");
+      // }, 500);
+      // let otherSectionsID = $(this).attr("href");
+      // $(otherSectionsID)
+      //   .removeClass("slide-show").addClass("slide-hide");
+
+      // setTimeout(function () {
+      //   $(otherSectionsID).addClass("move-back");
+      // }, 1000);
     });
   });
 }
