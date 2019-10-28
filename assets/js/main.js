@@ -51,7 +51,7 @@ function openModal(imageID, imageSRC) {
 
 //Functions to change visibility of video player div
 function videoShow() {
-
+  console.log("working")
   $("#videoContainer").hide()
 
   $(".vg-general-button").click(function () {
