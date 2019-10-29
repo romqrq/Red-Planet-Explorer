@@ -1,13 +1,15 @@
 //Global variables
 var URL;
 var SOLnum;
+var weightOnMars;
+var unit;
 const APIKEY = "api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b";
 const link1 = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
 //functions triggered on ready state
 $(document).ready(function () {
   getData("weather-section");
-  autoPlayYouTubeModal();
+  // autoPlayYouTubeModal();
   switchPages();
   videoShow();
 })
@@ -25,21 +27,6 @@ function scrolldown() {
   elTarget.scrollIntoView();
 }
 
-//function to autoplay videos
-//code from https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal
-function autoPlayYouTubeModal() {
-  let trigger = $("body").find('[data-toggle="modal"]');
-  trigger.click(function () {
-    let theModal = $(this).data("target"),
-      videoSRC = $(this).attr("data-theVideo"),
-      videoSRCauto = videoSRC + "?autoplay=1";
-    $(theModal + " iframe").attr("src", videoSRCauto);
-    $(theModal + " button.close").click(function () {
-      $(theModal + " iframe").attr("src", videoSRC);
-    });
-  });
-}
-
 //function to open modals with selected images
 function openModal(imageID, imageSRC) {
   let modalContent = document.getElementById("modalBody");
@@ -51,7 +38,7 @@ function openModal(imageID, imageSRC) {
 
 //Functions to change visibility of video player div
 function videoShow() {
-  console.log("working")
+
   $("#videoContainer").hide()
 
   $(".vg-general-button").click(function () {
@@ -81,16 +68,16 @@ $("#weightCheck").click(function () {
   let lbVal = $("#lbRadio:checked").val();
 
   if (kgVal == "on") {
-    let unit = "kg";
+    unit = "kg";
     let mass = weight / 9.8;
     let wom = mass * 3.711;
-    let weightOnMars = wom.toFixed(1);
+    weightOnMars = wom.toFixed(1);
   } else if (lbVal == "on") {
-    let unit = "lb";
+    unit = "lb";
     let weightInKG = weight / 2.20462;
     let mass = weightInKG / 9.8;
     let wom = mass * 3.711;
-    let weightOnMars = wom.toFixed(1);
+    weightOnMars = wom.toFixed(1);
   }
 
   if (testValue == false) {
@@ -111,25 +98,12 @@ function switchPages() {
       .removeClass("slide-hide, move-back");
 
     let siblingsOnly = $(`${selectedSectionID}`).siblings("section");
-    console.log(siblingsOnly);
+    // console.log(siblingsOnly);
     siblingsOnly.each(function (i) {
       if (!$(this).hasClass('move-back')) {
         $(this).removeClass("slide-show").addClass("slide-hide")
-      }
-
-      setTimeout($(this).addClass("move-back"), 500)
-      // console.log("test");
-      // setTimeout(function () {
-      //   console.log(this);
-      //   $(this).addClass("move-back");
-      // }, 500);
-      // let otherSectionsID = $(this).attr("href");
-      // $(otherSectionsID)
-      //   .removeClass("slide-show").addClass("slide-hide");
-
-      // setTimeout(function () {
-      //   $(otherSectionsID).addClass("move-back");
-      // }, 1000);
+      };
+      setTimeout($(this).addClass("move-back"), 500);
     });
   });
 }
@@ -143,10 +117,7 @@ document.getElementById("inputRoverName").addEventListener("change", getData);
 //Function to retrieve data from APIs
 function getData() {
   //Conditionals to determine parameters and ultimately parse the URL to fetch
-  if ("weather-section") {
-    //retrieving API weather information
-    URL = "https://mars.nasa.gov/rss/api/?feed=weather&category=insight&feedtype=json&ver=1.0";
-  } else if (this.id == "latestButton") {
+  if (this.id == "latestButton") {
     //retrieving API latest photos by rover name
     let roverLatest = document.getElementById("inputLatestRoverPhoto");
     let roverNameLatest = `${roverLatest.options[roverLatest.selectedIndex].value}`;
@@ -169,14 +140,68 @@ function getData() {
     let roverName = rvn.options[rvn.selectedIndex].value;
 
     URL = `${link1}${roverName}/photos?&sol=1600&${APIKEY}`;
+  } else if ("weather-section") {
+    //retrieving API weather information
+    URL = "https://mars.nasa.gov/rss/api/?feed=weather&category=insight&feedtype=json&ver=1.0";
   }
   //fetching API data
   fetch(URL)
     .then((res) => res.json())
     .then((data) => {
       //conditionals to process the content to the respective sections.
+
+      //Latest photos
+      if (this.id == "latestButton") {
+        let el = document.getElementById("data");
+        el.innerHTML = "";
+        data = data.latest_photos;
+        console.log("test");
+
+        data.forEach(function (item) {
+          el.innerHTML += `<img src=${item.img_src} class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
+        });
+      }
+      //Autofill for photo gallery search 
+      else if (this.id == "inputRoverName") {
+        data = data.photos;
+        let maxSol = data[0].rover.max_sol;
+        let cn = data[0].rover.cameras;
+
+        let camNamesList = document.getElementById("inputCamName");
+        camNamesList.innerHTML = "";
+        cn.forEach(function (camera) {
+
+          camNamesList.innerHTML += `
+          <option value="${camera.name}">${camera.name}</option>
+          `;
+        });
+
+        let maxSolField = document.getElementById("solTextInput");
+        maxSolField.placeholder = maxSol;
+
+      }
+      //Photos from Gallery search
+      else if (this.id == "photoButton") {
+        let el = document.getElementById("data2");
+        el.innerHTML = "";
+
+        data = data.photos;
+        if (data.length == 0) {
+          el.innerHTML = "<h2>Sorry! There are no pictures for this specific Sol and Camera combination. Please try different Sol values or different cameras!</h2>"
+        }
+        let cn = data[0].rover.cameras;
+        let camList = [];
+        cn.forEach(function (camera) {
+          camList.push(camera.name);
+        });
+
+        data.forEach(function (item) {
+
+          el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
+        });
+      }
       //Weather
-      if ("weather-section") {
+      else if ("weather-section") {
         let el = document.getElementById("dataWeather");
         el.innerHTML = "";
         let JSO = data;
@@ -274,55 +299,6 @@ function getData() {
                 </div>
             </div>
         </div>`;
-      }
-      //Latest photos
-      else if (this.id == "latestButton") {
-        let el = document.getElementById("data");
-        el.innerHTML = "";
-        data = data.latest_photos;
-
-        data.forEach(function (item) {
-          el.innerHTML += `<img src=${item.img_src} class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
-        });
-      }
-      //Autofill for photo gallery search 
-      else if (this.id == "inputRoverName") {
-        let rvn = document.getElementById("inputRoverName");
-        let roverName = rvn.options[rvn.selectedIndex].value;
-
-        data = data.photos;
-        let maxSol = data[0].rover.max_sol;
-        let cn = data[0].rover.cameras;
-
-        let camNamesList = document.getElementById("inputCamName");
-        camNamesList.innerHTML = "";
-        cn.forEach(function (camera) {
-
-          camNamesList.innerHTML += `
-          <option value="${camera.name}">${camera.name}</option>
-          `;
-        });
-
-        let maxSolField = document.getElementById("solTextInput");
-        maxSolField.placeholder = maxSol;
-
-      }
-      //Photos from Gallery search
-      else if (this.id == "photoButton") {
-        let el = document.getElementById("data2");
-        el.innerHTML = "";
-
-        data = data.photos;
-
-        let cn = data[0].rover.cameras;
-        let camList = [];
-        cn.forEach(function (camera) {
-          camList.push(camera.name);
-        });
-
-        data.forEach(function (item) {
-          el.innerHTML += `<img src=${item.img_src} id="${item.id}" class="img-thumbnail" onclick="openModal(this.id, this.src)" data-toggle="modal" data-target="#galleryModal">`;
-        });
       }
     });
 }

@@ -2,11 +2,11 @@
 
 ## UX
 
-This project is an application that brings different and scattered information to one place. Using a combination of APIs and other third part content to create an immersive experience.
+This project is an application that brings different and scattered information to one place. Using a combination of APIs and other third part content to create an intuitive and immersive experience.
 
-The future on Mars is more of a "when" than an "if". The website shows the progress torwards Mars exploration accelerating more and more. With new technologies, new studies and curiosity the possibility of humans becoming an interplanetary species is a possibility in the horizon.
+The future on Mars is more of a "when" than an "if". The website shows the progress torwards Mars exploration accelerating more and more. With new technologies, new studies and planned missions, humans becoming an interplanetary species is a possibility rising on the horizon.
 
-The design is responsive, changing the layout according to the size of the screen, loading data upon user actions and some buttons are shown or hidden depending on the screen resolution to make sure the user has the main actions always available on screen.
+The design is responsive, changing the layout and content according to the size of the screen, loading data upon user actions and some buttons are shown or hidden depending on the screen resolution to make sure the user has the main actions always available on screen.
 
 Four main User Stories were used to structure the website:
 
@@ -15,7 +15,18 @@ Four main User Stories were used to structure the website:
 3. I want to find photos taken by the rovers.
 4. I want to know what is behind the Mars exploration efforts.
 
-for these stories we considered both tech savvy and the average internet user that are curious about Mars but aren't really sure of what kind of information is available to be explored.
+For these stories we considered both tech savvy and the average internet user that are curious about Mars but aren't really sure of what kind of information is available to be explored.
+
+During development process, some changes from the original wireframes were made necessary to improve user experience and they were as listed:
+
+1. For tablet and mobile screens:
+    - Sticky navigation bar at the top of the screen keeping the different sections always available to the user.
+    - Reduced quantity of buttons, showing only the ones to the main sections to keep them always visible, readable and clean.
+    - Swapped positioning of social media buttons and navigation bar. This way the dark background from the navigation bar hides on the black of the main screen background. With that we avoid introducing an unwanted shape to compete with the background and text information.
+2. For desktop screen:
+    - Expanded menu with links to all subsections allowing a higher selectivity to the user.
+3. Photo Exploration section (all screen sizes):
+    - Changed to display thumbnails instead of loading a gallery as sometimes searches might not bring any results. Thumbnails set to open in a modal.
 
 All the sections and functionalities are easily accessible from the navigation bar and most of them won't take more than 3 clicks/taps from the home page to the end of the process.
 
@@ -23,8 +34,8 @@ All the sections and functionalities are easily accessible from the navigation b
 
 ### Existing Features
 
-1. Header - Contains responsive navigation bar with website logo and links to the different sections. The content is responsive to the resolution to avoid cluttering the area.
-2. Navigation Bar - Navigation bar fixed at the top of the screen keeping always visible the menu, the company logo and social media links. Menu collapsed on small screen sizes and expanded from 676px and up.
+1. Header - Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to avoid cluttering the area. 
+2. Navigation Bar - For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the section buttons are grouped to represent the main subjects being also always visible.
 3. Footer - On small and medium resolutions, it gives access to a short description of the website and social media buttons.
 4. Home - Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
 5. Mars Weather - Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
