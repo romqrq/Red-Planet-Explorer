@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  background-color: black;
   text-align: center;
 }
 
@@ -656,7 +657,20 @@ a:hover {
   margin: 0 0 1rem 0;
 }
 
-/* Modal */
+footer {
+  background: #000000f2;
+  color: white;
+  font-family: Jura;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+footer .sc-social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
 iframe {
   width: 80vw;
   height: 80vh;
@@ -988,6 +1002,7 @@ button.close {
   .content-section {
     width: 89%;
     height: 90%;
+    margin: 0;
     overflow-y: auto;
     overflow-x: hidden;
     position: absolute;
@@ -997,9 +1012,6 @@ button.close {
     border-top-right-radius: 0.5rem;
     -webkit-box-shadow: 0 0 8px 2px black;
             box-shadow: 0 0 8px 2px black;
-  }
-  #home {
-    top: 10.5%;
   }
   #home .main-screen-container {
     height: 100%;
@@ -1045,9 +1057,6 @@ button.close {
     max-width: 60vw;
     margin: 2rem auto;
   }
-}
-
-@media screen and (min-width: 769px) {
   .photo-gallery-text {
     padding-right: 2rem;
   }

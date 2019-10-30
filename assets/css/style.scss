@@ -18,6 +18,7 @@
     }
 
     body {
+        background-color: black;
         text-align: center;
          ::-webkit-scrollbar-thumb {
             background-color: #dc4f00;
@@ -551,6 +552,19 @@
             margin: 0 0 1rem 0;
         }
     }
+
+    // Footer
+
+    footer {
+        background: #000000f2;
+        color: white;
+        font-family: Jura;
+        font-size: 0.8rem;
+        padding: 1rem;
+        .sc-social {
+            display: inline-flex;
+        }
+    }
     iframe {
         width: 80vw;
         height: 80vh;
@@ -759,7 +773,7 @@
             border-top-right-radius: 0.5rem;
             box-shadow: $box-shadow;
         }
-        #home {
+        #home { 
             .main-screen-container {
                 height: 100%;
             }
