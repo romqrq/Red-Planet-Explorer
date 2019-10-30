@@ -34,8 +34,8 @@ All the sections and functionalities are easily accessible from the navigation b
 
 ### Existing Features
 
-1. Header - Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to avoid cluttering the area. 
-2. Navigation Bar - For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the section buttons are grouped to represent the main subjects being also always visible.
+1. Header - Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to keep the clean design. 
+2. Navigation Bar - For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the navigation bar is fixed to the top of the screen and the section buttons are grouped to represent the main subjects being also always visible. 
 3. Footer - On small and medium resolutions, it gives access to a short description of the website and social media buttons.
 4. Home - Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
 5. Mars Weather - Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
