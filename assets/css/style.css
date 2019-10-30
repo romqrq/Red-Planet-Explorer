@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  background-color: black;
   text-align: center;
 }
 
@@ -654,6 +655,20 @@ a:hover {
 .R2D-buttons .hr-divider {
   width: 100%;
   margin: 0 0 1rem 0;
+}
+
+footer {
+  background: #000000f2;
+  color: white;
+  font-family: Jura;
+  font-size: 0.8rem;
+  padding: 1rem;
+}
+
+footer .sc-social {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 
 iframe {

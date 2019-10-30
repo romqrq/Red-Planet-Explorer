@@ -18,6 +18,7 @@
     }
 
     body {
+        background-color: black;
         text-align: center;
          ::-webkit-scrollbar-thumb {
             background-color: #dc4f00;
@@ -549,6 +550,19 @@
         .hr-divider {
             width: 100%;
             margin: 0 0 1rem 0;
+        }
+    }
+
+    // Footer
+
+    footer {
+        background: #000000f2;
+        color: white;
+        font-family: Jura;
+        font-size: 0.8rem;
+        padding: 1rem;
+        .sc-social {
+            display: inline-flex;
         }
     }
     iframe {
