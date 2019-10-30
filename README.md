@@ -41,23 +41,22 @@ All the sections and functionalities are easily accessible from the navigation b
 5. Mars Weather - Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
 6. Mars Weather - The section also contains a carousel of images related to the weather on Mars and it also shows data from NASA's API showing Sol number, temperature, atmospheric pressure and wind speed/direction.
 7. Rovers Manifest - Section covering the importance of the rovers sent to Mars and a brief text introducing the topic.
-8. Rovers Manifest - Accordion covvering History and facts about all the rovers that were sent to Mars up to 2019.
-9. Latest Pictures - Contains some text explaining about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user.
-10. Latest Pictures - The input form retrieves, throught the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
+8. Rovers Manifest - Accordion covering History and facts about all the rovers that were sent to Mars up to 2019.
+9. Latest Pictures - Contains short text explaining about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user.
+10. Latest Pictures - The input form retrieves, through the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
 11. Gallery Explorer - Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos. Brief explanation with steps on how to use the search.
 12. Gallery Explorer - Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
-13. Video Gallery - With a brief description text to tell the user the purpose of the content and a panel with links that automatically play youtube videos in modals.
-14. Explore - Section with different interactive activities related to mars exploration and curious facts.
-15. Explore - The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
-16. Explore - Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
-17. Explore - Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
+13. Gallery Explorer - The results for the search are shown below the search form and display the pictures as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
+14. Video Gallery - With a brief description text to tell the user the purpose of the content and a panel with links that play youtube videos on a div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
+15. Explore - Section with different interactive activities related to mars exploration and curious facts.
+16. Explore - The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
+17. Explore - Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
+18. Explore - Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
+19. Footer - Visible on mobile and tablet, the footer displays a short description of the application and social media buttons.
 
 ### Features Left to Implement
 
-- Animated counter (counting from 0)
-- Live chat
-- Shopping cart
-- Interactive animation where buttons can turn on and off appliances on the screen.
+- Photo gallery with scrollable thumbnails
 
 ## Technologies Used
 
@@ -65,9 +64,8 @@ All the sections and functionalities are easily accessible from the navigation b
 - [HTML](https://en.wikipedia.org/wiki/HTML5) - HTML 5 is the latest version of the Hypertext Markup Language and it is the standard programming language across the internet for structure and content.
 - [CSS](https://getbootstrap.com/docs/3.3/) - CSS 3 makes possible to implement responsiveness and style to the HTML document.
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Allowed the creation of animations and effects for menus and other features.
-- [JQuery](https://jquery.com/) - Allowed the creation of animations such as the collapsed button.
+- [JQuery](https://jquery.com/) - Allowed acceleration of processes such as fetching API data.
 - [Font Awesome](https://origin.fontawesome.com/) - It allows the introduction of icons that behave as normal text and are hardwired to users mind across the internet making it more recognizable and requiring minimal effort in understanding.
-- [Hover Library](http://ianlunn.github.io/Hover/) - Allows the utilization of pre-made hover effects, accelerating the development and styling process.
 - [Google Fonts](https://fonts.google.com/) - Offers a wide variety of font styles.
 - [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
 
