@@ -909,6 +909,13 @@ button.close {
   .mobile-nav .medium-text {
     font-size: 2rem;
   }
+  .social-col .round-border {
+    height: 3rem;
+    border: 3px solid white;
+    width: 3rem;
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -982,7 +989,7 @@ button.close {
     margin-bottom: 0.3rem;
   }
   .move-back {
-    margin-left: -110%;
+    margin-left: -110% !important;
     z-index: -30;
   }
   .slide-hide {
