@@ -10,9 +10,7 @@
     <title>Red Planet Explorer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
         type="text/css" />
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.css"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
     <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -51,8 +49,8 @@
             </div>
         </nav>
     </header>
-    <nav class="mobile-nav">
-        <div class="row text-center hide-md" role="navigation">
+    <nav class="mobile-nav hide-md">
+        <div class="row text-center" role="navigation">
             <a class="col-3 medium-text" href="#weather-section">Weather</a>
             <a class="col-3 medium-text" href="#manifest">Rovers</a>
             <a class="col-3 medium-text" href="#photos">Gallery</a>
@@ -414,7 +412,7 @@
             </div>
             <hr class="hr-divider">
             <div class="container-fluid general-text">
-                <div class="row explore-gallery-row">
+                <div class="row">
                     <div class="col-12 photo-gallery-text">
                         <p>Our gallery consists of pictures you won't find on most websites. They are raw images, the
                             way they are received by NASA straight from the rovers.</p>
@@ -430,22 +428,20 @@
                                 carried by that specific rover. You can choose from the dropdown list.</li>
                         </ol>
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
-                        <div class="input-group mb-5">
-                            <div class="input-group mb-3">
-                                <!--Script in main.js-->
-                                <select class="custom-select orange-button" id="inputRoverName">
-                                    <option selected>Choose...</option>
-                                    <option value="curiosity">Curiosity</option>
-                                    <option value="spirit">Spirit</option>
-                                    <option value="opportunity">Opportunity</option>
-                                </select>
-                                <input type="text" class="form-control orange-button" id="solTextInput"
-                                    placeholder="Sol Nº">
-                                <select class="custom-select orange-button" id="inputCamName">
-                                </select>
-                                <!--Script in main.js-->
-                                <button class="btn orange-button" id="photoButton">Show me</button>
-                            </div>
+                        <div class="input-group mb-3">
+                            <!--Script in main.js-->
+                            <select class="custom-select orange-button" id="inputRoverName">
+                                <option selected>Choose...</option>
+                                <option value="curiosity">Curiosity</option>
+                                <option value="spirit">Spirit</option>
+                                <option value="opportunity">Opportunity</option>
+                            </select>
+                            <input type="text" class="form-control orange-button" id="solTextInput"
+                                placeholder="Sol Nº">
+                            <select class="custom-select orange-button" id="inputCamName">
+                            </select>
+                            <!--Script in main.js-->
+                            <button class="btn orange-button" id="photoButton">Show me</button>
                         </div>
                     </div>
                 </div>

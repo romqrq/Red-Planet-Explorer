@@ -36,6 +36,10 @@ a:hover {
   outline: none;
 }
 
+.input-group {
+  margin: 2rem 0;
+}
+
 .modal-dialog {
   max-width: 100% !important;
 }
@@ -77,7 +81,7 @@ a:hover {
   text-shadow: 0px 1px 1px black;
   color: white;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding: 1.5rem 0.5rem;
 }
 
 .heading-text {
@@ -139,6 +143,7 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  padding: 1rem 0;
   z-index: 12;
   background-color: #000000c7;
   -webkit-box-shadow: 0px 4px 3px 0px black;
@@ -146,7 +151,6 @@ a:hover {
 }
 
 .mobile-nav .row {
-  padding-right: 1rem;
   max-width: 100%;
   margin: 0;
 }
@@ -176,7 +180,7 @@ a:hover {
           justify-content: space-evenly;
   -webkit-box-shadow: 1px 4px 9px 0px black;
           box-shadow: 1px 4px 9px 0px black;
-  padding: 4rem 1rem 1rem !important;
+  padding: 1rem !important;
   border-radius: 0.5rem !important;
 }
 
@@ -269,6 +273,7 @@ a:hover {
 /* WEATHER */
 .weather-container {
   padding: 0;
+  margin: 3rem 0;
   height: 70vh;
   overflow: hidden;
   border-radius: 0.5rem !important;
@@ -404,7 +409,7 @@ a:hover {
 }
 
 #accordion {
-  margin-bottom: 2rem;
+  margin: 2rem;
 }
 
 #accordion .card {
@@ -490,7 +495,7 @@ a:hover {
 }
 
 .vg-mars-stages {
-  padding: 0 1rem;
+  margin: 2rem 0;
 }
 
 .vg-button1 {
@@ -559,6 +564,7 @@ a:hover {
 
 .weight-container .weight-text {
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 .weight-container .input-group,
@@ -900,6 +906,16 @@ button.close {
   .hide-sm {
     display: none;
   }
+  .mobile-nav .medium-text {
+    font-size: 2rem;
+  }
+  .social-col .round-border {
+    height: 3rem;
+    border: 3px solid white;
+    width: 3rem;
+    font-size: 1.3rem;
+    line-height: 2.8rem;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -973,7 +989,8 @@ button.close {
     margin-bottom: 0.3rem;
   }
   .move-back {
-    margin-left: -110%;
+    margin-left: -110% !important;
+    z-index: -30;
   }
   .slide-hide {
     height: 95%;

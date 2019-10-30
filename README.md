@@ -102,7 +102,7 @@ The project deployment was made using GitHub.
 6. Selected "master branch" and saved.
 7. After a few seconds the page was published.
 
-From this point, all the changes on the pages were made straight from my local file/branch management through GitKraken as I pushed the content.
+From this point, all the changes on the pages were made straight from Visual Studio Code, from where I pushed the content. From time to time I merged the branches on GitHub.
 
 If you wish to run the code locally, it is possible once you have saved the files for the page you wish to run (html, css, images and/or videos).
 
@@ -116,16 +116,48 @@ If you wish to run the code locally, it is possible once you have saved the file
 
 The photos used in this site were obtained from:
 
-- Carousel images :
-- [Different devices](https://www.pexels.com/photo/accessories-business-computer-desk-511425/)
-- [Tablet on the beach](https://www.publicdomainpictures.net/en/view-image.php?image=261344&picture=tablet-internetbeach-vacation)
-- [Man in the jungle](https://pixabay.com/photos/forest-mobile-phone-camera-vacation-2347079/)
-- [Man in the mountains](https://www.goodfreephotos.com/other-landscapes/man-taking-photo-of-mountain-landscape-with-cellphone.jpg.php)
-- [Woman sitting on the couch](https://www.pexels.com/photo/woman-sitting-on-sofa-while-looking-at-phone-with-laptop-on-lap-920382/)
-- [Work environment](https://pxhere.com/en/photo/1547057)
-- [Logos and icons](https://fontawesome.com/icons?d=gallery&m=free)
-- [Robert Doe](https://pxhere.com/en/photo/1457989)
-- [Doe Family](https://pxhere.com/en/photo/1060077)
-- [Janice Doe](https://pxhere.com/en/photo/1565903)
-- [Family on the beach](https://allaboutplaya.com/record-number-of-tourists-visited-mexico-in-first-quarter/)
-- [Demo video](https://www.youtube.com/embed/hYMpMt0lwUY)
+- [Favicon] (https://pngimg.com/uploads/mars_planet/mars_planet_PNG26.png)
+- [Body Background from 769px up](https://upload.wikimedia.org/wikipedia/commons/8/87/LH_95.jpg)
+- [Side Panel Background](https://pixnio.com/free-images/2019/01/21/2019-01-21-13-02-14-1200x800.jpg)
+- [Sections Background](https://images.pexels.com/photos/383639/pexels-photo-383639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+- [Main screen image Background](https://commons.wikimedia.org/wiki/File:Mars_atmosphere.jpg)
+- Weather Carousel:
+    - [InSight Lander](https://photojournal.jpl.nasa.gov/jpeg/PIA22227.jpg)
+    - [Dune Field](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23056.jpg)
+    - [Pathfinder Rover](https://www.jpl.nasa.gov/images/mars/20170622/PIA01466-16.jpg)
+    - [Dunes](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia22869.jpg)
+- Video Gallery:
+- [Earth from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
+- [Body Background from 769px up](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
+- [Space Module](https://www.jpl.nasa.gov/images/orion/20141024/orion20141024-16.jpg)
+- [Landing Pod](https://images.pexels.com/photos/700015/pexels-photo-700015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
+- [Landing Curiosity](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14841_hires.jpg)
+- [Orbiter](https://www.jpl.nasa.gov/images/mro/20081126/mro-concept-browse.jpg)
+- [Mars Rover](https://upload.wikimedia.org/wikipedia/commons/a/a3/Rover1.jpg)
+- [Organic Molecule](https://storage.needpix.com/rsynced_images/uracil-2901413_1280.png)
+- [Mars from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14293_hires.jpg)
+
+### Content
+
+- [Skies and Scopes](https://skiesandscopes.com/mars-rovers/)
+- [Wikipedia - Sojourner](https://en.wikipedia.org/wiki/Sojourner_(rover))
+- [Wikipedia - Mars 2](https://en.wikipedia.org/wiki/Mars_2)
+- [Wikipedia - Mars 3](https://en.wikipedia.org/wiki/Mars_3#cite_note-Perminov1-3)
+- [Wikipedia - Spirit](https://en.wikipedia.org/wiki/Spirit_(rover))
+- [Wikipedia - Opportunity](https://en.wikipedia.org/wiki/Opportunity_(rover))
+- [Wikipedia - Curiosity](https://en.wikipedia.org/wiki/Curiosity_(rover))
+- [Space.com](https://www.space.com/mars-rover-opportunity-last-photographs.html)
+- [NASA - Curiosity Rover](https://mars.nasa.gov/msl/spacecraft/rover/summary/)
+- [NASA - Opportunity Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/)
+- [NASA - Spirit Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2010/)
+
+
+## Developer
+
+### Romulo Albuquerque
+
+## Repository
+
+- [Github] (https://github.com/romqrq/Red-Planet-Explorer)
+
+
