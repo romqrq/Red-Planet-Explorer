@@ -68,6 +68,7 @@ All the sections and functionalities are easily accessible from the navigation b
 - [Font Awesome](https://origin.fontawesome.com/) - It allows the introduction of icons that behave as normal text and are hardwired to users mind across the internet making it more recognizable and requiring minimal effort in understanding.
 - [Google Fonts](https://fonts.google.com/) - Offers a wide variety of font styles.
 - [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
+- [Toolur](https://compressimage.toolur.com/) - website used to compress image files.
 
 ## Testing
 
