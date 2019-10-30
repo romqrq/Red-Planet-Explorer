@@ -117,7 +117,9 @@ If you wish to run the code locally, it is possible once you have saved the file
 The photos used in this site were obtained from:
 
 - [Favicon] (https://pngimg.com/uploads/mars_planet/mars_planet_PNG26.png)
-- [Body Background from 769px up] (https://upload.wikimedia.org/wikipedia/commons/8/87/LH_95.jpg)
+- [Body Background from 769px up](https://upload.wikimedia.org/wikipedia/commons/8/87/LH_95.jpg)
+- [Side Panel Background](https://pixnio.com/free-images/2019/01/21/2019-01-21-13-02-14-1200x800.jpg)
+- [Sections Background](https://images.pexels.com/photos/383639/pexels-photo-383639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 - [Main screen image Background](https://commons.wikimedia.org/wiki/File:Mars_atmosphere.jpg)
 - Weather Carousel:
     - [InSight Lander](https://photojournal.jpl.nasa.gov/jpeg/PIA22227.jpg)
@@ -126,6 +128,7 @@ The photos used in this site were obtained from:
     - [Dunes](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia22869.jpg)
 - Video Gallery:
 - [Earth from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
+- [Body Background from 769px up](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
 - [Space Module](https://www.jpl.nasa.gov/images/orion/20141024/orion20141024-16.jpg)
 - [Landing Pod](https://images.pexels.com/photos/700015/pexels-photo-700015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
 - [Landing Curiosity](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14841_hires.jpg)
@@ -133,4 +136,15 @@ The photos used in this site were obtained from:
 - [Mars Rover](https://upload.wikimedia.org/wikipedia/commons/a/a3/Rover1.jpg)
 - [Organic Molecule](https://storage.needpix.com/rsynced_images/uracil-2901413_1280.png)
 - [Mars from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14293_hires.jpg)
+
+### Content
+
+- [Skies and Scopes](https://skiesandscopes.com/mars-rovers/)
+- [Wikipedia - Sojourner](https://en.wikipedia.org/wiki/Sojourner_(rover))
+- [Wikipedia - Mars 2](https://en.wikipedia.org/wiki/Mars_2)
+- [Wikipedia - Mars 3](https://en.wikipedia.org/wiki/Mars_3#cite_note-Perminov1-3)
+- [Wikipedia - Spirit](https://en.wikipedia.org/wiki/Spirit_(rover))
+- [Wikipedia - Opportunity](https://en.wikipedia.org/wiki/Opportunity_(rover))
+- [Wikipedia - Curiosity](https://en.wikipedia.org/wiki/Curiosity_(rover))
+
 
