@@ -760,7 +760,6 @@
             box-shadow: $box-shadow;
         }
         #home {
-            top: 10.5%;
             .main-screen-container {
                 height: 100%;
             }
@@ -803,9 +802,6 @@
             max-width: 60vw;
             margin: 2rem auto;
         }
-    }
-    
-    @media screen and (min-width: 769px) {
         .photo-gallery-text {
             padding-right: 2rem;
         }
@@ -813,6 +809,10 @@
             margin: 1rem -0.9rem;
         }
     }
+    
+    // @media screen and (min-width: 769px) {
+        
+    // }
     
     @media screen and (min-width: 1025px) {
         .carousel-img {
