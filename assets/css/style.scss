@@ -45,6 +45,10 @@
         box-shadow: none;
         outline: none;
     }
+
+    .input-group{
+        margin: 2rem 0;
+    }
     
     .modal-dialog {
         max-width: 100%!important;
@@ -99,7 +103,7 @@
         text-shadow: $text-shadow;
         color: white;
         font-size: 1.2rem;
-        padding: 1rem;
+        padding: 1.5rem 0.5rem;
     }
     
     .heading-text {
@@ -150,11 +154,11 @@
     .mobile-nav {
         position: sticky;
         top: 0;
+        padding: 1rem 0;
         z-index: 12;
         background-color: #000000c7;
         box-shadow: 0px 4px 3px 0px black;
         .row{
-            padding-right: 1rem;
             max-width: 100%;
             margin: 0;
         }
@@ -175,7 +179,7 @@
         flex-direction: column;
         justify-content: space-evenly;
         box-shadow: 1px 4px 9px 0px black;
-        padding: 4rem 1rem 1rem!important;
+        padding: 1rem!important;
         @include border-radius;
         .hr-divider {
             margin-bottom: 0;
@@ -245,6 +249,7 @@
     
     .weather-container {
         padding: 0;
+        margin: 3rem 0;
         height: 70vh;
         overflow: hidden;
         @include border-radius;
@@ -347,7 +352,7 @@
     }
     
     #accordion {
-        margin-bottom: 2rem;
+        margin: 2rem;
         .card {
             border: none;
             background-color: #00000059;
@@ -415,7 +420,7 @@
     }
     
     .vg-mars-stages {
-        padding: 0 1rem;
+        margin: 2rem 0;
     }
     
     .vg-button1 {
@@ -481,6 +486,7 @@
         }
         .weight-text {
             width: 100%;
+            margin-bottom: 2rem;
         }
         .input-group,
         .btn-group {
@@ -679,6 +685,11 @@
         .hide-sm {
             display: none;
         }
+        .mobile-nav {
+            .medium-text{
+                font-size: 2rem;
+            }
+        }
     }
     
     @media screen and (min-width: 769px) {
@@ -695,6 +706,7 @@
         .hide-md {
             display: none;
         }
+
         /*Side console */
         .side-console {
             position: absolute;
@@ -742,6 +754,7 @@
         }
         .move-back {
             margin-left: -110%;
+            z-index: -30;
         }
         .slide-hide {
             height: 95%;
