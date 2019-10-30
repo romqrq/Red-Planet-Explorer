@@ -146,5 +146,18 @@ The photos used in this site were obtained from:
 - [Wikipedia - Spirit](https://en.wikipedia.org/wiki/Spirit_(rover))
 - [Wikipedia - Opportunity](https://en.wikipedia.org/wiki/Opportunity_(rover))
 - [Wikipedia - Curiosity](https://en.wikipedia.org/wiki/Curiosity_(rover))
+- [Space.com](https://www.space.com/mars-rover-opportunity-last-photographs.html)
+- [NASA - Curiosity Rover](https://mars.nasa.gov/msl/spacecraft/rover/summary/)
+- [NASA - Opportunity Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/)
+- [NASA - Spirit Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2010/)
+
+
+## Developer
+
+### Romulo Albuquerque
+
+## Repository
+
+- [Github] (https://github.com/romqrq/Red-Planet-Explorer)
 
 
