@@ -211,13 +211,17 @@ function getData() {
         let sol = vc.sols_checked[vc.sols_checked.length - 1];
         //setting SECOND LAST sol number
         let SLsol = vc.sols_checked[vc.sols_checked.length - 2];
+        //Checking if data is valid
         //data/validity_checks/"last sun number"/AT/valid:"true or false"
         let vcsATvalid = vc[sol].AT.valid;
+        let vcsHWSvalid = vc[sol].HWS.valid;
+        let vcsPREvalid = vc[sol].PRE.valid;
+        let vcsWDvalid = vc[sol].WD.valid;
         //data/validity_checks/"SECOND LAST sun number"/AT/valid:"true or false"
         let vcSLsATvalid = vc[SLsol].AT.valid;
 
         //Setting sol number to use as reference to drill down to the other variables
-        if (vcsATvalid) {
+        if (vcsATvalid && vcsHWSvalid && vcsPREvalid && vcsWDvalid) {
           SOLnum = sol;
         } else if (vcSLsATvalid) {
           SOLnum = SLsol;

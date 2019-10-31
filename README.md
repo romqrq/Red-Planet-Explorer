@@ -11,7 +11,7 @@ The design is responsive, changing the layout and content according to the size 
 Four main User Stories were used to structure the website:
 
 1. I want to know how is the weather on Mars.
-2. I want to know about other missions sent to mars.
+2. I want to know about other missions sent to Mars.
 3. I want to find photos taken by the rovers.
 4. I want to know what is behind the Mars exploration efforts.
 
@@ -48,7 +48,7 @@ All the sections and functionalities are easily accessible from the navigation b
 12. Gallery Explorer - Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
 13. Gallery Explorer - The results for the search are shown below the search form and display the pictures as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
 14. Video Gallery - With a brief description text to tell the user the purpose of the content and a panel with links that play youtube videos on a div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
-15. Explore - Section with different interactive activities related to mars exploration and curious facts.
+15. Explore - Section with different interactive activities related to Mars exploration and curious facts.
 16. Explore - The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
 17. Explore - Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
 18. Explore - Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
@@ -152,12 +152,6 @@ The photos used in this site were obtained from:
 - [NASA - Spirit Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2010/)
 
 
-## Developer
 
-### Romulo Albuquerque
-
-## Repository
-
-- [Github] (https://github.com/romqrq/Red-Planet-Explorer)
 
 

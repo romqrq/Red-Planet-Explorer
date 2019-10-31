@@ -120,13 +120,13 @@
                         <img src="assets/images/carousel/insight-lander.jpg" class="d-block carousel-img" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/carousel/dune_field.jpg" class="d-block carousel-img" alt="...">
+                        <img src="assets/images/carousel/red-dunes.jpg" class="d-block carousel-img" alt="...">
                     </div>
                     <div class="carousel-item">
                         <img src="assets/images/carousel/rover-mars-surface.jpg" class="d-block carousel-img" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="assets/images/carousel/dunes.jpg" class="d-block carousel-img" alt="...">
+                        <img src="assets/images/carousel/delta.jpg" class="d-block carousel-img" alt="...">
                     </div>
                 </div>
                 <div class="carousel-caption d-md-block" id="dataWeather"></div>
@@ -335,7 +335,7 @@
                                     <li>Robotic arm</li>
                                     <li>Dinamic Albedo of Neutrons(DAN) - Measures hydrogen, ice or water on or under
                                         the surface.</li>
-                                    <li>Radiation Assessment Detector (RAD) - It measured radiation on the way to mars
+                                    <li>Radiation Assessment Detector (RAD) - It measured radiation on the way to Mars
                                         and keeps measuring it.</li>
                                     <li>Dust Removal Tool</li>
                                     <li>Sample Analysis at Mars (SAM) - It consists of a set of equipments to analyse
@@ -392,8 +392,8 @@
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
-                    <select class="custom-select orange-button" id="inputLatestRoverPhoto">
-                        <option selected>Choose...</option>
+                    <select class="custom-select orange-button" id="inputLatestRoverPhoto" aria-label="Choose a Rover">
+                        <option selected>Choose a rover...</option>
                         <option value="curiosity">Curiosity</option>
                         <option value="spirit">Spirit</option>
                         <option value="opportunity">Opportunity</option>
@@ -432,15 +432,15 @@
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                         <div class="input-group mb-3">
                             <!--Script in main.js-->
-                            <select class="custom-select orange-button" id="inputRoverName">
-                                <option selected>Choose...</option>
+                            <select class="custom-select orange-button" id="inputRoverName" aria-label="Choose a Rover">
+                                <option selected>Choose a rover</option>
                                 <option value="curiosity">Curiosity</option>
                                 <option value="spirit">Spirit</option>
                                 <option value="opportunity">Opportunity</option>
                             </select>
-                            <input type="text" class="form-control orange-button" id="solTextInput"
-                                placeholder="Sol Nº">
-                            <select class="custom-select orange-button" id="inputCamName">
+                            <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº"
+                                aria-label="Sol number">
+                            <select class="custom-select orange-button" id="inputCamName" aria-label="Camera name">
                             </select>
                             <!--Script in main.js-->
                             <button class="btn orange-button" id="photoButton">Show me</button>
