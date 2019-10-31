@@ -1,8 +1,8 @@
 //Global variables
-var URL;
-var SOLnum;
-var weightOnMars;
-var unit;
+let URL;
+let SOLnum;
+let weightOnMars;
+let unit;
 const APIKEY = "api_key=unJZiQapXhyZamSl37P8FEh7Zlssi7xmaIF4l95b";
 const link1 = "https://api.nasa.gov/mars-photos/api/v1/rovers/";
 
@@ -23,14 +23,13 @@ $("#launch-button").click(function () {
 
 //Function to scroll down to weather after "launch"
 function scrolldown() {
-  let elTarget = document.getElementById("weather-section");
+  const elTarget = document.getElementById("weather-section");
   elTarget.scrollIntoView();
 }
 
 //function to open modals with selected images
 function openModal(imageID, imageSRC) {
-  let modalContent = document.getElementById("modalBody");
-  modalContent.innerHTML = "";
+  const modalContent = document.getElementById("modalBody");
 
   modalContent.innerHTML = `
       <img class="modal-content" src="${imageSRC}" id="${imageID}">`;
@@ -103,7 +102,8 @@ function switchPages() {
       if (!$(this).hasClass('move-back')) {
         $(this).removeClass("slide-show").addClass("slide-hide")
       };
-      setTimeout($(this).addClass("move-back"), 500);
+      let target = this
+      setTimeout(function () { $(target).addClass("move-back"); }, 500);
     });
   });
 }
@@ -119,24 +119,24 @@ function getData() {
   //Conditionals to determine parameters and ultimately parse the URL to fetch
   if (this.id == "latestButton") {
     //retrieving API latest photos by rover name
-    let roverLatest = document.getElementById("inputLatestRoverPhoto");
+    const roverLatest = document.getElementById("inputLatestRoverPhoto");
     let roverNameLatest = `${roverLatest.options[roverLatest.selectedIndex].value}`;
     URL = `${link1}${roverNameLatest}/latest_photos?${APIKEY}&feedtype=json&ver=1.0`;
   } else if (this.id == "photoButton") {
     //retrieving API photos by rover name, sol number and camera name
-    let rvn = document.getElementById("inputRoverName");
+    const rvn = document.getElementById("inputRoverName");
     let roverName = rvn.options[rvn.selectedIndex].value;
 
-    let snb = document.getElementById("solTextInput");
+    const snb = document.getElementById("solTextInput");
     let solNumber = `&sol=${snb.value}`;
 
-    let cmn = document.getElementById("inputCamName");
+    const cmn = document.getElementById("inputCamName");
     let camName = `&camera=${cmn.options[cmn.selectedIndex].value}`;
 
     URL = `${link1}${roverName}/photos?${solNumber}${camName}&${APIKEY}`;
   } else if (this.id == "inputRoverName") {
     //retrieving API information to auto fill the input fields of the photo search
-    let rvn = document.getElementById("inputRoverName");
+    const rvn = document.getElementById("inputRoverName");
     let roverName = rvn.options[rvn.selectedIndex].value;
 
     URL = `${link1}${roverName}/photos?&sol=1600&${APIKEY}`;
@@ -152,7 +152,7 @@ function getData() {
 
       //Latest photos
       if (this.id == "latestButton") {
-        let el = document.getElementById("data");
+        const el = document.getElementById("data");
         el.innerHTML = "";
         data = data.latest_photos;
         console.log("test");
@@ -167,7 +167,7 @@ function getData() {
         let maxSol = data[0].rover.max_sol;
         let cn = data[0].rover.cameras;
 
-        let camNamesList = document.getElementById("inputCamName");
+        const camNamesList = document.getElementById("inputCamName");
         camNamesList.innerHTML = "";
         cn.forEach(function (camera) {
 
@@ -176,13 +176,13 @@ function getData() {
           `;
         });
 
-        let maxSolField = document.getElementById("solTextInput");
+        const maxSolField = document.getElementById("solTextInput");
         maxSolField.placeholder = maxSol;
 
       }
       //Photos from Gallery search
       else if (this.id == "photoButton") {
-        let el = document.getElementById("data2");
+        const el = document.getElementById("data2");
         el.innerHTML = "";
 
         data = data.photos;
@@ -202,7 +202,7 @@ function getData() {
       }
       //Weather
       else if ("weather-section") {
-        let el = document.getElementById("dataWeather");
+        const el = document.getElementById("dataWeather");
         el.innerHTML = "";
         let JSO = data;
         //data/validity_checks/
@@ -222,7 +222,7 @@ function getData() {
         } else if (vcSLsATvalid) {
           SOLnum = SLsol;
         }
-        let DLVS = JSO[SOLnum];
+
         let AT = JSO[SOLnum].AT;
         let PRE = JSO[SOLnum].PRE;
         let HWS = JSO[SOLnum].HWS;
