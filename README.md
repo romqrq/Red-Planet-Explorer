@@ -30,7 +30,7 @@ During development process, some changes from the original wireframes were made 
 
 All the sections and functionalities are easily accessible from the navigation bar and most of them won't take more than 3 clicks/taps from the home page to the end of the process.
 
-## Features <---->
+## Features
 
 ### Existing Features
 
@@ -136,6 +136,8 @@ The photos used in this site were obtained from:
 - [Mars Rover](https://upload.wikimedia.org/wikipedia/commons/a/a3/Rover1.jpg)
 - [Organic Molecule](https://storage.needpix.com/rsynced_images/uracil-2901413_1280.png)
 - [Mars from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14293_hires.jpg)
+https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18244_hires.jpg
+https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23239_hires.jpg
 
 ### Content
 
