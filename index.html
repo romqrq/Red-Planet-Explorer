@@ -392,8 +392,8 @@
             </div>
             <div class="container-fluid">
                 <div class="input-group mb-3">
-                    <select class="custom-select orange-button" id="inputLatestRoverPhoto">
-                        <option selected>Choose...</option>
+                    <select class="custom-select orange-button" id="inputLatestRoverPhoto" aria-label="Choose a Rover">
+                        <option selected>Choose a rover...</option>
                         <option value="curiosity">Curiosity</option>
                         <option value="spirit">Spirit</option>
                         <option value="opportunity">Opportunity</option>
@@ -432,15 +432,15 @@
                         <p>Please choose one a Rover, type the number of the sun and the camera you want to see.</p>
                         <div class="input-group mb-3">
                             <!--Script in main.js-->
-                            <select class="custom-select orange-button" id="inputRoverName">
-                                <option selected>Choose...</option>
+                            <select class="custom-select orange-button" id="inputRoverName" aria-label="Choose a Rover">
+                                <option selected>Choose a rover</option>
                                 <option value="curiosity">Curiosity</option>
                                 <option value="spirit">Spirit</option>
                                 <option value="opportunity">Opportunity</option>
                             </select>
-                            <input type="text" class="form-control orange-button" id="solTextInput"
-                                placeholder="Sol Nº">
-                            <select class="custom-select orange-button" id="inputCamName">
+                            <input type="text" class="form-control orange-button" id="solTextInput" placeholder="Sol Nº"
+                                aria-label="Sol number">
+                            <select class="custom-select orange-button" id="inputCamName" aria-label="Camera name">
                             </select>
                             <!--Script in main.js-->
                             <button class="btn orange-button" id="photoButton">Show me</button>
