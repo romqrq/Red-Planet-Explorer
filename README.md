@@ -81,12 +81,16 @@ We asked the users doing the test to fulfill the four tasks from our User Storie
 The website was also tested through Google Chrome Developer tools - Audits for performance, Progressive web app, best practices, accessibility and SEO, with a simulated fast 3g connection and 4x CPU slowdown.
 Some aspects weren't tackled due to our present technical limitations.
 
-Many of the tests were made manually. Using browser "forward and back" arrows for navigating the website, testing the input fields with different formats of data such as email formats and required fields not to be allowed for submition as blank.
+Many of the tests were made manually. Testing the input fields with different formats of data such as email formats and required fields not to be allowed for submition as blank.
 We also tested the user stories as test path to ensure they work as desired.
+
+Some issues rose up regarding some images file size. After trying to further compress, we decided to replace the ones that we couldn't get compressed any further and it improved the loading time.
+
+The assets/images/body-bg.jpg is a bigger file than the 
 
 After the tests, we are satisfied with the way the website works on different devices and browsers.
 
-The accessibility features on the code are still a part that we aren't very confident that is implemented correctly but is one of the main priorities on the improvements list as people who have sensorial impairments would be an important part of the potential customer base for the company.
+The only loading issue that couldn't be addressed to this point due to technical limitations was to prioritize the loading of the content above the fold and then loading the rest of the content on the sequence.
 
 The [W3C Validator](https://validator.w3.org/) was used to check the HTML code. To validate the CSS code it was used the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).
 
