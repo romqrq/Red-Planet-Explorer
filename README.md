@@ -34,25 +34,53 @@ All the sections and functionalities are easily accessible from the navigation b
 
 ### Existing Features
 
-1. Header - Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to keep the clean design. 
-2. Navigation Bar - For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the navigation bar is fixed to the top of the screen and the section buttons are grouped to represent the main subjects being also always visible. 
-3. Footer - On small and medium resolutions, it gives access to a short description of the website and social media buttons.
-4. Home - Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
-5. Mars Weather - Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
-6. Mars Weather - The section also contains a carousel of images related to the weather on Mars and it also shows data from NASA's API showing Sol number, temperature, atmospheric pressure and wind speed/direction.
-7. Rovers Manifest - Section covering the importance of the rovers sent to Mars and a brief text introducing the topic.
-8. Rovers Manifest - Accordion covering History and facts about all the rovers that were sent to Mars up to 2019.
-9. Latest Pictures - Contains short text explaining about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user.
-10. Latest Pictures - The input form retrieves, through the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
-11. Gallery Explorer - Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos. Brief explanation with steps on how to use the search.
-12. Gallery Explorer - Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
-13. Gallery Explorer - The results for the search are shown below the search form and display the pictures as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
-14. Video Gallery - With a brief description text to tell the user the purpose of the content and a panel with links that play youtube videos on a div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
-15. Explore - Section with different interactive activities related to Mars exploration and curious facts.
-16. Explore - The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
-17. Explore - Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
-18. Explore - Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
-19. Footer - Visible on mobile and tablet, the footer displays a short description of the application and social media buttons.
+**Header:**
+
+Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to keep the clean design. 
+
+**Navigation Bar:** 
+
+For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the navigation bar is fixed to the top of the screen and the section buttons are grouped to represent the main subjects being also always visible. 
+
+**Home:**
+
+Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
+
+**Mars Weather:**
+
+Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
+The section also contains a carousel of images related to the weather on Mars and it also shows data from NASA's API showing Sol number, temperature, atmospheric pressure and wind speed/direction.
+
+**Rovers Manifest:**
+
+Section covering the importance of the rovers sent to Mars and a brief text introducing the topic.
+Accordion covering History and facts about all the rovers that were sent to Mars up to 2019.
+
+**Latest Pictures:**
+
+Contains short text explaining about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user.
+The input form retrieves, through the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
+
+**Gallery Explorer:**
+
+Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos. Brief explanation with steps on how to use the search.
+Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
+The results for the search are shown below the search form and display the pictures as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
+
+**Video Gallery:**
+
+With a brief description text to tell the user the purpose of the content and a panel with links that play youtube videos on a div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
+
+**Explore:**
+
+Section with different interactive activities related to Mars exploration and curious facts.
+The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
+Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
+Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
+
+**Footer:**
+
+Visible on mobile and tablet, the footer displays a short description of the application and social media buttons.
 
 ### Features Left to Implement
 
@@ -72,21 +100,18 @@ All the sections and functionalities are easily accessible from the navigation b
 
 ## Testing
 
-During development process, the main tool for tests was the Developer Tools from Google Chrome.
+During development process, the main tool for tests was the Google Chrome Developer Tools.
 The website was deployed on GitHub and tested on different screen resolutions and manufacturers (mobile phones).
 The link was shared through slack, whatsapp and facebook and we collected users feedback to re-evaluate our project and find ways to improve it from the user point of view.
 
 We asked the users doing the test to fulfill the four tasks from our User Stories and we asked for their feedback for these specific stories. The results were productive, offering important insights from the users perspective and also reinforcing positive aspects of the project.
 
 The website was also tested through Google Chrome Developer tools - Audits for performance, Progressive web app, best practices, accessibility and SEO, with a simulated fast 3g connection and 4x CPU slowdown.
-Some aspects weren't tackled due to our present technical limitations.
 
-Many of the tests were made manually. Testing the input fields with different formats of data such as email formats and required fields not to be allowed for submition as blank.
+Many of the tests were made manually. Testing the input fields with different formats of data such as data types and required fields not to be allowed for submition as blank.
 We also tested the user stories as test path to ensure they work as desired.
 
 Some issues rose up regarding some images file size. After trying to further compress, we decided to replace the ones that we couldn't get compressed any further and it improved the loading time.
-
-The assets/images/body-bg.jpg is a bigger file than the 
 
 After the tests, we are satisfied with the way the website works on different devices and browsers.
 
