@@ -1,12 +1,58 @@
-# Red Planet Explorer
+<h1>
+  <a href="https://github.com/romqrq/Red-Planet-Explorer" target="_blank"><img src="https://github.com/romqrq/Red-Planet-Explorer/blob/master/assets/images/mars-surface.jpg" alt="Mars surface"/></a>
+</h1>
+<h2 align="center">
+<a href="https://github.com/romqrq/Red-Planet-Explorer" target="_blank">Red Planet Explorer</a>
+</h2>
 
-## UX
+<div align="center"> 
 
-This project is an application that brings different and scattered information to one place. Using a combination of APIs and other third part content to create an intuitive and immersive experience.
+[Red Planet Explorer](https://github.com/romqrq/Red-Planet-Explorer) This project is an application that brings different and scattered information to one place. Using a combination of APIs and other third part content to create an intuitive and immersive experience.
 
 The future on Mars is more of a "when" than an "if". The website shows the progress torwards Mars exploration accelerating more and more. With new technologies, new studies and planned missions, humans becoming an interplanetary species is a possibility rising on the horizon.
 
 The design is responsive, changing the layout and content according to the size of the screen, loading data upon user actions and some buttons are shown or hidden depending on the screen resolution to make sure the user has the main actions always available on screen.
+
+Features include images and video galleries, games, a weight calculator to compare the weight of things on Earth and Mars, accordion with facts and curiosities about rovers sent to Mars with an overall feel of a hightech outer space environment.
+<br>
+
+[View the Red Planet Explorer page](https://github.com/romqrq/Red-Planet-Explorer)
+
+</div>
+
+## Table of Contents
+1. [**UX**](#ux)
+    - [**Project Goals**](#project-goals)
+    - [**User Stories**](#user-stories)
+    - [**Design choices**](#design-choices)
+    - [**Wireframes**](#wireframes)
+
+2. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Features Left to Implement**](#features-left-to-implement)
+
+3. [**Technologies used**](#technologies-used)
+
+4. [**Testing**](#testing)
+
+5. [**Deployment**](#deployment)
+    - [**How to run this project locally**](#how-to-run-this-project-locally)
+
+6. [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+    - [**Code**](#code)
+    - [**Acknowledgements**](#acknowledgements)
+
+7. [**Disclaimer**](#disclaimer)
+
+## UX
+
+### Project Goals
+
+The primary goal of Red Planet Explorer is to provide a clean, intuitive, engaging experience and also entertain, inform and delight it's users.
+
+### User Stories
 
 Four main User Stories were used to structure the website:
 
@@ -17,7 +63,54 @@ Four main User Stories were used to structure the website:
 
 For these stories we considered both tech savvy and the average internet user that are curious about Mars but aren't really sure of what kind of information is available to be explored.
 
-During development process, some changes from the original wireframes were made necessary to improve user experience and they were as listed:
+### Design Choices
+
+The overall feel of the application is one that is designed for users to have an immersive experience. The following design choices were made with this in mind:
+
+**Fonts**
+
+- The primary font **Jura** was chosen because it resembles classic digital characters. It's likeness to those is used with the intend to recall feelings on the user and make the experience closer and more engaging. 
+
+- The secondary font **Revalia** was chosen for its exotic looks while still comfortably readable, while complementing the primary font adding more weight and attention capturing qualities to titles.
+
+**Icons**
+
+- All icons used were chosen for their obvious meaning and purpose so that they can be understood by everyone.
+
+**Colours**
+
+- The primary colour choices of orange and black as the main theme, these colors were chosen because they have a clean clear aspect while contrasting each other well while adding to the exotic martian feel of the application.
+- Other colours used in the project such as white, aiming for higher contrast and readability and blue, to call attention to links, using a colour picker in Google Chrome Developer tools and setting the colors on reusable SCSS classes to make sure all colours used were consistent across the entire project.
+
+**Styling**
+
+- Elements across the application were given rounded corners to give it a smoother visual.
+- Repeating the same rounded corner pattern throughout the page keeps consistency in design and maintains the feeling that all elements belong together. 
+
+**Backgrounds**
+
+- The background image for the body on desktop was chosen to give the user the sensation of being in space while scrolling through a futuristic sweeping pages device. 
+- The background for the sections has a metallic look with colors that work well with the main color scheme while not competing for the user's attention.
+
+**Video button images**
+
+- Images were chosen to keep a close relation to the theme of the video linked to the button. There is the intention to use elements that will entice user's curiosity.
+
+**Video popup**
+
+- A hidden div manipulated through JavaScript was chosen over a modal as the solutions for user interaction with videos on modals haven't been as functional and reliable.
+
+
+### Wireframes
+
+These wireframes were created using [Mockflow](https://mockflow.com/) during the Scope Plane part of the design and planning process for this project. 
+
+- [Mobile](https://github.com/romqrq/Red-Planet-Explorer/blob/master/wireframes/Wireframe_Mobile.pdf)
+- [Tablet](https://github.com/romqrq/Red-Planet-Explorer/blob/master/wireframes/Wireframe_Tablet.pdf)
+- [Desktop](https://github.com/romqrq/Red-Planet-Explorer/blob/master/wireframes/Wireframe_Desktop.pdf)
+
+
+During development and testing processes, some changes from the original wireframes were made necessary to improve user experience and they were as listed:
 
 1. For tablet and mobile screens:
     - Sticky navigation bar at the top of the screen keeping the different sections always available to the user.
@@ -31,56 +124,83 @@ During development process, some changes from the original wireframes were made 
 All the sections and functionalities are easily accessible from the navigation bar and most of them won't take more than 3 clicks/taps from the home page to the end of the process.
 
 ## Features
-
+ 
 ### Existing Features
 
-**Header:**
+1. **Landing Page**
 
-Contains responsive navigation bar with links to the different sections. The content is responsive to the resolution to keep the clean design. 
+    Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
+    On arriving at the page for the first time, the user can press the launch button which will play an animation simulating a rocket launch and scrolling to the next content page. This feature is reset when the page is refreshed.
+    
+    **Navigation Bar:** 
 
-**Navigation Bar:** 
+    For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the navigation bar is fixed to the top of the screen and the section buttons are grouped to represent the main subjects being also always visible. 
 
-For desktop screen, navigation bar fixed at the side of the screen simulates a spaceship kind of console, keeping always visible the website name, section links and social media links. For tablets and mobile devices, the navigation bar is fixed to the top of the screen and the section buttons are grouped to represent the main subjects being also always visible. 
+    **Side Console:**
 
-**Home:**
+    Visible above 769px screen width, the side console is a dress for the navigation bar and it emulates a futuristic device.
+    For this version, the navigation bar has expanded buttons linked to subsections for a more precise user experience, it also displays the social media buttons and website logo.
 
-Section that contains the title of the website acting as a callout showing the user what is the purpose of the application.
+2. **Mars Weather:**
 
-**Mars Weather:**
+    Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
+    
+    **API weather data:**
 
-Contains a brief text about weather on Mars with the intent to create a reference on earth to help the user to understand the weather on Mars. External links are featured in this section and they bring extra facts about the InSight Lander, the source of the weather information on Mars.
-The section also contains a carousel of images related to the weather on Mars and it also shows data from NASA's API showing Sol number, temperature, atmospheric pressure and wind speed/direction.
+    A carousel of images related to Mars weather is the background for the data retrieved from NASA weather API. The data is processed and delivered in an intuitive way to the user. The inormation available is Sol number, temperature, atmospheric pressure and wind speed/direction.
 
-**Rovers Manifest:**
+3. **Rovers Manifest:**
 
-Section covering the importance of the rovers sent to Mars and a brief text introducing the topic.
-Accordion covering History and facts about all the rovers that were sent to Mars up to 2019.
+    Section covering the importance of the rovers sent to Mars and a brief text introducing the topic.
+    
+    **Accordion:**
+    Listing the 6 rovers sent to Mars until Mars2020 mission, the accordion displays facts about the different missions and offers links to external sources in case the user desires to find out more about that specific rover.
 
-**Latest Pictures:**
+4. **Latest Pictures:**
 
-Contains short text explaining about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user.
-The input form retrieves, through the NASA API, the latest pictures from the rover chosen by the user. This section also features some external links for further details about the topic.
+    Information about the latest or last pictures sent by the rovers Spirit, Opportunity and Curiosity to give some context to the user and offers external links to further information.
+    
+    **Input Form:**
 
-**Gallery Explorer:**
+    The input form retrieves, through the NASA API, the latest pictures from the rover chosen by the user.
 
-Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos. Brief explanation with steps on how to use the search.
-Search that retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, displays the last Sol number as a placeholder on the input field and updates the dropdown list of cameras to the types that are carried by that specific rover.
-The results for the search are shown below the search form and display the pictures as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
+5. **Gallery Explorer:**
 
-**Video Gallery:**
+    Photo gallery section composed of a brief text explaining the content and how to use the search to look up for photos.
 
-With a brief description text to tell the user the purpose of the content and a panel with links that play youtube videos on a div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
+    **Gallery Search:**
 
-**Explore:**
+    Search retrieves information from NASA's API. After the user choses one of the rovers, the application retrieves the number of Sols that rover covered, sets the last Sol number as input field value and updates the dropdown list of cameras to the types that are carried by that specific rover.
 
-Section with different interactive activities related to Mars exploration and curious facts.
-The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
-Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
-Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
+    **Gallery Results:**
 
-**Footer:**
+    The results for the search are shown below the search form and the pictures are displayed as clickable thumbnails. Once clicked, the photos are loaded on a full screen modal. In case of no results for the search, the user will receive a message to let them know that there are no results for that specific parameters combination.
 
-Visible on mobile and tablet, the footer displays a short description of the application and social media buttons.
+6. **Video Gallery:**
+
+    The video gallery covers different stages of the efforts to explore Mars. 
+    Buttons are displayed with an unique background image related to the theme covered on that specific video.
+    On click, the video opens on a fullscreen popup div that, through JavaScript code, becomes full screen when the video is open and is hidden when the video is closed.
+
+7. **Explore:**
+
+    Section with different interactive activities related to Mars exploration and curious facts.
+
+    **Guess Wheight:**
+    
+    The Guess Weight is a weight calculator that uses the mass, weight and gravitational acceleration to convert the input to the equivalent weight on Mars. The value can be obtained on Metric or Imperial systems through radio buttons selected by the user.
+
+    **Explore and Drive Curiosity:**
+
+    Explore and Drive Curiosity is an embeded 3D game that allows the user to explore some of the main features of Curiosity Rover and the user can also drive the rover on the virtual Martian surface while visiting specific points to reveal facts about the Curiosity rover.
+
+    **Go Arcade!:**
+
+    Go Arcade is a 2D arcade type of game where the user has to drive the rover as far as possible without damaging or going too slow. The section offers links for desktop and downloads for Android and IOS.
+
+8. **Footer:**
+
+    Visible on mobile and tablet, the footer displays a short description of the application and social media buttons.
 
 ### Features Left to Implement
 
@@ -88,13 +208,22 @@ Visible on mobile and tablet, the footer displays a short description of the app
 
 ## Technologies Used
 
-- [HTML](https://en.wikipedia.org/wiki/HTML5) - HTML 5 is the latest version of the Hypertext Markup Language and it is the standard programming language across the internet for structure and content.
-- [CSS](https://getbootstrap.com/docs/3.3/) - CSS 3 makes possible to implement responsiveness and style to the HTML document.
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Allowed the creation of animations and effects for menus and other features.
-- [JQuery](https://jquery.com/) - Allowed acceleration of processes such as fetching API data.
-- [Font Awesome](https://origin.fontawesome.com/) - It allows the introduction of icons that behave as normal text and are hardwired to users mind across the internet making it more recognizable and requiring minimal effort in understanding.
-- [Google Fonts](https://fonts.google.com/) - Offers a wide variety of font styles.
-- [Bootstrap] (https://getbootstrap.com/)
+- This project uses HTML, CSS and JavaScript programming languages.
+- [JQuery](https://jquery.com)
+    - The project uses **JQuery** to simplify DOM manipulation.
+- [AWSCloud9](https://eu-west-1.console.aws.amazon.com/cloud9) 
+    - Developer used **AWSCloud9** for their IDE while building the website.
+- [Visual Studio Code](https://code.visualstudio.com/)
+    - Developer used **Visual Studio Code** as development platform for this project.
+- [Bootstrap](https://getbootstrap.com/)
+    - The project uses **Bootstrap** to simplify the structure of the website and make the website responsive easily.
+    - The project also uses Bootstrap to provide icons from [FontAwesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/)
+- [Google Fonts](https://fonts.google.com/)
+    - The project uses **Google fonts** to style the website fonts.
+- [GitHub](https://github.com/)
+    - This project uses **GitHub** to store and share all project code remotely.
+- [AutoPrefixer](https://autoprefixer.github.io/)
+    - The project used **AutoPrefixer** to make sure all css prefixes were the most up to date versions. 
 
 
 ## Testing
@@ -110,33 +239,127 @@ The website was also tested through Google Chrome Developer tools - Audits for p
 Many of the tests were made manually. Testing the input fields with different formats of data such as data types and required fields not to be allowed for submition as blank.
 We also tested the user stories as test path to ensure they work as desired.
 
-Some issues rose up regarding some images file size. After trying to further compress, we decided to replace the ones that we couldn't get compressed any further and it improved the loading time.
+We also tested manually the user stories to check if the buttons were accessible and easy to find, if the content is displayed with correct content and formatting.
 
-After the tests, we are satisfied with the way the website works on different devices and browsers.
+Some issues rose up regarding some images file size. After trying to further compress, we decided to replace the ones that we couldn't get compressed any further and it improved the loading time.
 
 The only loading issue that couldn't be addressed to this point due to technical limitations was to prioritize the loading of the content above the fold and then loading the rest of the content on the sequence.
 
 The [W3C Validator](https://validator.w3.org/) was used to check the HTML code. To validate the CSS code it was used the [Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/).
 
+### Bugs discovered: 
+#### Solved bugs
+1. **Desktop version pages weren't sliding and staying hidden**
+
+- Even though the animations were set to slide in and out, on the background the previous pages would still be visible during transitions.
+    - Fix: I added a setTimeout to the animation function that adds a class to the inactive pages so they stay hidden. 
+```javascript
+function switchPages() {
+  let trigger = $(".sc-buttons > a");
+
+  trigger.click(function () {
+    let selectedSectionID = $(this).attr("href");
+    $(`${selectedSectionID}`)
+      .addClass("slide-show")
+      .removeClass("slide-hide, move-back");
+
+    let siblingsOnly = $(`${selectedSectionID}`).siblings("section");
+    // console.log(siblingsOnly);
+    siblingsOnly.each(function (i) {
+      if (!$(this).hasClass('move-back')) {
+        $(this).removeClass("slide-show").addClass("slide-hide")
+      };
+      let target = this
+      setTimeout(function () { $(target).addClass("move-back"); }, 500);
+    });
+  });
+}
+```
+
+2. **Partial data retrieved from API causing uncaught errors**
+
+- When the data was fetched during an update from NASA, the application would throw an error as the data was incomplete. 
+    - Fix: Added conditional test that gets the second last data point in case the last one isn't valid.
+```javascript
+else if ("weather-section") {
+        const el = document.getElementById("dataWeather");
+        el.innerHTML = "";
+        let JSO = data;
+        //data/validity_checks/
+        let vc = data.validity_checks;
+        //setting last sol number
+        let sol = vc.sols_checked[vc.sols_checked.length - 1];
+        //setting SECOND LAST sol number
+        let SLsol = vc.sols_checked[vc.sols_checked.length - 2];
+        //Checking if data is valid
+        //data/validity_checks/"last sun number"/AT/valid:"true or false"
+        let vcsATvalid = vc[sol].AT.valid;
+        let vcsHWSvalid = vc[sol].HWS.valid;
+        let vcsPREvalid = vc[sol].PRE.valid;
+        let vcsWDvalid = vc[sol].WD.valid;
+        //data/validity_checks/"SECOND LAST sun number"/AT/valid:"true or false"
+        let vcSLsATvalid = vc[SLsol].AT.valid;
+
+        //Setting sol number to use as reference to drill down to the other variables
+        //tests the data for validity of all parameters
+        if (vcsATvalid && vcsHWSvalid && vcsPREvalid && vcsWDvalid) {
+          SOLnum = sol;
+        } else if (vcSLsATvalid) {
+          SOLnum = SLsol;
+        }
+        //(code contiues...)
+```
+
+3. **Weather data was being retrieved but no other call from other sections were working**
+
+- The only call retrieving results was the weather section one. All the others were returning undefined or throwing an error. 
+    - Fix: As the call from the weather-section is on ready state, it was setting the URL value for the other calls.
+    with conditional tests, we moved the weather call to last on the chain. This way the call will still go through the conditional tests and allow the other calls to check for validity through the conditional chain.
+
+#### Unsolved bugs
+
+1. **Browser forward and backward arrows**
+
+    - On desktop we found problems trying to use the arrows on the browser to move forwards and backwards. Our impression is that because the application is built on a single page, the browser doesn't see the change between sections as page changes.
+
+## Further testing: 
+1. Asked fellow students, friends and family to look at the site on their devices and report any issues they found.
+2. Red Planet Explorer viewed on all devices and orientations available in Google Chrome Developer Tools.
+
+
 ## Deployment
 
-The project deployment was made using GitHub.
+This project was initially developed using the [AWSCloud9](https://eu-west-1.console.aws.amazon.com/cloud9) and later on moved to [Visual Studio Code](https://code.visualstudio.com/), committed to git and pushed to GitHub using the built in function within the applications. 
 
-1. Created the local environment and files.
-2. Created the equivalent repository on GitHub.
-3. Pushed the local files to the GitHub repository.
-4. On GitHub environment, opened the tab "Settings"
-5. Accessed the "github Pages" section
-6. Selected "master branch" and saved.
-7. After a few seconds the page was published.
+To deploy Red Planet Explorer to GitHub Pages from its [GitHub repository](https://github.com/romqrq/Red-Planet-Explorer), the following steps were taken: 
+1. Log into GitHub. 
+2. From the list of repositories on the screen, select **romqrq/Red-Planet-Explorer**.
+3. From the menu items near the top of the page, select **Settings**.
+4. Scroll down to the **GitHub Pages** section.
+5. Under **Source** click the drop-down menu labelled **None** and select **Master Branch**
+6. On selecting Master Branch the page is automatically refreshed, Red Planet Explorer is now deployed. 
+7. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
 
-From this point, all the changes on the pages were made straight from Visual Studio Code, from where I pushed the content. From time to time I merged the branches on GitHub.
+The Red Planet Explorer project made use of branches for development, testing and bug fixing. 
+The Master Branch has always been the one deployed to GitHUb Pages. When displaying the website life, the developer tries to keep the master branch to optimal code only.
+At the moment of submitting this Milestone project the Development Branch (Branch1) and Master Branch are identical. 
 
-If you wish to run the code locally, it is possible once you have saved the files for the page you wish to run (html, css, images and/or videos).
+### How to run this project locally
 
-1. Make sure you have a browser installed on your computer.
-2. Find the saved files
-3. Right-click (Windows/Linux) or two-finger-click (Mac) on the file and select "Open with" from the action menu.
+To clone this project from GitHub:
+1. Follow this link to the [Red Planet Explorer GitHub repository](romqrq/Red-Planet-Explorer).
+2. Under the repository name, click "Clone or download".
+3. In the Clone with HTTPs section, copy the clone URL for the repository. 
+4. In your local IDE open Git Bash.
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type ```git clone```, and then paste the URL you copied in Step 3.
+```console
+git clone https://github.com/USERNAME/REPOSITORY
+```
+7. Press Enter. Your local clone will be created.
+
+Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
+
 
 ## Credits
 
