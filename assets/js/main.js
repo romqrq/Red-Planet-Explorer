@@ -177,7 +177,7 @@ function getData() {
         });
 
         const maxSolField = document.getElementById("solTextInput");
-        maxSolField.placeholder = maxSol;
+        maxSolField.value = maxSol;
 
       }
       //Photos from Gallery search

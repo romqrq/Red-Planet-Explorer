@@ -81,7 +81,7 @@ a:hover {
   text-shadow: 0px 1px 1px black;
   color: white;
   font-size: 1.2rem;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .heading-text {
@@ -143,7 +143,6 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 1rem 0;
   z-index: 12;
   background-color: #000000c7;
   -webkit-box-shadow: 0px 4px 3px 0px black;
@@ -190,6 +189,7 @@ a:hover {
 
 .social-row {
   padding: 1rem;
+  margin-top: 2.5rem;
 }
 
 .social-col {
@@ -421,6 +421,10 @@ a:hover {
   padding: 0;
 }
 
+#accordion img {
+  max-width: 100%;
+}
+
 /* Gallery */
 .photo-gallery-text {
   display: -webkit-box;
@@ -482,8 +486,8 @@ a:hover {
 }
 
 .vg-general-button:hover {
-  -webkit-box-shadow: inset 0 0 7px 2px #c74a0f;
-          box-shadow: inset 0 0 7px 2px #c74a0f;
+  -webkit-box-shadow: inset 0 0 14px 6px #c74a0f;
+          box-shadow: inset 0 0 14px 6px #c74a0f;
 }
 
 .vg-earth-button {
@@ -496,6 +500,11 @@ a:hover {
 
 .vg-mars-stages {
   margin: 2rem 0;
+}
+
+.vg-mars-stages .btn:hover {
+  color: #f8f9fa;
+  text-shadow: 0 0 10px black;
 }
 
 .vg-button1 {
@@ -528,11 +537,12 @@ a:hover {
 }
 
 #videoContainer {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  padding-top: 1rem;
+  width: 100%;
+  padding-top: 5rem;
   background-color: #000000b0;
 }
 
@@ -549,6 +559,7 @@ a:hover {
 #videoContainer iframe {
   border: none;
   border-radius: 0.5rem !important;
+  max-height: 70vh;
 }
 
 /* Explore */
@@ -906,9 +917,6 @@ button.close {
   .hide-sm {
     display: none;
   }
-  .mobile-nav .medium-text {
-    font-size: 2rem;
-  }
   .social-col .round-border {
     height: 3rem;
     border: 3px solid white;
@@ -1079,6 +1087,9 @@ button.close {
   }
   .table-box {
     margin: 1rem -0.9rem;
+  }
+  #videoContainer iframe {
+    margin-right: -8%;
   }
 }
 

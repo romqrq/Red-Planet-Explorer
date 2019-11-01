@@ -88,15 +88,14 @@ Visible on mobile and tablet, the footer displays a short description of the app
 
 ## Technologies Used
 
-- [Mockflow](https://mockflow.com/) - Used to create initial wireframe for the structure.
 - [HTML](https://en.wikipedia.org/wiki/HTML5) - HTML 5 is the latest version of the Hypertext Markup Language and it is the standard programming language across the internet for structure and content.
 - [CSS](https://getbootstrap.com/docs/3.3/) - CSS 3 makes possible to implement responsiveness and style to the HTML document.
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - Allowed the creation of animations and effects for menus and other features.
 - [JQuery](https://jquery.com/) - Allowed acceleration of processes such as fetching API data.
 - [Font Awesome](https://origin.fontawesome.com/) - It allows the introduction of icons that behave as normal text and are hardwired to users mind across the internet making it more recognizable and requiring minimal effort in understanding.
 - [Google Fonts](https://fonts.google.com/) - Offers a wide variety of font styles.
-- [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
-- [Toolur](https://compressimage.toolur.com/) - website used to compress image files.
+- [Bootstrap] (https://getbootstrap.com/)
+
 
 ## Testing
 
@@ -141,6 +140,10 @@ If you wish to run the code locally, it is possible once you have saved the file
 
 ## Credits
 
+- [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
+- [Mockflow](https://mockflow.com/) - Used to create initial wireframe for the structure.
+- [Compress or die](https://compress-or-die.com/)- website used to compress image files..
+
 ### Media
 
 The photos used in this site were obtained from:
@@ -167,6 +170,8 @@ The photos used in this site were obtained from:
 - [Mars from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14293_hires.jpg)
 https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18244_hires.jpg
 https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23239_hires.jpg
+
+
 
 ### Content
 
