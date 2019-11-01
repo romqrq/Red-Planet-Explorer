@@ -460,11 +460,12 @@
     }
 
     #videoContainer {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
-        padding-top: 1rem;
+        width: 100%;
+        padding-top: 5rem;
         background-color: #000000b0;
         .video-close-button {
             text-align: right;
@@ -477,6 +478,7 @@
         iframe {
             border: none;
             @include border-radius;
+            max-height: 70vh;
         }
     }
 
@@ -846,11 +848,12 @@
         .table-box {
             margin: 1rem -0.9rem;
         }
+        #videoContainer {
+            iframe{
+            margin-right: -8%;
+            }
+        }
     }
-    
-    // @media screen and (min-width: 769px) {
-        
-    // }
     
     @media screen and (min-width: 1025px) {
         .carousel-img {

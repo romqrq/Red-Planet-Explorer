@@ -537,11 +537,12 @@ a:hover {
 }
 
 #videoContainer {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
-  padding-top: 1rem;
+  width: 100%;
+  padding-top: 5rem;
   background-color: #000000b0;
 }
 
@@ -558,6 +559,7 @@ a:hover {
 #videoContainer iframe {
   border: none;
   border-radius: 0.5rem !important;
+  max-height: 70vh;
 }
 
 /* Explore */
@@ -1085,6 +1087,9 @@ button.close {
   }
   .table-box {
     margin: 1rem -0.9rem;
+  }
+  #videoContainer iframe {
+    margin-right: -8%;
   }
 }
 
