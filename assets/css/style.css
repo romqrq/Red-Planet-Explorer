@@ -81,7 +81,7 @@ a:hover {
   text-shadow: 0px 1px 1px black;
   color: white;
   font-size: 1.2rem;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .heading-text {
@@ -143,7 +143,6 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  padding: 1rem 0;
   z-index: 12;
   background-color: #000000c7;
   -webkit-box-shadow: 0px 4px 3px 0px black;
@@ -419,6 +418,10 @@ a:hover {
 
 #accordion .card-header {
   padding: 0;
+}
+
+#accordion img {
+  max-width: 100%;
 }
 
 /* Gallery */
@@ -905,9 +908,6 @@ button.close {
 @media screen and (max-width: 768px) {
   .hide-sm {
     display: none;
-  }
-  .mobile-nav .medium-text {
-    font-size: 2rem;
   }
   .social-col .round-border {
     height: 3rem;

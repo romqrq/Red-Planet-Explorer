@@ -103,7 +103,7 @@
         text-shadow: $text-shadow;
         color: white;
         font-size: 1.2rem;
-        padding: 1.5rem 0.5rem;
+        padding: 1rem 0.5rem;
     }
     
     .heading-text {
@@ -154,7 +154,6 @@
     .mobile-nav {
         position: sticky;
         top: 0;
-        padding: 1rem 0;
         z-index: 12;
         background-color: #000000c7;
         box-shadow: 0px 4px 3px 0px black;
@@ -359,6 +358,9 @@
         }
         .card-header {
             padding: 0;
+        }
+        img {
+            max-width: 100%;
         }
     }
     /* Gallery */
@@ -684,11 +686,6 @@
     @media screen and (max-width: 768px) {
         .hide-sm {
             display: none;
-        }
-        .mobile-nav {
-            .medium-text{
-                font-size: 2rem;
-            }
         }
         .social-col{
             .round-border{
