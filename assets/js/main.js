@@ -221,6 +221,7 @@ function getData() {
         let vcSLsATvalid = vc[SLsol].AT.valid;
 
         //Setting sol number to use as reference to drill down to the other variables
+        //tests the data for validity of all parameters
         if (vcsATvalid && vcsHWSvalid && vcsPREvalid && vcsWDvalid) {
           SOLnum = sol;
         } else if (vcSLsATvalid) {
