@@ -33,10 +33,11 @@
     
     a {
         text-decoration: none;
+        color: #6bb2ff;
     }
     
     a:hover {
-        color: inherit;
+        color: $orange-color;
         text-decoration: none;
     }
     
@@ -126,7 +127,7 @@
     
     .content-section {
         @include border-radius;
-        padding: 2rem 1rem;
+        padding: 4rem 1rem 2rem;
         background-color: #29292859;
         box-shadow: inset 0 0 10px 5px black;
         background-image: url(../images/bg-content-section.jpg);
