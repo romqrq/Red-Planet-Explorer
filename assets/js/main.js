@@ -21,13 +21,19 @@ $("#launch-button").click(function () {
   setTimeout(scrolldown, 2000);
 });
 
-//Function to scroll down to weather after "launch"
+/**
+ * Function to scroll down to weather after "launch"
+ */
 function scrolldown() {
   const elTarget = document.getElementById("weather-section");
   elTarget.scrollIntoView();
 }
 
-//function to open modals with selected images
+/**
+ * Function to scroll down to weather after "launch"
+ * @param imageID API image ID - String
+ * @param imageSRC API image source - String
+ */
 function openModal(imageID, imageSRC) {
   const modalContent = document.getElementById("modalBody");
 
@@ -35,7 +41,9 @@ function openModal(imageID, imageSRC) {
       <img class="modal-content" src="${imageSRC}" id="${imageID}">`;
 }
 
-//Functions to change visibility of video player div
+/**
+ * Function to change visibility of video player div
+ */
 function videoShow() {
 
   $("#videoContainer").hide()
@@ -58,8 +66,9 @@ function videoShow() {
   })
 }
 
-
-//Function for the weight calculator
+/**
+ * Function for the weight calculator
+ */
 $("#weightCheck").click(function () {
   let weight = $("#weightInput").val();
   let testValue = $.isNumeric(weight);
@@ -86,7 +95,9 @@ $("#weightCheck").click(function () {
   };
 });
 
-//Function to switch the pages for tablets and desktop
+/**
+ * Function to switch the pages for tablets and desktop
+ */
 function switchPages() {
   let trigger = $(".sc-buttons > a");
 
@@ -97,8 +108,7 @@ function switchPages() {
       .removeClass("slide-hide, move-back");
 
     let siblingsOnly = $(`${selectedSectionID}`).siblings("section");
-    // console.log(siblingsOnly);
-    siblingsOnly.each(function (i) {
+    siblingsOnly.each(function () {
       if (!$(this).hasClass('move-back')) {
         $(this).removeClass("slide-show").addClass("slide-hide")
       };
@@ -114,7 +124,10 @@ document.getElementById("latestButton").addEventListener("click", getData);
 document.getElementById("photoButton").addEventListener("click", getData);
 document.getElementById("inputRoverName").addEventListener("change", getData);
 
-//Function to retrieve data from APIs
+
+/**
+ * Function to retrieve data from APIs
+ */
 function getData() {
   //Conditionals to determine parameters and ultimately parse the URL to fetch
   if (this.id == "latestButton") {
