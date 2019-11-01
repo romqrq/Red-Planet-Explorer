@@ -361,56 +361,45 @@ git clone https://github.com/USERNAME/REPOSITORY
 Further reading and troubleshooting on cloning a repository from GitHub [here](https://help.github.com/en/articles/cloning-a-repository).
 
 
-## Credits
-
-- [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
-- [Mockflow](https://mockflow.com/) - Used to create initial wireframe for the structure.
-- [Compress or die](https://compress-or-die.com/)- website used to compress image files..
-
-### Media
-
-The photos used in this site were obtained from:
-
-- [Favicon] (https://pngimg.com/uploads/mars_planet/mars_planet_PNG26.png)
-- [Body Background from 769px up](https://upload.wikimedia.org/wikipedia/commons/8/87/LH_95.jpg)
-- [Side Panel Background](https://pixnio.com/free-images/2019/01/21/2019-01-21-13-02-14-1200x800.jpg)
-- [Sections Background](https://images.pexels.com/photos/383639/pexels-photo-383639.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-- [Main screen image Background](https://commons.wikimedia.org/wiki/File:Mars_atmosphere.jpg)
-- Weather Carousel:
-    - [InSight Lander](https://photojournal.jpl.nasa.gov/jpeg/PIA22227.jpg)
-    - [Dune Field](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia23056.jpg)
-    - [Pathfinder Rover](https://www.jpl.nasa.gov/images/mars/20170622/PIA01466-16.jpg)
-    - [Dunes](https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/pia22869.jpg)
-- Video Gallery:
-- [Earth from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
-- [Body Background from 769px up](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA11066_hires.jpg)
-- [Space Module](https://www.jpl.nasa.gov/images/orion/20141024/orion20141024-16.jpg)
-- [Landing Pod](https://images.pexels.com/photos/700015/pexels-photo-700015.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940)
-- [Landing Curiosity](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14841_hires.jpg)
-- [Orbiter](https://www.jpl.nasa.gov/images/mro/20081126/mro-concept-browse.jpg)
-- [Mars Rover](https://upload.wikimedia.org/wikipedia/commons/a/a3/Rover1.jpg)
-- [Organic Molecule](https://storage.needpix.com/rsynced_images/uracil-2901413_1280.png)
-- [Mars from space](https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA14293_hires.jpg)
-https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA18244_hires.jpg
-https://www.jpl.nasa.gov/spaceimages/images/largesize/PIA23239_hires.jpg
-
-
+# Credits
 
 ### Content
 
-- [Skies and Scopes](https://skiesandscopes.com/mars-rovers/)
-- [Wikipedia - Sojourner](https://en.wikipedia.org/wiki/Sojourner_(rover))
-- [Wikipedia - Mars 2](https://en.wikipedia.org/wiki/Mars_2)
-- [Wikipedia - Mars 3](https://en.wikipedia.org/wiki/Mars_3#cite_note-Perminov1-3)
-- [Wikipedia - Spirit](https://en.wikipedia.org/wiki/Spirit_(rover))
-- [Wikipedia - Opportunity](https://en.wikipedia.org/wiki/Opportunity_(rover))
-- [Wikipedia - Curiosity](https://en.wikipedia.org/wiki/Curiosity_(rover))
-- [Space.com](https://www.space.com/mars-rover-opportunity-last-photographs.html)
-- [NASA - Curiosity Rover](https://mars.nasa.gov/msl/spacecraft/rover/summary/)
-- [NASA - Opportunity Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/opportunity/recent/)
-- [NASA - Spirit Status](https://mars.jpl.nasa.gov/mer/mission/rover-status/spirit/2010/)
+- [Skies and Scopes](https://skiesandscopes.com/)
+- [Wikipedia](https://en.wikipedia.org/)
+- [Space.com](https://www.space.com/)
+- [NASA](https://mars.nasa.gov/)
 
 
+### Media
+
+#### Images
+
+Images were obtained from:
+
+- [Wikipedia](https://wikimedia.org)
+- [Pixio](https://pixnio.com)
+- [Pexels](https://images.pexels.com)
+- [NASA](https://www.jpl.nasa.gov)
+- [Needpix](https://storage.needpix.com)
+- [Favicon generator](https://realfavicongenerator.net) - Website used to generate a custom favicon.
+- [Compress or die](https://compress-or-die.com/)- website used to compress image files.
+- [Mockflow](https://mockflow.com/) - Used to create wireframe.
+
+#### Videos
+
+- [NASA](https://www.jpl.nasa.gov)
 
 
+### Code
 
+Code that was copied from other sources are indicated with the source link as a comment above the code.
+
+### Acknowledgements
+
+Special thanks to: 
+- Code Institute Mentor Simen Daehlin for his time and much appreciated help showing me paths for better coding.
+- All my friends and colleagues that spent a bit of their time to test and give me a feedback on this application. 
+
+#### Disclaimer
+The content of this website, including the images used, are for educational purposes only.
