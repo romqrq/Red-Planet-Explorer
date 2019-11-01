@@ -1,3 +1,21 @@
+<h1>
+  <a href="https://github.com/romqrq/Red-Planet-Explorer" target="_blank"><img src="https://github.com/romqrq/Red-Planet-Explorer/blob/master/assets/images/mars-surface.jpg" alt="Mars surface"/></a>
+</h1>
+<h2 align="center">
+<a href="https://github.com/romqrq/Red-Planet-Explorer" target="_blank">Red Planet Explorer</a>
+</h2>
+
+<div align="center"> 
+
+[PicFlip!](https://ajgreaves.github.io/picflip/) is an engaging and entertaining memory card game, designed for children aged between 1 and 5 years old. 
+Features include easy to operate controls, 3 levels of difficulty, entertaining animations and sounds,
+characters that children enjoy, with an overall feel of child friendly entertainment.
+<br>
+
+[View the PicFlip! page](https://ajgreaves.github.io/picflip/)
+
+</div>
+
 # Red Planet Explorer
 
 ## UX
